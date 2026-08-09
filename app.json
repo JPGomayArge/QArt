@@ -1,0 +1,87 @@
+{
+  "expo": {
+    "name": "QArt",
+    "slug": "qart",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "scheme": "qart",
+    "userInterfaceStyle": "dark",
+    "backgroundColor": "#0B0B0F",
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.jpgmzyl.qart",
+      "infoPlist": {
+        "ITSAppUsesNonExemptEncryption": false,
+        "NSCameraUsageDescription": "QArt uses the camera to scan QR codes and reveal artworks for your collection.",
+        "NSPhotoLibraryAddUsageDescription": "QArt saves artworks you've unlocked to your photo library."
+      }
+    },
+    "android": {
+      "package": "com.jpgmzyl.qart",
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/icon.png",
+        "backgroundColor": "#0B0B0F"
+      },
+      "permissions": [
+        "android.permission.CAMERA",
+        "android.permission.RECORD_AUDIO"
+      ]
+    },
+    "web": {
+      "bundler": "metro",
+      "output": "static",
+      "favicon": "./assets/icon.png"
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "QArt uses the camera to scan QR codes and reveal artworks."
+        }
+      ],
+      [
+        "expo-splash-screen",
+        {
+          "image": "./assets/icon.png",
+          "resizeMode": "contain",
+          "backgroundColor": "#0B0B0F"
+        }
+      ],
+      "expo-image",
+      "expo-status-bar",
+      "expo-audio",
+      [
+        "expo-media-library",
+        {
+          "photosPermission": "QArt saves artworks you've unlocked to your photo library.",
+          "savePhotosPermission": "QArt saves artworks you've unlocked to your photo library.",
+          "isAccessMediaLocationEnabled": false
+        }
+      ],
+      [
+        "@reactvision/react-viro",
+        {
+          "android": { "xRMode": "AR" },
+          "ios": {
+            "cameraUsagePermission": "QArt uses your camera to preview artworks on your wall in AR.",
+            "microphoneUsagePermission": "QArt may use your microphone during AR experiences.",
+            "photosPermission": "QArt may read photos for AR experiences.",
+            "savephotosPermission": "QArt may save photos during AR experiences."
+          }
+        }
+      ]
+    ],
+    "experiments": {
+      "typedRoutes": true
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "cade30b4-90db-4c93-8981-d974e098498c"
+      }
+    },
+    "owner": "jpgmzyl-mx"
+  }
+}
