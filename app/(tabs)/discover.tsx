@@ -20,7 +20,7 @@ import { useLocale } from '@/i18n';
 import { pickDaily, isExclusive } from '@/game/hash';
 import { IMG_CARD } from '@/game/images';
 import { Haptics, hNotify } from '@/game/prefs';
-import { PAINTINGS, partsOf, isPaintingComplete } from '@/game/parts';
+import { PAINTINGS, partsOf, isPaintingComplete, FINALE_COLLECTION } from '@/game/parts';
 import { RARITY } from '@/game/rarity';
 import { ARTWORK_PRICE } from '@/game/shop';
 import { useGame } from '@/store/GameStore';
@@ -186,12 +186,31 @@ export default function DiscoverScreen() {
     const movementKey = availKeys.length ? pickDaily(availKeys.sort(), mKey, 'movement') : null;
     const movementWorks = movementKey ? withKey.filter((x) => x.k === movementKey).map((x) => x.a) : [];
 
+    // Counts exclude the hidden 301st piece, so nothing here hints at it.
+    const shown = ARTWORKS.filter((a) => a.collectionId !== FINALE_COLLECTION);
     const curiosities = [
       t(locale, 'disc.curio1', { n: PAINTINGS.length, c: COLLECTIONS.length }),
-      t(locale, 'disc.curio2', { n: ARTWORKS_BY_RARITY.unique.length }),
+      t(locale, 'disc.curio2', { n: shown.filter((a) => a.rarity === 'unique').length }),
       t(locale, 'disc.curio3'),
-      t(locale, 'disc.curio4', { n: new Set(ARTWORKS.map((a) => a.artist)).size }),
+      t(locale, 'disc.curio4', { n: new Set(shown.map((a) => a.artist)).size }),
       t(locale, 'disc.curio5'),
+      t(locale, 'disc.qr1'),
+      t(locale, 'disc.qr2'),
+      t(locale, 'disc.qr3'),
+      t(locale, 'disc.qr4'),
+      t(locale, 'disc.qr5'),
+      t(locale, 'disc.qr6'),
+      t(locale, 'disc.qart1'),
+      t(locale, 'disc.qart2'),
+      t(locale, 'disc.qart3'),
+      t(locale, 'disc.qart4'),
+      t(locale, 'disc.qart5'),
+      t(locale, 'disc.art1'),
+      t(locale, 'disc.art2'),
+      t(locale, 'disc.art3'),
+      t(locale, 'disc.art4'),
+      t(locale, 'disc.art5'),
+      t(locale, 'disc.art6'),
     ];
     const curiosity = pickDaily(curiosities, dKey, 'curio');
     return {

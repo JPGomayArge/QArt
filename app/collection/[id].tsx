@@ -27,7 +27,8 @@ import {
   type GridRow,
 } from '@/game/parts';
 import { isExclusive } from '@/game/hash';
-import { RARITY, rarityRank, SPECIAL_COLOR } from '@/game/rarity';
+import { RARITY, rarityRank, SPECIAL_COLOR, FINALE_COLOR } from '@/game/rarity';
+import { FINALE_ID } from '@/game/parts';
 import { useGame } from '@/store/GameStore';
 import { COLORS, FONT, RADIUS, SPACING } from '@/theme/theme';
 
@@ -242,7 +243,7 @@ export default function ExhibitionScreen() {
 function Centerpiece({ artwork, owned, onPress }: { artwork: Artwork; owned: boolean; onPress: () => void }) {
   const { locale } = useLocale();
   const rarity = RARITY[artwork.rarity];
-  const accent = isExclusive(artwork.id) ? SPECIAL_COLOR : rarity.color;
+  const accent = artwork.id === FINALE_ID ? FINALE_COLOR : isExclusive(artwork.id) ? SPECIAL_COLOR : rarity.color;
   return (
     <Pressable
       onPress={() => owned && onPress()}
@@ -280,7 +281,7 @@ function FramedPiece({
   const { locale } = useLocale();
   const rarity = RARITY[artwork.rarity];
   const exclusive = isExclusive(artwork.id);
-  const accent = exclusive ? SPECIAL_COLOR : rarity.color;
+  const accent = artwork.id === FINALE_ID ? FINALE_COLOR : exclusive ? SPECIAL_COLOR : rarity.color;
   const bw = exclusive ? 3 : frameWidth(rarityRank(artwork.rarity));
   return (
     <Pressable

@@ -116,12 +116,21 @@ export function sha256(ascii: string): string {
 // variant maps to one code (one cooldown, one painting). Different PATHS stay
 // distinct (a real poster at /a is a different code than one at /b). Non-URL
 // payloads fall through unchanged.
+/**
+ * Reduce a URL to its DOMAIN, dropping the path, query and fragment.
+ *
+ * Every link from the same site is therefore the same code: the thousands of
+ * distinct instagram.com/p/… posters in the world all behave as one QR, sharing
+ * one painting and one cooldown. Without this, anyone could mint unlimited
+ * "new" codes just by changing the path.
+ *
+ * "www." is stripped so www.site.com and site.com match, and a leading "m." or
+ * "mobile." too, since those are the same site on a phone.
+ */
 function canonicalUrl(s: string): string | null {
-  const m = s.match(/^(?:[a-z][a-z0-9+.\-]*:\/\/)?((?:[a-z0-9\-]+\.)+[a-z]{2,})(\/[^\s?#]*)?/i);
+  const m = s.match(/^(?:[a-z][a-z0-9+.\-]*:\/\/)?((?:[a-z0-9\-]+\.)+[a-z]{2,})(?:[\/?#]|$)/i);
   if (!m) return null;
-  const host = m[1].toLowerCase().replace(/^www\./, '');
-  const path = (m[2] ?? '').replace(/\/+$/, '');
-  return host + path;
+  return m[1].toLowerCase().replace(/^(?:www|m|mobile)\./, '');
 }
 
 // Normalize so visually-equal QRs map to the same artwork regardless of casing

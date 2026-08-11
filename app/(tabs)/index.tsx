@@ -128,7 +128,7 @@ export default function ScanScreen() {
           <HourglassMedium size={64} color={COLORS.gold} weight="thin" />
           <Text style={styles.permTitle}>{t(locale, 'scan.limitTitle')}</Text>
           <Text style={styles.permBody}>
-            {t(locale, 'scan.limitBody', { n: scanLimit })}
+            {t(locale, 'scan.limitBody', { n: Number.isFinite(scanLimit) ? scanLimit : '∞' })}
           </Text>
         </View>
       </View>

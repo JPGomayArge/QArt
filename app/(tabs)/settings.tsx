@@ -18,8 +18,7 @@ import {
   Sparkle,
   Star,
   Trash,
-  Vibrate,
-} from 'phosphor-react-native';
+  Vibrate, HourglassMedium, GraduationCap, Stack, Crown } from 'phosphor-react-native';
 import React, { useEffect, useRef, useState } from 'react';
 import {
   Alert,
@@ -70,8 +69,12 @@ export default function SettingsScreen() {
     qrCooldownEnabled,
     setQrCooldownEnabled,
     scanLimit,
+    replayTutorial,
     scansToday,
     devAddShards,
+    devSetAllOwned,
+    devFinaleAnytime,
+    devToggleFinaleAnytime,
     addShards,
     unit,
     setUnit,
@@ -179,13 +182,15 @@ export default function SettingsScreen() {
             <View style={styles.rowLeft}>
               <SpeakerHigh size={22} color={COLORS.gold} weight="fill" />
               <View style={{ flex: 1 }}>
-                <Text style={styles.rowTitle}>{t(locale, 'set.revealSounds')}</Text>
-                <Text style={styles.rowBody}>{t(locale, 'set.revealSoundsBody')}</Text>
+                <Text style={styles.rowTitle}>{t(locale, 'set.muteSounds')}</Text>
+                <Text style={styles.rowBody}>{t(locale, 'set.muteSoundsBody')}</Text>
               </View>
             </View>
+            {/* Inverted on purpose: the switch turns the sound OFF, so leaving it
+                alone (off) keeps the reveal chimes playing. */}
             <Switch
-              value={soundOn}
-              onValueChange={toggleSound}
+              value={!soundOn}
+              onValueChange={(v) => toggleSound(!v)}
               trackColor={{ false: COLORS.cardBorder, true: COLORS.gold }}
               thumbColor="#F5F3EE"
               ios_backgroundColor={COLORS.cardBorder}
@@ -198,13 +203,14 @@ export default function SettingsScreen() {
             <View style={styles.rowLeft}>
               <Vibrate size={22} color={COLORS.gold} weight="fill" />
               <View style={{ flex: 1 }}>
-                <Text style={styles.rowTitle}>{t(locale, 'set.vibration')}</Text>
-                <Text style={styles.rowBody}>{t(locale, 'set.vibrationBody')}</Text>
+                <Text style={styles.rowTitle}>{t(locale, 'set.noVibration')}</Text>
+                <Text style={styles.rowBody}>{t(locale, 'set.noVibrationBody')}</Text>
               </View>
             </View>
+            {/* Inverted: flipping it ON removes the haptics. */}
             <Switch
-              value={hapticsOn}
-              onValueChange={toggleHaptics}
+              value={!hapticsOn}
+              onValueChange={(v) => toggleHaptics(!v)}
               trackColor={{ false: COLORS.cardBorder, true: COLORS.gold }}
               thumbColor="#F5F3EE"
               ios_backgroundColor={COLORS.cardBorder}
@@ -341,7 +347,7 @@ export default function SettingsScreen() {
           style={styles.card}
           onPress={() =>
             Linking.openURL(
-              `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent('QArt feedback')}`
+              `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent('Q[Art] feedback')}`
             )
           }
         >
@@ -373,7 +379,7 @@ export default function SettingsScreen() {
             <View style={styles.card}>
               <View style={styles.rowBetween}>
                 <View style={{ flex: 1, paddingRight: SPACING.md }}>
-                  <Text style={styles.rowTitle}>{t(locale, 'set.limitScans', { n: scanLimit })}</Text>
+                  <Text style={styles.rowTitle}>{t(locale, 'set.limitScans', { n: Number.isFinite(scanLimit) ? scanLimit : '∞' })}</Text>
                   <Text style={styles.rowBody}>{t(locale, 'set.limitScansBody')}</Text>
                 </View>
                 <Switch
@@ -386,7 +392,9 @@ export default function SettingsScreen() {
               </View>
               {dailyLimitEnabled && (
                 <View style={styles.limitBar}>
-                  <Text style={styles.limitText}>{t(locale, 'set.scansLeftToday', { left: Math.max(0, scanLimit - scansToday), limit: scanLimit })}</Text>
+                  <Text style={styles.limitText}>{Number.isFinite(scanLimit)
+                    ? t(locale, 'set.scansLeftToday', { left: Math.max(0, scanLimit - scansToday), limit: scanLimit })
+                    : t(locale, 'set.scansUnlimited', { n: scansToday })}</Text>
                 </View>
               )}
             </View>
@@ -406,6 +414,47 @@ export default function SettingsScreen() {
                 />
               </View>
             </View>
+
+            <Pressable
+              style={[styles.card, { marginTop: SPACING.sm }]}
+              onPress={() => {
+                replayTutorial();
+                Alert.alert(t(locale, 'dev.tutorial'), t(locale, 'dev.tutorialBody'));
+              }}
+            >
+              <View style={styles.rowBetween}>
+                <View style={styles.rowLeft}>
+                  <GraduationCap size={20} color={COLORS.gold} weight="fill" />
+                  <View style={{ flex: 1 }}>
+                    <Text style={styles.rowTitle}>{t(locale, 'dev.tutorial')}</Text>
+                    <Text style={styles.rowBody}>{t(locale, 'dev.tutorialBody')}</Text>
+                  </View>
+                </View>
+              </View>
+            </Pressable>
+
+            <Pressable style={[styles.card, { marginTop: SPACING.sm }]} onPress={() => router.push('/dev-sounds')}>
+              <View style={styles.rowBetween}>
+                <View style={styles.rowLeft}>
+                  <SpeakerHigh size={20} color={COLORS.gold} weight="fill" />
+                  <View style={{ flex: 1 }}>
+                    <Text style={styles.rowTitle}>{t(locale, 'dev.sounds')}</Text>
+                    <Text style={styles.rowBody}>{t(locale, 'dev.soundsBody')}</Text>
+                  </View>
+                </View>
+                <CaretRight size={18} color={COLORS.textFaint} />
+              </View>
+            </Pressable>
+
+            <Pressable style={[styles.card, { marginTop: SPACING.sm }]} onPress={() => router.push('/dev-cooldowns')}>
+              <View style={styles.rowBetween}>
+                <View style={styles.rowLeft}>
+                  <HourglassMedium size={20} color={COLORS.gold} weight="fill" />
+                  <Text style={styles.rowTitle}>{t(locale, 'dev.cooldowns')}</Text>
+                </View>
+                <CaretRight size={18} color={COLORS.textFaint} />
+              </View>
+            </Pressable>
 
             <Pressable style={[styles.card, { marginTop: SPACING.sm }]} onPress={() => router.push('/dev-catalog')}>
               <View style={styles.rowBetween}>
@@ -427,6 +476,43 @@ export default function SettingsScreen() {
                   </View>
                 </View>
                 <CaretRight size={18} color={COLORS.textFaint} />
+              </View>
+            </Pressable>
+
+            {/* The 301st piece can only be earned once the 300 are complete —
+                which used to make it untestable without 300 manual taps. */}
+            <Pressable
+              style={[styles.card, { marginTop: SPACING.sm }]}
+              onPress={() =>
+                Alert.alert(t(locale, 'dev.all300'), t(locale, 'dev.all300Body'), [
+                  { text: t(locale, 'dev.grant'), onPress: () => devSetAllOwned(true) },
+                  { text: t(locale, 'dev.revoke'), style: 'destructive', onPress: () => devSetAllOwned(false) },
+                  { text: t(locale, 'common.cancel'), style: 'cancel' },
+                ])
+              }
+            >
+              <View style={styles.rowBetween}>
+                <View style={styles.rowLeft}>
+                  <Stack size={20} color={COLORS.gold} weight="fill" />
+                  <View style={{ flex: 1 }}>
+                    <Text style={styles.rowTitle}>{t(locale, 'dev.all300')}</Text>
+                    <Text style={styles.rowBody}>{t(locale, 'dev.all300Body')}</Text>
+                  </View>
+                </View>
+                <CaretRight size={18} color={COLORS.textFaint} />
+              </View>
+            </Pressable>
+
+            <Pressable style={[styles.card, { marginTop: SPACING.sm }]} onPress={devToggleFinaleAnytime}>
+              <View style={styles.rowBetween}>
+                <View style={styles.rowLeft}>
+                  <Crown size={20} color={COLORS.gold} weight="fill" />
+                  <View style={{ flex: 1 }}>
+                    <Text style={styles.rowTitle}>{t(locale, 'dev.finaleAnytime')}</Text>
+                    <Text style={styles.rowBody}>{t(locale, 'dev.finaleAnytimeBody')}</Text>
+                  </View>
+                </View>
+                <Switch value={devFinaleAnytime} onValueChange={devToggleFinaleAnytime} />
               </View>
             </Pressable>
 

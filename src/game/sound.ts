@@ -41,6 +41,8 @@ const SOURCES = {
   legendary: require('../../assets/sounds/legendary.wav'),
   unique: require('../../assets/sounds/unique.wav'),
   dupe: require('../../assets/sounds/dupe.wav'),
+  special: require('../../assets/sounds/special.wav'),
+  finale: require('../../assets/sounds/finale.wav'),
 } as const;
 
 type Key = keyof typeof SOURCES;
@@ -100,20 +102,27 @@ function fire(key: Key) {
       try {
         p.remove?.();
       } catch {}
-    }, 6000); // longest cue (unique) is ~4.4s + reverb tail
+    }, 12000); // longest cue (finale) is ~8.5s + reverb tail
   } catch {
     // audio is best-effort; never let it break a reveal
   }
 }
 
-/** Play the chime for a reveal. `rank` is rarityRank; dupes get a soft tone. */
-export function playReveal(rank: number, isNew: boolean) {
+/**
+ * Play the chime for a reveal. `rank` is rarityRank; dupes get a soft tone.
+ * `finale` overrides everything: the 301st piece has its own bell fanfare, and
+ * it should ring even if that piece somehow arrives as a duplicate.
+ */
+export function playReveal(rank: number, isNew: boolean, kind?: 'finale' | 'special') {
   if (!enabled) return;
+  if (kind === 'finale') return fire('finale');
+  // A QR-exclusive piece has its own cue: it isn't a rarity, it's a secret.
+  if (kind === 'special' && isNew) return fire('special');
   fire(!isNew ? 'dupe' : BY_RANK[Math.max(0, Math.min(rank, 4))] ?? 'common');
 }
 
 // Ordered list of every sound, for a preview board in Settings.
-export const SOUND_KEYS = ['common', 'rare', 'epic', 'legendary', 'unique', 'dupe'] as const;
+export const SOUND_KEYS = ['common', 'rare', 'epic', 'legendary', 'unique', 'special', 'finale', 'dupe'] as const;
 export type SoundKey = (typeof SOUND_KEYS)[number];
 
 /** Play one specific sound on demand — always audible (ignores the mute toggle). */

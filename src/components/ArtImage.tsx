@@ -14,7 +14,7 @@ import { useLocale } from '@/i18n';
 import type { Artwork } from '@/data/artworks';
 import { ARTWORK_IMAGES } from '@/data/images';
 import { IMAGE_OVERRIDES } from '@/data/imageOverrides';
-import { focusFor } from '@/data/focus';
+import { focusFor, focusTopFor } from '@/data/focus';
 import { MOSAICS } from '@/data/mosaics';
 import { resolveArtworkImage, sizedUrl, IMG_HIDDEN, IMG_CARD } from '@/game/images';
 import { RARITY } from '@/game/rarity';
@@ -157,6 +157,9 @@ export function ArtImage({
           placeholderContentFit="cover"
           style={[styles.slice, sliceStyle, dim && { opacity: 0.5 }]}
           contentFit="cover"
+          // Slices are cropped horizontally by sliceStyle, so only the vertical
+          // half of the focus applies here (see focusTopFor).
+          contentPosition={focusTopFor(artwork.id)}
           transition={transition}
           cachePolicy="disk"
           blurRadius={blur}

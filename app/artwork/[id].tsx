@@ -35,14 +35,14 @@ import { COLLECTION_BY_ID, collectionName, collectionFull } from '@/data/collect
 import { titleFor } from '@/data/titles';
 import { t } from '@/data/ui';
 import { resolveArtworkImage, IMG_DETAIL } from '@/game/images';
-import { partProgress, teaser } from '@/game/parts';
+import { partProgress, teaser, FINALE_ID } from '@/game/parts';
 import { partsOf } from '@/game/parts';
 import { PartComposite } from '@/components/PartPaintingCard';
 import { isExclusive } from '@/game/hash';
 import { useLocale } from '@/i18n';
 import { pick } from '@/data/localized';
 import { track } from '@/game/telemetry';
-import { RARITY, SPECIAL_COLOR } from '@/game/rarity';
+import { RARITY, SPECIAL_COLOR, FINALE_COLOR } from '@/game/rarity';
 import { useGame } from '@/store/GameStore';
 import { formatDimensions } from '@/data/dimensions';
 import { COLORS, FONT, RADIUS, SPACING } from '@/theme/theme';
@@ -77,7 +77,8 @@ export default function ArtworkDetail() {
 
   const rarity = RARITY[artwork.rarity];
   const exclusive = isExclusive(artwork.id);
-  const accent = exclusive ? SPECIAL_COLOR : rarity.color;
+  const finale = artwork.id === FINALE_ID; // its own colour: luminous white
+  const accent = finale ? FINALE_COLOR : exclusive ? SPECIAL_COLOR : rarity.color;
   const collection = COLLECTION_BY_ID[artwork.collectionId];
   const detail = ARTWORK_DETAILS[artwork.id] ?? {};
   const spare = spareOf(artwork.id);

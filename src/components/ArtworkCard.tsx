@@ -9,7 +9,8 @@ import { isExclusive } from '@/game/hash';
 import { titleFor } from '@/data/titles';
 import { useLocale } from '@/i18n';
 import { t } from '@/data/ui';
-import { RARITY, SPECIAL_COLOR } from '@/game/rarity';
+import { RARITY, SPECIAL_COLOR, FINALE_COLOR } from '@/game/rarity';
+import { FINALE_ID } from '@/game/parts';
 import { COLORS, FONT, RADIUS, SPACING } from '@/theme/theme';
 
 type Props = {
@@ -25,7 +26,8 @@ function ArtworkCardBase({ artwork, owned, count = 0, width, favorite = false }:
   const { locale } = useLocale();
   const rarity = RARITY[artwork.rarity];
   const exclusive = isExclusive(artwork.id);
-  const accent = exclusive ? SPECIAL_COLOR : rarity.color;
+  const finale = artwork.id === FINALE_ID; // ranks above unique: her own white
+  const accent = finale ? FINALE_COLOR : exclusive ? SPECIAL_COLOR : rarity.color;
   const spare = Math.max(0, count - 1);
 
   return (
@@ -35,6 +37,8 @@ function ArtworkCardBase({ artwork, owned, count = 0, width, favorite = false }:
         styles.card,
         { width, borderColor: owned ? accent + '44' : COLORS.cardBorder },
         exclusive && owned && { borderColor: accent, borderWidth: 2 },
+        // Above every rarity: a thick, lit white edge and a pale inner wash.
+        finale && owned && styles.finaleCard,
         pressed && owned && { opacity: 0.85 },
       ]}
     >
@@ -71,7 +75,7 @@ function ArtworkCardBase({ artwork, owned, count = 0, width, favorite = false }:
             {t(locale, 'card.undiscovered')}
           </Text>
         )}
-        <View style={[styles.rarityStrip, { backgroundColor: accent }]} />
+        <View style={[styles.rarityStrip, { backgroundColor: accent }, finale && styles.finaleStrip]} />
       </View>
     </Pressable>
   );
@@ -88,6 +92,10 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     overflow: 'hidden',
   },
+  // Loud, but shadow-free: a shadow on a rounded + clipped cell forces an
+  // offscreen pass per cell, which is not worth paying for in a 300-item grid.
+  finaleCard: { borderColor: '#FFFFFF', borderWidth: 3, backgroundColor: 'rgba(255,255,255,0.10)' },
+  finaleStrip: { height: 5, opacity: 1 },
   imageWrap: { width: '100%', padding: SPACING.xs },
   dupBadge: {
     position: 'absolute',

@@ -62,13 +62,24 @@ export const RESET_COOLDOWN_COST = 150; // shards — a genuinely useful conveni
 // so it doubles as a hands-on tutorial for the shop.
 export const SCAN_UPGRADE_STEP = 5; // extra scans per upgrade
 export const SCAN_UPGRADE_BASE = 20; // price of the first upgrade
-export const SCAN_UPGRADE_GROWTH = 1.5; // gentler climb: 20,30,45,68,101,152,228,342
-export const MAX_SCAN_UPGRADES = 8; // caps the daily ceiling (10 + 8*5 = 50/day)
+export const SCAN_UPGRADE_GROWTH = 1.5; // gentle climb: 20, 30, 45, 68, 101
+// Five paid steps take the cap from 25 to 50 a day. The SIXTH is different: it
+// removes the daily limit altogether. It is deliberately expensive — a late-game
+// goal, and a sink for the shards that pile up once duplicates start flowing.
+export const SCAN_UPGRADES_TO_MAX = 5; // 25 -> 50/day
+export const MAX_SCAN_UPGRADES = 6; // the last one is UNLIMITED
+export const UNLIMITED_SCANS_COST = 750;
 export const STARTER_SHARDS = SCAN_UPGRADE_BASE; // gifted on first launch = first upgrade
 
 /** Price of the next scan-limit upgrade given how many are already owned. */
 export function scanUpgradePrice(purchased: number): number {
+  if (purchased >= SCAN_UPGRADES_TO_MAX) return UNLIMITED_SCANS_COST;
   return Math.round(SCAN_UPGRADE_BASE * Math.pow(SCAN_UPGRADE_GROWTH, purchased));
+}
+
+/** True once the player has bought the final, limit-removing upgrade. */
+export function hasUnlimitedScans(purchased: number): boolean {
+  return purchased >= MAX_SCAN_UPGRADES;
 }
 
 export type SkinDef = {

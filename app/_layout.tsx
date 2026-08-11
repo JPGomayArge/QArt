@@ -6,13 +6,14 @@ import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 
 import { SafetyScreen } from '@/components/SafetyScreen';
+import { TutorialScreen } from '@/components/TutorialScreen';
 import { I18nProvider } from '@/i18n';
 import { warmImageCache, warmRoom } from '@/game/prefetch';
 import { GameProvider, useGame } from '@/store/GameStore';
 import { COLORS } from '@/theme/theme';
 
 function RootGate() {
-  const { ready, safetyAck, acknowledgeSafety, owned, room } = useGame();
+  const { ready, safetyAck, acknowledgeSafety, owned, room, tutorialSeen, markTutorialSeen } = useGame();
 
   // Cache the catalog on-device once the save is loaded (runs in background).
   useEffect(() => {
@@ -27,6 +28,9 @@ function RootGate() {
 
   // First-run safety notice, shown until acknowledged.
   if (!safetyAck) return <SafetyScreen onAcknowledge={acknowledgeSafety} />;
+
+  // Then the walkthrough: what a QR becomes, rarity, fragments, your room.
+  if (!tutorialSeen) return <TutorialScreen onDone={markTutorialSeen} />;
 
   return (
     <Stack

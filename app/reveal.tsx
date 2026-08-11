@@ -11,9 +11,10 @@ import { useLocale } from '@/i18n';
 import { t } from '@/data/ui';
 import { IMG_DETAIL } from '@/game/images';
 import { isExclusive } from '@/game/hash';
-import { RARITY, rarityRank, SPECIAL_COLOR } from '@/game/rarity';
+import { RARITY, rarityRank, SPECIAL_COLOR, FINALE_COLOR } from '@/game/rarity';
 import { partProgress, useGame } from '@/store/GameStore';
 import { playReveal } from '@/game/sound';
+import { FINALE_ID } from '@/game/parts';
 import { track } from '@/game/telemetry';
 import { Haptics, hImpact, hNotify, isReduceMotion } from '@/game/prefs';
 import { COLORS, FONT, RADIUS, SPACING } from '@/theme/theme';
@@ -27,7 +28,10 @@ export default function RevealScreen() {
   const artwork = params.id ? ARTWORK_BY_ID[params.id] : undefined;
   const isNew = params.isNew === '1';
   const count = Number(params.count ?? '1');
-  const rank = artwork ? rarityRank(artwork.rarity) : 0;
+  const isFinale = artwork?.id === FINALE_ID;
+  // The finale uses the proven top-tier (unique) animation path — its identity
+  // comes from the white accent and its own 9s cue, not from extra motion.
+  const rank = artwork ? (isFinale ? 4 : rarityRank(artwork.rarity)) : 0;
   const pp = artwork ? partProgress(artwork, owned) : null;
   const showPart = pp?.isPart && !pp.complete ? { index: artwork!.partIndex!, total: artwork!.partTotal! } : undefined;
 
@@ -57,7 +61,7 @@ export default function RevealScreen() {
 
   useEffect(() => {
     if (!artwork) return;
-    const buildup = rank * 90; // rarer pieces build suspense a touch longer
+    const buildup = rank * 90;
 
     // Track everything so we can shut it ALL down on unmount. Without this,
     // every reveal left its looping animations + timers running forever, which
@@ -168,7 +172,15 @@ export default function RevealScreen() {
     }
 
     // Reveal chime, synced with the pop (grander the rarer; soft tone for dupes).
-    later(() => playReveal(rank, isNew), buildup);
+    later(
+      () =>
+        playReveal(
+          rank,
+          isNew,
+          artwork.id === FINALE_ID ? 'finale' : isExclusive(artwork.id) ? 'special' : undefined
+        ),
+      buildup
+    );
 
     // Local analytics: what got revealed and where from.
     track('reveal', { id: artwork.id, rarity: artwork.rarity, source: params.source ?? 'scan' });
@@ -192,7 +204,7 @@ export default function RevealScreen() {
   }
 
   const rarity = RARITY[artwork.rarity];
-  const accent = isExclusive(artwork.id) ? SPECIAL_COLOR : rarity.color;
+  const accent = isFinale ? FINALE_COLOR : isExclusive(artwork.id) ? SPECIAL_COLOR : rarity.color;
   const collection = COLLECTION_BY_ID[artwork.collectionId];
   const glowOpacity = glow.interpolate({ inputRange: [0, 1], outputRange: [0.2, 0.6 + rank * 0.06] });
 
@@ -321,6 +333,7 @@ export default function RevealScreen() {
 }
 
 const styles = StyleSheet.create({
+  // The gathering light of the finale's build-up.
   backdrop: { flex: 1, alignItems: 'center', justifyContent: 'center', padding: SPACING.xl },
   dim: { color: COLORS.textDim },
   frameZone: { alignItems: 'center', justifyContent: 'center', marginBottom: SPACING.lg },

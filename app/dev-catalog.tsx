@@ -15,7 +15,8 @@ import { ARTWORK_DETAILS } from '@/data/details';
 import { ARTWORK_IMAGES } from '@/data/images';
 import { MOSAICS } from '@/data/mosaics';
 import { IMG_CARD } from '@/game/images';
-import { RARITY } from '@/game/rarity';
+import { RARITY, FINALE_COLOR } from '@/game/rarity';
+import { FINALE_ID } from '@/game/parts';
 import { useGame } from '@/store/GameStore';
 import { COLORS, FONT, RADIUS, SPACING } from '@/theme/theme';
 
@@ -121,6 +122,8 @@ export default function DevCatalogScreen() {
         renderItem={({ item }: { item: Artwork }) => {
           const d = ARTWORK_DETAILS[item.id];
           const hasImage = !!ARTWORK_IMAGES[item.id];
+          // The Muse sits above every rarity, so she never wears a rarity colour.
+          const tone = item.id === FINALE_ID ? FINALE_COLOR : RARITY[item.rarity].color;
           return (
             <Pressable
               style={styles.row}
@@ -129,7 +132,7 @@ export default function DevCatalogScreen() {
               onPress={() => router.push({ pathname: '/viewer', params: { id: item.id } })}
               onLongPress={() => router.push({ pathname: '/artwork/[id]', params: { id: item.id, dev: '1' } })}
             >
-              <View style={[styles.thumb, { borderColor: RARITY[item.rarity].color + '88' }]}>
+              <View style={[styles.thumb, { borderColor: tone + '88' }]}>
                 {/* never hidden here — auditing needs the real picture */}
                 <ArtImage artwork={item} hidden={false} radius={3} width={IMG_CARD} />
               </View>
@@ -154,7 +157,7 @@ export default function DevCatalogScreen() {
                 </View>
               </View>
               <View style={styles.rowRight}>
-                <View style={[styles.dot, { backgroundColor: RARITY[item.rarity].color }]} />
+                <View style={[styles.dot, { backgroundColor: tone }]} />
                 {/* Grant / revoke the piece to test flows without scanning */}
                 <Pressable
                   hitSlop={8}

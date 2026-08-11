@@ -29,6 +29,7 @@ import {
   RESET_COOLDOWN_COST,
   SCAN_UPGRADE_STEP,
   MAX_SCAN_UPGRADES,
+  hasUnlimitedScans,
   STARTER_SHARDS,
   scanUpgradePrice,
 } from '@/game/shop';
@@ -36,12 +37,28 @@ import {
 const STORAGE_KEY = 'arthunt.save.v1';
 export const ROOM_MAX = 10; // max pieces on the private wall in My Room
 export const BOOSTER_COST = 20; // shards needed to open a booster
-export const DAILY_SCAN_LIMIT = 10; // scans/day when the limit is enabled
+// Scans/day when the limit is enabled. The tutorial gifts exactly the shards for
+// the first upgrade, so a new player effectively starts the game at 30.
+export const DAILY_SCAN_LIMIT = 25;
 const DAY_MS = 24 * 60 * 60 * 1000;
-export const MAX_COOLDOWN_DAYS = 14;
-// Cooldown grows each time a code is re-scanned: 1 day, then 2, then 3… up to 14.
-// `scans` = how many times the code has already been scanned.
-export const cooldownDaysFor = (scans: number) => Math.min(MAX_COOLDOWN_DAYS, Math.max(1, scans));
+export const MAX_COOLDOWN_DAYS = 7;
+// Cooldown grows as a code is re-scanned, but gently: it climbs one day every
+// TWO scans and stops at a week. The old 1-per-scan climb to 14 days meant a
+// code yielded ~11 scans in two months; this gives ~16, which matters far more
+// than the daily cap for a player who only meets a handful of codes a day.
+export const cooldownDaysFor = (scans: number) =>
+  Math.min(MAX_COOLDOWN_DAYS, Math.max(1, Math.ceil(scans / 2)));
+
+// Fragments granted the first time a piece is discovered. Duplicates alone used
+// to be the only source, which made shards scarcest exactly when a new player
+// needed them most.
+export const DISCOVERY_REWARD: Record<Rarity, number> = {
+  common: 3,
+  rare: 8,
+  epic: 15,
+  legendary: 40,
+  unique: 100,
+};
 
 function today(): string {
   return new Date().toISOString().slice(0, 10);
@@ -95,6 +112,10 @@ type SaveData = {
   // Shown once, the moment the 300 are complete: congratulates the player and
   // points them at the hidden 301st piece.
   finaleSeen?: boolean;
+  // First-run walkthrough (what a QR becomes, rarity, shards, your room).
+  tutorialSeen?: boolean;
+  /** Dev only: let the finale code work without holding all 300. */
+  devFinaleAnytime?: boolean;
 };
 
 export type DiscoverResult = {
@@ -129,6 +150,11 @@ type GameContextValue = {
   nextScanUpgradeCost: number;
   resetCooldownCost: number;
   cooldownsActive: number; // codes currently on cooldown
+  /** Developer view: raw per-code cooldown timestamps and scan counts. */
+  scanCooldowns: Record<string, number>;
+  scanCounts: Record<string, number>;
+  /** Developer: clear the cooldown on a single code. */
+  devClearCooldown: (qrHash: string) => void;
   favorites: Record<string, true>;
   room: string[];
   roomFrames: Record<string, string>;
@@ -159,6 +185,11 @@ type GameContextValue = {
   buySkin: (id: string) => boolean;
   setActiveSkin: (id: string) => void;
   markFinaleSeen: () => void;
+  /** First-run walkthrough. */
+  tutorialSeen: boolean;
+  markTutorialSeen: () => void;
+  /** Developer: show the first-run walkthrough again. */
+  replayTutorial: () => void;
   buyFrame: (id: string) => boolean;
   setActiveFrame: (id: string) => void;
   /** Buy a specific artwork with shards (Painting of the Day). */
@@ -169,6 +200,10 @@ type GameContextValue = {
   upgradeScanLimit: () => boolean;
   /** Developer only: grant or revoke a piece to test flows quickly. */
   devToggleOwned: (id: string) => void;
+  /** Dev: grant or revoke all 300 paintings (every fragment), finale excluded. */
+  devSetAllOwned: (owned: boolean) => void;
+  devFinaleAnytime: boolean;
+  devToggleFinaleAnytime: () => void;
   devAddShards: (n: number) => void;
   /** Grant shards (e.g. a silent thank-you after an in-app tip). Persisted. */
   addShards: (n: number) => void;
@@ -218,6 +253,8 @@ function emptySave(): SaveData {
     activeFrame: DEFAULT_FRAME,
     framesReset: true, // fresh saves already start with only the free frames owned
     finaleSeen: false,
+    tutorialSeen: false,
+    devFinaleAnytime: false,
     unit: 'cm',
     scaleReal: false,
   };
@@ -335,8 +372,12 @@ export function GameProvider({ children }: { children: React.ReactNode }) {
         const consumedGifts = opts.giftNonce
           ? { ...prev.consumedGifts, [opts.giftNonce]: true as const }
           : prev.consumedGifts;
+        // A brand-new piece pays a small finder's fee, so shards flow from the
+        // very first days instead of only once duplicates start piling up.
+        const discovery = !cur ? DISCOVERY_REWARD[artwork.rarity] ?? 0 : 0;
         const next = {
           ...prev,
+          shards: prev.shards + discovery,
           owned: {
             ...prev.owned,
             [artwork.id]: { count, firstSeen: cur?.firstSeen ?? Date.now() },
@@ -361,7 +402,9 @@ export function GameProvider({ children }: { children: React.ReactNode }) {
   );
 
   // Effective daily cap = base + permanent upgrades bought in the shop.
-  const effectiveScanLimit = DAILY_SCAN_LIMIT + save.scanUpgrades * SCAN_UPGRADE_STEP;
+  const effectiveScanLimit = hasUnlimitedScans(save.scanUpgrades)
+    ? Infinity
+    : DAILY_SCAN_LIMIT + save.scanUpgrades * SCAN_UPGRADE_STEP;
   // How many scans have been used today (0 after a day rollover).
   const scansToday = save.scanDay === today() ? save.scanCountToday : 0;
   const canScan = !save.dailyLimitEnabled || scansToday < effectiveScanLimit;
@@ -369,32 +412,44 @@ export function GameProvider({ children }: { children: React.ReactNode }) {
   const scanQr = useCallback(
     (raw: string): ScanOutcome => {
       const s = saveRef.current; // always-fresh, even between renders
+      const qrHash = sha256(normalizePayload(raw)) || sha256('_fb' + raw.length);
+      const count = s.scanCounts[qrHash] ?? 0;
+
+      // The 301st piece: its code is only meaningful to a player who already
+      // holds all 300. For anyone else it stays an ordinary code and falls
+      // through to the lottery below, so the ending can't be stumbled upon.
+      //
+      // It is checked BEFORE the daily cap and the anti-farm cooldown, and is
+      // exempt from both: the ending must never answer "come back tomorrow".
+      // Without this, a player who had already scanned that code once (as an
+      // ordinary code, before completing the 300) would be locked out of the
+      // finale for up to a week.
+      if (
+        matchesFinale(raw) &&
+        ARTWORK_BY_ID[FINALE_ID] &&
+        (s.devFinaleAnytime || PAINTINGS.every((p) => isPaintingComplete(p, s.owned)))
+      ) {
+        const result = recordDrop(ARTWORK_BY_ID[FINALE_ID], { incScan: true, cooldownKey: qrHash });
+        return { ok: true, result, special: true };
+      }
+
       const usedToday = s.scanDay === today() ? s.scanCountToday : 0;
-      const limit = DAILY_SCAN_LIMIT + s.scanUpgrades * SCAN_UPGRADE_STEP;
+      const limit = hasUnlimitedScans(s.scanUpgrades)
+        ? Infinity
+        : DAILY_SCAN_LIMIT + s.scanUpgrades * SCAN_UPGRADE_STEP;
       if (s.dailyLimitEnabled && usedToday >= limit) {
         return { ok: false, reason: 'limit' };
       }
 
       // Escalating anti-farm cooldown: 1 day after the first scan, 2 after the
       // second… up to 14. `count` = how many times this code has been scanned.
-      const qrHash = sha256(normalizePayload(raw)) || sha256('_fb' + raw.length);
-      const count = s.scanCounts[qrHash] ?? 0;
       if (s.qrCooldownEnabled && count > 0) {
         const last = s.scanCooldowns[qrHash] ?? 0;
-        const windowMs = cooldownDaysFor(count) * DAY_MS;
+        // The final upgrade halves every cooldown on top of lifting the daily cap.
+        const factor = hasUnlimitedScans(s.scanUpgrades) ? 0.5 : 1;
+        const windowMs = cooldownDaysFor(count) * DAY_MS * factor;
         if (last && Date.now() - last < windowMs) {
           return { ok: false, reason: 'cooldown', retryAt: last + windowMs };
-        }
-      }
-
-      // The 301st piece: its code is only meaningful to a player who already
-      // holds all 300. For anyone else it stays an ordinary code and falls
-      // through to the lottery below, so the ending can't be stumbled upon.
-      if (matchesFinale(raw) && ARTWORK_BY_ID[FINALE_ID]) {
-        const done = PAINTINGS.every((p) => isPaintingComplete(p, s.owned));
-        if (done) {
-          const result = recordDrop(ARTWORK_BY_ID[FINALE_ID], { incScan: true, cooldownKey: qrHash });
-          return { ok: true, result, special: true };
         }
       }
 
@@ -580,6 +635,14 @@ export function GameProvider({ children }: { children: React.ReactNode }) {
     setSave((prev) => (prev.ownedSkins[id] ? { ...prev, activeSkin: id } : prev));
   }, []);
 
+  const markTutorialSeen = useCallback(() => {
+    setSave((prev) => (prev.tutorialSeen ? prev : { ...prev, tutorialSeen: true }));
+  }, []);
+
+  const replayTutorial = useCallback(() => {
+    setSave((prev) => ({ ...prev, tutorialSeen: false }));
+  }, []);
+
   const markFinaleSeen = useCallback(() => {
     setSave((prev) => (prev.finaleSeen ? prev : { ...prev, finaleSeen: true }));
   }, []);
@@ -662,6 +725,15 @@ export function GameProvider({ children }: { children: React.ReactNode }) {
   );
 
   // Developer helper: add/remove a piece without scanning, for testing.
+  const devClearCooldown = useCallback((qrHash: string) => {
+    setSave((prev) => {
+      if (!prev.scanCooldowns[qrHash]) return prev;
+      const next = { ...prev.scanCooldowns };
+      delete next[qrHash];
+      return { ...prev, scanCooldowns: next };
+    });
+  }, []);
+
   const devToggleOwned = useCallback((id: string) => {
     setSave((prev) => {
       const owned = { ...prev.owned };
@@ -669,6 +741,26 @@ export function GameProvider({ children }: { children: React.ReactNode }) {
       else owned[id] = { count: 1, firstSeen: Date.now() };
       return { ...prev, owned };
     });
+  }, []);
+
+  // Grant or revoke the whole catalogue in one tap. Testing the finale used to
+  // mean tapping 300+ rows in the catalogue, which nobody was ever going to do —
+  // so the ending went untested. The finale itself is never granted here: it has
+  // to be earned by scanning its code, which is the flow worth testing.
+  const devSetAllOwned = useCallback((own: boolean) => {
+    setSave((prev) => {
+      const owned = { ...prev.owned };
+      for (const a of ARTWORKS) {
+        if (a.collectionId === FINALE_COLLECTION) continue;
+        if (own) owned[a.id] ??= { count: 1, firstSeen: Date.now() };
+        else delete owned[a.id];
+      }
+      return { ...prev, owned };
+    });
+  }, []);
+
+  const devToggleFinaleAnytime = useCallback(() => {
+    setSave((prev) => ({ ...prev, devFinaleAnytime: !prev.devFinaleAnytime }));
   }, []);
 
   const devAddShards = useCallback((n: number) => {
@@ -732,12 +824,21 @@ export function GameProvider({ children }: { children: React.ReactNode }) {
       setActiveSkin,
       finaleSeen: save.finaleSeen ?? false,
       markFinaleSeen,
+      tutorialSeen: save.tutorialSeen ?? false,
+      markTutorialSeen,
+      replayTutorial,
       buyFrame,
       setActiveFrame,
       buyArtwork,
       resetCooldowns,
       upgradeScanLimit,
+      scanCooldowns: save.scanCooldowns,
+      scanCounts: save.scanCounts,
+      devClearCooldown,
       devToggleOwned,
+      devSetAllOwned,
+      devFinaleAnytime: save.devFinaleAnytime ?? false,
+      devToggleFinaleAnytime,
       devAddShards,
       addShards,
       acknowledgeSafety,
@@ -772,6 +873,9 @@ export function GameProvider({ children }: { children: React.ReactNode }) {
       resetCooldowns,
       upgradeScanLimit,
       devToggleOwned,
+      devSetAllOwned,
+      save.devFinaleAnytime,
+      devToggleFinaleAnytime,
       devAddShards,
       addShards,
       acknowledgeSafety,
@@ -817,8 +921,20 @@ export function collectionStats(owned: Record<string, OwnedEntry>) {
   const hasFinale = !!owned[FINALE_ID];
   const total = base + (perfect ? 1 : 0);
   const discovered = found + (perfect && hasFinale ? 1 : 0);
-  const artists = new Set(ARTWORKS.filter((a) => discoveredIds.has(a.id)).map((a) => a.artist));
-  const totalArtists = new Set(ARTWORKS.filter((a) => a.collectionId !== FINALE_COLLECTION).map((a) => a.artist));
+  // Artists follow the same rule as the pieces: the finale's painter doesn't
+  // exist until the 300 are done, so the tally never reads 112 / 111.
+  const baseArtists = new Set(
+    ARTWORKS.filter((a) => a.collectionId !== FINALE_COLLECTION).map((a) => a.artist)
+  );
+  const artists = new Set(
+    ARTWORKS.filter((a) => discoveredIds.has(a.id))
+      .map((a) => a.artist)
+      .filter((name) => baseArtists.has(name) || (perfect && hasFinale))
+  );
+  const totalArtists = new Set(baseArtists);
+  if (perfect) {
+    for (const a of ARTWORKS) if (a.collectionId === FINALE_COLLECTION) totalArtists.add(a.artist);
+  }
   let duplicates = 0;
   for (const id of discoveredIds) duplicates += Math.max(0, (owned[id]?.count ?? 1) - 1);
   return {

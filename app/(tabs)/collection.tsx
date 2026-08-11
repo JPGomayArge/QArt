@@ -35,7 +35,7 @@ import {
   type GridRow,
   type PaintingCell,
 } from '@/game/parts';
-import { RARITY, RARITY_ORDER, rarityRank, type Rarity } from '@/game/rarity';
+import { RARITY, RARITY_ORDER, rarityRank, artworkRank, FINALE_COLOR, type Rarity } from '@/game/rarity';
 import { collectionStats, useGame } from '@/store/GameStore';
 import { COLORS, FONT, RADIUS, SPACING } from '@/theme/theme';
 
@@ -103,8 +103,9 @@ export default function CollectionScreen() {
   const cmp = useMemo<Record<SortKey, (a: Artwork, b: Artwork) => number>>(
     () => ({
       // Rarity bands, and within each band multi-part works sit below the singles.
+      // The Muse outranks unique: artworkRank puts her above the whole ladder.
       rarity: (a, b) =>
-        rarityRank(b.rarity) - rarityRank(a.rarity) ||
+        artworkRank(b.id, b.rarity) - artworkRank(a.id, a.rarity) ||
         (a.partGroup ? 1 : 0) - (b.partGroup ? 1 : 0) ||
         a.title.localeCompare(b.title),
       // Oldest → newest; undated pieces fall to the end.
@@ -119,7 +120,10 @@ export default function CollectionScreen() {
   // Index: one entry per painting; multi-part works get a full-width row that
   // fills in as you collect their fragments.
   const indexRows = useMemo(() => {
-    let list = PAINTINGS.slice(); // representative per painting
+    // The finale joins the index only once it's yours — before that it doesn't
+    // exist as far as the catalogue is concerned.
+    const finale = ARTWORK_BY_ID[FINALE_ID];
+    let list = PAINTINGS.concat(finale && owned[FINALE_ID] ? [finale] : []);
     if (rarity) list = list.filter((a) => a.rarity === rarity);
     if (ownedFilter === 'owned') list = list.filter((a) => isPaintingComplete(a, owned));
     if (ownedFilter === 'missing') list = list.filter((a) => !isPaintingComplete(a, owned));
@@ -130,7 +134,8 @@ export default function CollectionScreen() {
 
   // "All my paintings": one tile per painting you hold at least part of.
   const mineCells = useMemo(() => {
-    let list = PAINTINGS.filter((a) =>
+    const finale = ARTWORK_BY_ID[FINALE_ID];
+    let list = PAINTINGS.concat(finale && owned[FINALE_ID] ? [finale] : []).filter((a) =>
       a.partGroup ? partsOwned(a.partGroup, owned) > 0 : isOwned(a.id)
     );
     if (rarity) list = list.filter((a) => a.rarity === rarity);
@@ -158,7 +163,10 @@ export default function CollectionScreen() {
       {/* Progress */}
       <View style={styles.progressCard}>
         <View style={styles.progressTop}>
-          <Text style={styles.progressPct}>{Math.round(stats.percent * 100)}%</Text>
+          {/* floor, not round: 299/300 must read 99%, never a premature 100%. */}
+          <Text style={styles.progressPct}>
+            {stats.discovered >= stats.total ? 100 : Math.min(99, Math.floor(stats.percent * 100))}%
+          </Text>
           <Text style={styles.progressSub}>
             {t(locale, 'col.discovered', { n: stats.discovered, total: stats.total })}
           </Text>
@@ -180,7 +188,8 @@ export default function CollectionScreen() {
             disabled={!stats.hasFinale}
             onPress={() => router.push(`/artwork/${FINALE_ID}`)}
           >
-            <View style={styles.finaleThumb}>
+            {/* Centring collapses ArtImage's flex:1, so only centre the placeholder icon. */}
+            <View style={[styles.finaleThumb, !stats.hasFinale && styles.finaleThumbEmpty]}>
               {stats.hasFinale && ARTWORK_BY_ID[FINALE_ID] ? (
                 <ArtImage artwork={ARTWORK_BY_ID[FINALE_ID]} radius={RADIUS.sm} showQrMark={false} instant />
               ) : (
@@ -188,9 +197,10 @@ export default function CollectionScreen() {
               )}
             </View>
             <View style={{ flex: 1 }}>
-              <Text style={styles.finaleSlotTitle}>
+              <Text style={styles.finaleSlotTitle} numberOfLines={1}>
                 {stats.hasFinale && ARTWORK_BY_ID[FINALE_ID]
-                  ? titleFor(FINALE_ID, locale, ARTWORK_BY_ID[FINALE_ID].title)
+                  ? // just "The Muse" — the sitter's name doesn't fit next to the thumb
+                    titleFor(FINALE_ID, locale, ARTWORK_BY_ID[FINALE_ID].title).split('—')[0].trim()
                   : t(locale, 'finale.slotTitle')}
               </Text>
               <Text style={styles.finaleSlotSub}>
@@ -223,7 +233,14 @@ export default function CollectionScreen() {
           <ScrollView horizontal showsHorizontalScrollIndicator={false} contentContainerStyle={styles.recentRow}>
             {recent.map((a) => (
               <Pressable key={a.id} onPress={() => router.push(`/artwork/${a.id}`)}>
-                <View style={[styles.recentThumb, { borderColor: RARITY[a.rarity].color + '99' }]}>
+                <View
+                  style={[
+                    styles.recentThumb,
+                    { borderColor: RARITY[a.rarity].color + '99' },
+                    // The Muse never wears a rarity colour — she's her own tier.
+                    a.id === FINALE_ID && styles.recentThumbFinale,
+                  ]}
+                >
                   <ArtImage artwork={a} radius={4} showQrMark={false} />
                 </View>
               </Pressable>
@@ -332,13 +349,16 @@ export default function CollectionScreen() {
 
   const renderMineCell = ({ item: cell }: { item: PaintingCell }) => {
     const art = cell.kind === 'single' ? cell.art : cell.rep;
-    const color = RARITY[art.rarity].color;
+    const isFin = art.id === FINALE_ID;
+    const color = isFin ? FINALE_COLOR : RARITY[art.rarity].color;
     return (
       <Pressable
         onPress={() => router.push(`/artwork/${art.id}`)}
         style={({ pressed }) => [
           styles.mineTile,
           { width: mineWidth, height: mineWidth * 1.15, borderColor: color + 'AA' },
+          // She reads as the top of the ladder: a solid white edge that glows.
+          isFin && styles.mineTileFinale,
           pressed && { opacity: 0.85 },
         ]}
       >
@@ -347,7 +367,7 @@ export default function CollectionScreen() {
         ) : (
           <PartComposite parts={cell.parts} owned={owned} />
         )}
-        <View style={[styles.mineDot, { backgroundColor: color }]} />
+        <View style={[styles.mineDot, { backgroundColor: color }, isFin && styles.mineDotFinale]} />
         {isFavorite(art.id) && (
           <View style={styles.mineHeart}>
             <Heart size={11} color={COLORS.danger} weight="fill" />
@@ -452,11 +472,17 @@ function GalleryCard({
   const dayIndex = Math.floor(Date.now() / 86400000);
   const cover = pool.length ? pool[dayIndex % pool.length] : undefined;
   const coverOwned = cover ? isOwned(cover.id) : false;
+  // A finished collection gets the same golden treatment as the 301st piece.
+  const complete = items.length > 0 && have >= items.length;
 
   return (
     <Pressable
       onPress={onPress}
-      style={({ pressed }) => [styles.galleryCard, pressed && { borderColor: COLORS.gold }]}
+      style={({ pressed }) => [
+        styles.galleryCard,
+        complete && styles.galleryCardDone,
+        pressed && { borderColor: COLORS.gold },
+      ]}
     >
       {cover && (
         <View style={[styles.coverFrame, { borderColor: RARITY[cover.rarity].color + '88' }]}>
@@ -476,7 +502,9 @@ function GalleryCard({
         </View>
       </View>
       <View style={styles.galleryRight}>
-        <Text style={styles.galleryPct}>{Math.round(pct * 100)}%</Text>
+        <Text style={[styles.galleryPct, complete && styles.galleryPctDone]}>
+          {complete ? 100 : Math.min(99, Math.floor(pct * 100))}%
+        </Text>
         <CaretRight size={14} color={COLORS.gold} weight="bold" />
       </View>
     </Pressable>
@@ -581,7 +609,11 @@ const styles = StyleSheet.create({
   mineTile: {
     backgroundColor: COLORS.mat, borderWidth: 2, borderRadius: RADIUS.sm, padding: 3,
   },
+  // The Muse: a solid, lit white edge so she's unmistakable in a grid of 300.
+  mineTileFinale: { borderWidth: 3, borderColor: '#FFFFFF', backgroundColor: 'rgba(255,255,255,0.14)' },
+  recentThumbFinale: { borderWidth: 3, borderColor: '#FFFFFF', backgroundColor: 'rgba(255,255,255,0.14)' },
   mineDot: { position: 'absolute', top: 5, right: 5, width: 9, height: 9, borderRadius: 5 },
+  mineDotFinale: { width: 12, height: 12, borderRadius: 6, borderWidth: 1, borderColor: 'rgba(0,0,0,0.35)' },
   mineHeart: { position: 'absolute', bottom: 5, left: 5 },
   finaleBackdrop: {
     flex: 1, backgroundColor: 'rgba(6,6,10,0.88)',
@@ -609,11 +641,18 @@ const styles = StyleSheet.create({
     borderWidth: 1, borderStyle: 'dashed', borderColor: 'rgba(201,162,75,0.55)',
     backgroundColor: 'rgba(201,162,75,0.07)',
   },
-  finaleSlotFound: { borderStyle: 'solid', borderColor: COLORS.gold, backgroundColor: 'rgba(201,162,75,0.14)' },
+  finaleSlotFound: { borderStyle: 'solid', borderColor: '#FFFFFF', backgroundColor: 'rgba(255,255,255,0.10)' },
   finaleThumb: {
-    width: 42, height: 52, borderRadius: RADIUS.sm, overflow: 'hidden',
-    alignItems: 'center', justifyContent: 'center', backgroundColor: 'rgba(0,0,0,0.25)',
+    width: 84, height: 96, borderRadius: RADIUS.sm, overflow: 'hidden',
+    backgroundColor: 'rgba(0,0,0,0.25)',
+    borderWidth: 1, borderColor: 'rgba(255,255,255,0.55)',
   },
-  finaleSlotTitle: { color: COLORS.gold, fontSize: 14, fontWeight: '800', fontFamily: FONT.serif },
+  finaleThumbEmpty: { alignItems: 'center', justifyContent: 'center' },
+  galleryCardDone: {
+    borderColor: COLORS.gold,
+    backgroundColor: 'rgba(201,162,75,0.10)',
+  },
+  galleryPctDone: { color: COLORS.gold },
+  finaleSlotTitle: { color: '#FFFFFF', fontSize: 14, fontWeight: '800', fontFamily: FONT.serif },
   finaleSlotSub: { color: COLORS.textDim, fontSize: 12, marginTop: 2 },
 });

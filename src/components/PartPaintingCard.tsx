@@ -22,7 +22,7 @@ const ROW_RATIO = 0.58; // painting height / full-row width
 export function PartComposite({
   parts,
   owned,
-  divided = true,
+  divided,
   width,
   revealBlur = false,
 }: {
@@ -37,6 +37,10 @@ export function PartComposite({
   revealBlur?: boolean;
 }) {
   const total = parts.length;
+  // Once every fragment is in hand the work is whole again, so the seams go away
+  // by default. Callers can still force them with `divided`.
+  const allOwned = parts.every((p) => !!owned[p.id]);
+  const showSeams = divided ?? !allOwned;
   return (
     <View style={styles.compositeRow}>
       {parts.map((p, i) => {
@@ -44,7 +48,14 @@ export function PartComposite({
         return (
           <View
             key={p.id}
-            style={[styles.cell, divided && i < total - 1 && styles.cellDivider]}
+            style={[
+              styles.cell,
+              showSeams && i < total - 1 && styles.cellDivider,
+              // Fractional cell widths (e.g. a third of an odd pixel count) leave a
+              // hairline of background showing between slices, which reads as a
+              // stray dark line on an assembled painting. Overlap by a pixel.
+              !showSeams && i < total - 1 && styles.cellBleed,
+            ]}
           >
             <ArtImage
               artwork={p}
@@ -140,6 +151,7 @@ const styles = StyleSheet.create({
   compositeRow: { flexDirection: 'row', flex: 1, borderRadius: 4, overflow: 'hidden' },
   cell: { flex: 1, overflow: 'hidden' },
   cellDivider: { borderRightWidth: 1, borderColor: 'rgba(0,0,0,0.45)' },
+  cellBleed: { marginRight: -1 },
   frame: {
     backgroundColor: COLORS.card,
     borderRadius: RADIUS.sm,

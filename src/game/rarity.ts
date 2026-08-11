@@ -38,8 +38,22 @@ export const RARITY_META: RarityMeta[] = RARITY_ORDER.map((r) => RARITY[r]);
 // distinctive frame instead, so they read as "outside the lottery".
 export const SPECIAL_LABEL = 'Special';
 export const SPECIAL_COLOR = '#5CE1E6';
+/** The 301st piece answers to no rarity: its colour is plain, luminous white. */
+export const FINALE_COLOR = '#FFFFFF';
+export const FINALE_GLOW = 'rgba(255,255,255,0.55)';
 export const SPECIAL_GLOW = 'rgba(92,225,230,0.5)';
 
 export function rarityRank(r: Rarity): number {
   return RARITY_ORDER.indexOf(r);
+}
+
+// The 301st piece isn't part of the rarity lottery, so it has no tier of its
+// own — but wherever pieces are ranked it must sit ABOVE unique, not beside it.
+// The id is inlined here (rather than imported from parts.ts) to keep this
+// module a leaf with no cycles.
+const FINALE = 'final-la-musa';
+
+/** Sort rank including the finale, which outranks every rarity. */
+export function artworkRank(id: string, r: Rarity): number {
+  return id === FINALE ? RARITY_ORDER.length : rarityRank(r);
 }

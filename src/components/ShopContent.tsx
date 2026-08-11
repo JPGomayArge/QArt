@@ -14,8 +14,9 @@ import { prefetchArtwork } from '@/game/prefetch';
 import { ARTWORKS, ARTWORKS_BY_RARITY } from '@/data/artworks';
 import { COLLECTIONS, collectionName } from '@/data/collections';
 import { RARITY } from '@/game/rarity';
-import { BOOSTERS, boosterOdds, COLLECTION_BOOSTER_COST, SKINS, FRAMES, SCAN_UPGRADE_STEP, MAX_SCAN_UPGRADES } from '@/game/shop';
+import { BOOSTERS, boosterOdds, COLLECTION_BOOSTER_COST, SKINS, FRAMES, SCAN_UPGRADE_STEP, MAX_SCAN_UPGRADES, SCAN_UPGRADES_TO_MAX } from '@/game/shop';
 import { FRAME_ASSETS } from '@/data/frameAssets';
+import { FINALE_COLLECTION } from '@/game/parts';
 import { NineSliceFrame } from '@/components/NineSliceFrame';
 import { useLocale } from '@/i18n';
 import { t } from '@/data/ui';
@@ -47,6 +48,8 @@ export function ShopContent() {
     resetCooldowns,
   } = useGame();
   const atScanMax = scanUpgrades >= MAX_SCAN_UPGRADES;
+  // The sixth and last purchase doesn't add +5 — it removes the cap entirely.
+  const isFinalUpgrade = !atScanMax && scanUpgrades >= SCAN_UPGRADES_TO_MAX;
 
   const openReveal = (res: { artwork: { id: string }; isNew: boolean; count: number }) => {
     prefetchArtwork(res.artwork.id); // warm the reveal image so it appears instantly
@@ -95,7 +98,8 @@ export function ShopContent() {
           const color = RARITY[b.rarity].color;
           const odds = Math.round(boosterOdds(b) * 100);
           const affordable = shards >= b.cost;
-          const pool = ARTWORKS_BY_RARITY[b.rarity] ?? [];
+          // The hidden finale is 'unique' too, but it isn't in any crate's pool.
+          const pool = (ARTWORKS_BY_RARITY[b.rarity] ?? []).filter((a) => a.collectionId !== FINALE_COLLECTION);
           const have = pool.filter((a) => owned[a.id]).length;
           const missing = pool.length - have;
           return (
@@ -172,11 +176,15 @@ export function ShopContent() {
             <Gauge size={26} color={COLORS.gold} weight="fill" />
           </View>
           <View style={{ flex: 1 }}>
-            <Text style={styles.rowName}>{t(locale, 'shopc.increaseScans')}</Text>
+            <Text style={styles.rowName}>
+              {isFinalUpgrade ? t(locale, 'shopc.unlimitedScans') : t(locale, 'shopc.increaseScans')}
+            </Text>
             <Text style={styles.rowMeta}>
               {atScanMax
-                ? t(locale, 'shopc.maxedOut', { n: scanLimit })
-                : t(locale, 'shopc.nowPerDay', { n: scanLimit, step: SCAN_UPGRADE_STEP })}
+                ? t(locale, 'shopc.unlimitedOwned')
+                : isFinalUpgrade
+                  ? t(locale, 'shopc.unlimitedBody', { n: scanLimit })
+                  : t(locale, 'shopc.nowPerDay', { n: scanLimit, step: SCAN_UPGRADE_STEP })}
             </Text>
           </View>
           {atScanMax ? (

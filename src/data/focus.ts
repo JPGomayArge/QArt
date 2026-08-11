@@ -23,16 +23,39 @@ export const FOCUS: Record<string, ImageContentPosition> = {
   // --- subject near the top edge ---
   'col-1-adan-y-eva-p1': 'top', // show faces, not torsos
   'col-1-adan-y-eva-p2': 'top',
+  'col-1-la-gioconda-mona-lisa': { left: '50%', top: '16%' }, // her face sits high
+  'col-5-retrato-de-adele-bloch-bauer-i': { left: '50%', top: '12%' }, // the golden lady
+  'col-2-mujeres-de-tahiti-p1': { left: '50%', top: '38%' }, // nudged up a touch
+  'col-2-mujeres-de-tahiti-p2': { left: '50%', top: '38%' },
   'col-3-saturno-devorando-a-su-hijo': 'top', // Saturn's head
   'col-6-a-carioca': 'top',
 
   // --- subject sitting to the right ---
-  'col-3-la-maja-desnuda': 'right', // her head is on the right
-  'col-3-la-maja-vestida': 'right',
+  // The majas read better pulled slightly back from the very edge: 'right' cropped
+  // too hard, so we stop at 82% and keep a little of the body in frame.
+  'col-3-la-maja-desnuda': { left: '82%', top: '50%' },
+  'col-3-la-maja-vestida': { left: '82%', top: '50%' },
   'col-5-la-gitana-dormida': 'right',
 };
 
 /** Crop focus for a piece, defaulting to centre. */
 export function focusFor(id: string): ImageContentPosition {
   return FOCUS[id] ?? 'center';
+}
+
+/**
+ * Vertical half of the focus only. Fragments of a multi-part work are cropped
+ * horizontally by hand (each slice is positioned by its index), so they can only
+ * honour the up/down part — but they DO need it, or a triptych keeps showing
+ * torsos where the faces should be.
+ */
+export function focusTopFor(id: string): ImageContentPosition {
+  const f = FOCUS[id];
+  if (!f) return 'center';
+  if (f === 'top') return { left: '50%', top: '0%' };
+  if (f === 'bottom') return { left: '50%', top: '100%' };
+  if (typeof f === 'object' && 'top' in f && f.top !== undefined) {
+    return { left: '50%', top: f.top as any };
+  }
+  return 'center';
 }
