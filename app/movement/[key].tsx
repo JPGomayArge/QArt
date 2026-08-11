@@ -116,7 +116,8 @@ export default function MovementScreen() {
                       <Pressable
                         key={a.id}
                         style={styles.tile}
-                        onPress={() => router.push(`/artwork/${a.id}`)}
+                        disabled={!done}
+                        onPress={done ? () => router.push(`/artwork/${a.id}`) : undefined}
                       >
                         <View style={[styles.tileFrame, { borderColor: RARITY[a.rarity].color + '66' }]}>
                           <ArtImage artwork={a} hidden={!done} radius={RADIUS.sm} showQrMark={false} />

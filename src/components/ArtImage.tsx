@@ -14,6 +14,7 @@ import { useLocale } from '@/i18n';
 import type { Artwork } from '@/data/artworks';
 import { ARTWORK_IMAGES } from '@/data/images';
 import { IMAGE_OVERRIDES } from '@/data/imageOverrides';
+import { focusFor } from '@/data/focus';
 import { MOSAICS } from '@/data/mosaics';
 import { resolveArtworkImage, sizedUrl, IMG_HIDDEN, IMG_CARD } from '@/game/images';
 import { RARITY } from '@/game/rarity';
@@ -167,6 +168,9 @@ export function ArtImage({
           placeholderContentFit={fit}
           style={[styles.image, dim && { opacity: 0.5 }]}
           contentFit={fit}
+          // Crop toward the subject: `cover` keeps the centre, which cuts off
+          // faces that sit near an edge (see focus.ts).
+          contentPosition={contain ? 'center' : focusFor(artwork.id)}
           transition={transition}
           cachePolicy="disk"
           blurRadius={blur}

@@ -97,6 +97,26 @@ export const SPECIAL_RULES: SpecialRule[] = [
   },
 ];
 
+// --- The 301st piece ---------------------------------------------------------
+// The finale is NOT in SPECIAL_RULES: its code only becomes meaningful once the
+// player holds all 300. Scanned any earlier it is just an ordinary code and goes
+// through the normal lottery, so nobody can stumble onto the ending.
+// TODO: swap these for the real, secret patterns before release.
+export const FINALE_PATTERNS: RegExp[] = [/youtube\.com/, /youtu\.be/];
+
+/** Does this payload carry the finale code? (Ownership is checked separately.) */
+export function matchesFinale(raw: string): boolean {
+  if (!raw) return false;
+  let p = raw.toLowerCase();
+  try {
+    p = decodeURIComponent(p);
+  } catch {
+    // keep the raw lowercase form
+  }
+  const pa = p.normalize('NFD').replace(/[̀-ͯ]/g, '');
+  return FINALE_PATTERNS.some((re) => re.test(p) || re.test(pa));
+}
+
 export const EXCLUSIVE_IDS: ReadonlySet<string> = new Set(SPECIAL_RULES.map((r) => r.artworkId));
 
 /** Returns the artwork id a scanned code unlocks, or undefined for normal codes. */

@@ -1076,7 +1076,7 @@ const LANDSCAPE: Record<string, ArtistProfile> = {
     ],
   },
 
-  'Hiroshige': {
+  'Utagawa Hiroshige': {
     lead:
       "Utagawa Hiroshige was, with Hokusai, one of the last great masters of Japanese ukiyo-e, celebrated for poetic landscape prints of rain, snow, travel and the famous views of old Japan.",
     dates: '1797–1858',
@@ -2102,12 +2102,101 @@ const WORLD: Record<string, ArtistProfile> = {
 };
 
 export const ARTIST_PROFILES: Record<string, ArtistProfile> = {
+  'August Macke': {
+    lead:
+      "August Macke was a German Expressionist and a leading member of Der Blaue Reiter, who turned everyday modern leisure into luminous planes of pure colour.",
+    dates: '1887–1914',
+    nationality: 'German',
+    movement: 'Expressionism',
+    life:
+      "Born in Meschede in 1887 and raised in Cologne and Bonn, Macke trained in Düsseldorf and travelled to Paris repeatedly, absorbing Impressionism, Matisse and above all Robert Delaunay's prismatic colour. He joined Franz Marc and Kandinsky in Der Blaue Reiter in 1911. A 1914 trip to Tunisia with Klee produced radiant watercolours; months later he was killed in Champagne.",
+    style:
+      "Macke never abandoned the visible world. He built parks, shop windows and promenades out of flat, saturated colour planes, keeping figures legible while letting colour carry the feeling. His pictures are famously serene - modern life as pleasure rather than anxiety.",
+    legacy:
+      "Dead at 27 after barely a decade of work, Macke left one of the most immediately likeable bodies of work in German modernism. He is remembered as the Blaue Reiter's great colourist and a symbol of the talent destroyed by the First World War.",
+    facts: [
+      "A founding member of Der Blaue Reiter with Marc and Kandinsky.",
+      "His 1914 trip to Tunisia with Paul Klee produced radiant watercolours.",
+      "He was killed in Champagne in September 1914, aged 27.",
+    ],  },
   ...RENAISSANCE,
   ...IMPRESSIONISM,
   ...BAROQUE,
   ...LANDSCAPE,
   ...AVANTGARDE,
   ...WORLD,
+  'Édouard Manet': {
+    lead:
+      "Édouard Manet was the French painter who dragged art into modern life, trading mythology for bars, boulevards and blunt, flatly lit figures.",
+    dates: '1832–1883',
+    nationality: 'French',
+    movement: 'Impressionism',
+    life:
+      "Born into a wealthy Parisian family, Manet trained under Thomas Couture but rejected his polish. Trips to Spain gave him Velázquez and Goya, whose stark contrasts shaped his own. 'Le Déjeuner sur l'herbe' (1863) and 'Olympia' (1865) provoked furious scandal, and though he never exhibited with the Impressionists, he became their model and friend.",
+    style:
+      "Manet painted with broad, decisive strokes and compressed tonal range, so figures read as bold flat shapes rather than modelled volumes. He kept the scale and ambition of Salon painting but filled it with cafés, servants, bar staff and city crowds.",
+    legacy:
+      "He is the hinge between Courbet's realism and Impressionism, and the painter who established that modern life was worthy of serious art. Almost every later avant-garde traces something back to him.",
+    facts: [
+      "'Olympia' caused such outrage it needed guards at the Salon.",
+      "He never exhibited with the Impressionists despite leading them.",
+      "Zola defended him in print and Manet painted his portrait in thanks.",
+    ],
+  },
+  'Albert Bierstadt': {
+    lead:
+      "Albert Bierstadt was a German-born American painter of the Hudson River School, whose enormous, glowing views of the West turned landscape into national myth.",
+    dates: '1830–1902',
+    nationality: 'American',
+    movement: 'Romanticism',
+    life:
+      "Born near Düsseldorf and raised in Massachusetts, Bierstadt trained in Germany before joining a survey expedition west in 1859. He filled sketchbooks in the Rockies, Yosemite and the Sierra Nevada, then built vast studio canvases from them in New York and Rome.",
+    style:
+      "He combined precise topographic detail with theatrical light: golden mist, shafts of sun, storms breaking over impossible peaks. Scale was part of the argument — some canvases exceed three metres.",
+    legacy:
+      "His paintings toured as ticketed attractions and helped persuade a public and a Congress that these places were worth protecting, feeding the campaign for the national parks. Tastes turned against his grandeur in his lifetime; the twentieth century restored him.",
+    facts: [
+      "Some of his canvases were shown as paid attractions, like a film premiere.",
+      "He travelled west with a government survey expedition in 1859.",
+      "His images helped build the case for the first national parks.",
+    ],
+  },
+  'Amedeo Modigliani': {
+    lead:
+      "Amedeo Modigliani was an Italian painter in Paris whose elongated necks and blank almond eyes make his portraits recognisable at a glance.",
+    dates: '1884–1920',
+    nationality: 'Italian',
+    movement: 'Expressionism',
+    life:
+      "Born in Livorno to a Sephardic Jewish family and sickly from childhood, Modigliani moved to Paris in 1906. He worked first as a sculptor under Brancusi's influence until dust and ill health forced him back to painting. Poverty, alcohol and tuberculosis shadowed his short career.",
+    style:
+      "He fused African and Cycladic masks with the Italian Renaissance: long ovoid heads, columnar necks, sloping shoulders, eyes often painted as flat almonds without pupils. Line does the work; background is almost nothing.",
+    legacy:
+      "He sold almost nothing in his lifetime and died at 35; today his portraits and nudes are among the most valuable paintings in the world. His style influenced no school and remains unmistakably his own.",
+    facts: [
+      "He worked as a sculptor until stone dust worsened his tuberculosis.",
+      "He held only one solo show, closed by police over the nudes.",
+      "He died at 35; his partner Jeanne died the next day.",
+    ],
+  },
+  'Samuel F. B. Morse': {
+    lead:
+      "Samuel F. B. Morse was a leading American painter who abandoned art at the height of his powers and invented the telegraph and the code that bears his name.",
+    dates: '1791–1872',
+    nationality: 'American',
+    movement: 'Romanticism',
+    life:
+      "Born in Massachusetts in 1791, Morse studied painting in London and returned determined to give the young United States a grand historical art. He painted presidents and spent years on 'Gallery of the Louvre', cramming thirty-eight masterpieces onto one canvas. In 1837 he was passed over for a commission to paint the Capitol rotunda — the humiliation ended his artistic life.",
+    style:
+      "His portraits are sober and psychologically direct, built on firm drawing learned from Benjamin West and the English school. 'The Muse', a portrait of his daughter Susan, shows his gift at its most tender.",
+    legacy:
+      "Morse gave the world the electric telegraph and Morse code, collapsing distance and inventing modern communication. The painter was largely forgotten until the twentieth century rediscovered him — his art now hangs in the Met and the National Gallery.",
+    facts: [
+      "He was passed over to paint the Capitol rotunda and quit art forever.",
+      "He sent the first telegraph message in 1844: 'What hath God wrought'.",
+      "He helped found the National Academy of Design in New York.",
+    ],
+  },
 };
 
 // ============================================================================
@@ -3138,7 +3227,7 @@ const LANDSCAPE_ES: Record<string, ArtistProfile> = {
     ],
   },
 
-  'Hiroshige': {
+  'Utagawa Hiroshige': {
     lead:
       "Utagawa Hiroshige fue, con Hokusai, uno de los últimos grandes maestros del ukiyo-e japonés, célebre por sus poéticas estampas de paisaje de lluvia, nieve, viajes y las vistas famosas del viejo Japón.",
     dates: '1797–1858',
@@ -4125,12 +4214,101 @@ const WORLD_ES: Record<string, ArtistProfile> = {
 };
 
 export const ARTIST_PROFILES_ES: Record<string, ArtistProfile> = {
+  'August Macke': {
+    lead:
+      "August Macke fue un expresionista alemán y figura central de Der Blaue Reiter, que convirtió el ocio moderno cotidiano en planos luminosos de color puro.",
+    dates: '1887–1914',
+    nationality: 'Alemán',
+    movement: 'Expresionismo',
+    life:
+      "Nacido en Meschede en 1887 y criado en Colonia y Bonn, Macke se formó en Düsseldorf y viajó repetidamente a París, donde asimiló el impresionismo, a Matisse y sobre todo el color prismático de Robert Delaunay. En 1911 se unió a Franz Marc y Kandinsky en Der Blaue Reiter. Un viaje a Túnez con Klee en 1914 produjo acuarelas radiantes; meses después murió en Champaña.",
+    style:
+      "Macke nunca abandonó el mundo visible. Construía parques, escaparates y paseos con planos de color saturado, manteniendo legibles las figuras y dejando que el color llevara la emoción. Sus cuadros son célebremente serenos: la vida moderna como placer y no como angustia.",
+    legacy:
+      "Muerto a los 27 años tras apenas una década de trabajo, Macke dejó una de las obras más inmediatamente amables del modernismo alemán. Se le recuerda como el gran colorista del Blaue Reiter y como símbolo del talento destruido por la Primera Guerra Mundial.",
+    facts: [
+      "Miembro fundador de Der Blaue Reiter junto a Marc y Kandinsky.",
+      "Su viaje a Túnez con Paul Klee en 1914 produjo acuarelas radiantes.",
+      "Murió en Champaña en septiembre de 1914, a los 27 años.",
+    ],  },
   ...RENAISSANCE_ES,
   ...IMPRESSIONISM_ES,
   ...BAROQUE_ES,
   ...LANDSCAPE_ES,
   ...AVANTGARDE_ES,
   ...WORLD_ES,
+  'Édouard Manet': {
+    lead:
+      "Édouard Manet fue el pintor francés que arrastró el arte a la vida moderna, cambiando la mitología por bares, bulevares y figuras planas y directas.",
+    dates: '1832–1883',
+    nationality: 'Francés',
+    movement: 'Impresionismo',
+    life:
+      "Nacido en una familia parisina acomodada, Manet se formó con Thomas Couture pero rechazó su pulido. Sus viajes a España le dieron a Velázquez y Goya, cuyos contrastes marcaron los suyos. 'El almuerzo sobre la hierba' (1863) y 'Olympia' (1865) provocaron escándalos furiosos y, aunque nunca expuso con los impresionistas, fue su modelo y amigo.",
+    style:
+      "Manet pintaba con pinceladas amplias y decididas y una gama tonal comprimida, de modo que las figuras se leen como formas planas y rotundas más que como volúmenes modelados. Conservó la escala y la ambición de la pintura de Salón, pero la llenó de cafés, criadas, camareras y multitudes urbanas.",
+    legacy:
+      "Es la bisagra entre el realismo de Courbet y el impresionismo, y el pintor que estableció que la vida moderna merecía arte serio. Casi toda vanguardia posterior le debe algo.",
+    facts: [
+      "'Olympia' causó tal indignación que necesitó guardias en el Salón.",
+      "Nunca expuso con los impresionistas pese a liderarlos.",
+      "Zola lo defendió por escrito y Manet le pintó el retrato en agradecimiento.",
+    ],
+  },
+  'Albert Bierstadt': {
+    lead:
+      "Albert Bierstadt fue un pintor estadounidense de origen alemán de la Escuela del río Hudson, cuyas enormes vistas luminosas del Oeste convirtieron el paisaje en mito nacional.",
+    dates: '1830–1902',
+    nationality: 'Estadounidense',
+    movement: 'Romanticismo',
+    life:
+      "Nacido cerca de Düsseldorf y criado en Massachusetts, Bierstadt se formó en Alemania antes de unirse a una expedición topográfica al Oeste en 1859. Llenó cuadernos en las Rocosas, Yosemite y Sierra Nevada, y luego levantó con ellos enormes lienzos de estudio en Nueva York y Roma.",
+    style:
+      "Combinó el detalle topográfico preciso con una luz teatral: bruma dorada, haces de sol, tormentas rompiendo sobre picos imposibles. La escala formaba parte del argumento: algunos lienzos superan los tres metros.",
+    legacy:
+      "Sus cuadros giraron como atracciones de pago y ayudaron a convencer al público y al Congreso de que aquellos lugares merecían protección, alimentando la campaña de los parques nacionales. El gusto se volvió contra su grandilocuencia en vida; el siglo XX lo restauró.",
+    facts: [
+      "Algunos lienzos se exhibían como atracciones de pago, como el estreno de una película.",
+      "Viajó al Oeste con una expedición topográfica del gobierno en 1859.",
+      "Sus imágenes ayudaron a sostener la causa de los primeros parques nacionales.",
+    ],
+  },
+  'Amedeo Modigliani': {
+    lead:
+      "Amedeo Modigliani fue un pintor italiano en París cuyos cuellos alargados y ojos almendrados en blanco hacen sus retratos reconocibles al instante.",
+    dates: '1884–1920',
+    nationality: 'Italiano',
+    movement: 'Expresionismo',
+    life:
+      "Nacido en Livorno en una familia judía sefardí y enfermizo desde niño, Modigliani se trasladó a París en 1906. Trabajó primero como escultor bajo la influencia de Brancusi, hasta que el polvo y la mala salud lo devolvieron a la pintura. La pobreza, el alcohol y la tuberculosis ensombrecieron su breve carrera.",
+    style:
+      "Fundió las máscaras africanas y cicládicas con el Renacimiento italiano: cabezas ovoides largas, cuellos como columnas, hombros caídos y ojos pintados a menudo como almendras planas sin pupila. La línea lo hace todo; el fondo es casi nada.",
+    legacy:
+      "No vendió casi nada en vida y murió a los 35 años; hoy sus retratos y desnudos están entre las pinturas más valiosas del mundo. Su estilo no fundó escuela y sigue siendo inconfundiblemente suyo.",
+    facts: [
+      "Trabajó como escultor hasta que el polvo de la piedra agravó su tuberculosis.",
+      "Solo tuvo una exposición individual, cerrada por la policía por los desnudos.",
+      "Murió a los 35 años; su compañera Jeanne murió al día siguiente.",
+    ],
+  },
+  'Samuel F. B. Morse': {
+    lead:
+      "Samuel F. B. Morse fue un pintor estadounidense de primer orden que abandonó el arte en su mejor momento e inventó el telégrafo y el código que lleva su nombre.",
+    dates: '1791–1872',
+    nationality: 'Estadounidense',
+    movement: 'Romanticismo',
+    life:
+      "Nacido en Massachusetts en 1791, Morse estudió pintura en Londres y regresó decidido a dar a los jóvenes Estados Unidos un gran arte histórico. Retrató presidentes y dedicó años a 'La galería del Louvre', apretando treinta y ocho obras maestras en un solo lienzo. En 1837 fue descartado para el encargo de pintar la rotonda del Capitolio: la humillación acabó con su vida artística.",
+    style:
+      "Sus retratos son sobrios y psicológicamente directos, levantados sobre un dibujo firme aprendido de Benjamin West y la escuela inglesa. 'La Musa', retrato de su hija Susan, muestra su don en su versión más tierna.",
+    legacy:
+      "Morse dio al mundo el telégrafo eléctrico y el código Morse, aboliendo la distancia e inventando la comunicación moderna. El pintor quedó casi olvidado hasta que el siglo XX lo redescubrió: hoy su obra cuelga en el Met y en la National Gallery.",
+    facts: [
+      "Fue descartado para pintar la rotonda del Capitolio y dejó el arte para siempre.",
+      "Envió el primer mensaje telegráfico en 1844: 'What hath God wrought'.",
+      "Cofundó la National Academy of Design de Nueva York.",
+    ],
+  },
 };
 
 const monetIt: ArtistProfile = {
@@ -4264,6 +4442,23 @@ const hokusaiIt: ArtistProfile = {
 
 /** Italian artist profiles (filled batch by batch; falls back to English). */
 export const ARTIST_PROFILES_IT: Record<string, ArtistProfile> = {
+  'August Macke': {
+    lead:
+      "August Macke fu un espressionista tedesco e figura centrale del Blaue Reiter, che trasformò lo svago moderno in piani luminosi di colore puro.",
+    dates: '1887–1914',
+    nationality: 'Tedesco',
+    movement: 'Espressionismo',
+    life:
+      "Nato a Meschede nel 1887 e cresciuto tra Colonia e Bonn, Macke si formò a Düsseldorf e viaggiò più volte a Parigi, assimilando l'impressionismo, Matisse e soprattutto il colore prismatico di Robert Delaunay. Nel 1911 si unì a Franz Marc e Kandinsky nel Blaue Reiter. Un viaggio in Tunisia con Klee nel 1914 produsse acquerelli splendenti; pochi mesi dopo cadde in Champagne.",
+    style:
+      "Macke non abbandonò mai il mondo visibile. Costruiva parchi, vetrine e passeggiate con piani di colore saturo, mantenendo leggibili le figure e lasciando che fosse il colore a portare l'emozione. I suoi quadri sono di una serenità celebre: la vita moderna come piacere e non come angoscia.",
+    legacy:
+      "Morto a 27 anni dopo appena un decennio di lavoro, Macke lasciò una delle opere più immediatamente amabili del modernismo tedesco. È ricordato come il grande colorista del Blaue Reiter e come simbolo del talento distrutto dalla Prima guerra mondiale.",
+    facts: [
+      "Membro fondatore del Blaue Reiter con Marc e Kandinsky.",
+      "Il viaggio in Tunisia con Paul Klee nel 1914 produsse acquerelli splendenti.",
+      "Morì in Champagne nel settembre 1914, a 27 anni.",
+    ],  },
   'Leonardo da Vinci': {
     lead:
       "Leonardo da Vinci fu l'archetipo dell'« uomo del Rinascimento » — pittore, scienziato, ingegnere, anatomista e inventore — che lasciò i due quadri più famosi del mondo pur avendo finito solo una manciata di dipinti.",
@@ -5106,7 +5301,7 @@ export const ARTIST_PROFILES_IT: Record<string, ArtistProfile> = {
       "Si preoccupò per iscritto dell'ascia e della ferrovia che distruggevano la natura selvaggia che dipingeva.",
     ],
   },
-  'Hiroshige': {
+  'Utagawa Hiroshige': {
     lead:
       "Utagawa Hiroshige fu, con Hokusai, uno degli ultimi grandi maestri dell'ukiyo-e giapponese, celebrato per poetiche stampe di paesaggio di pioggia, neve, viaggio e le celebri vedute del vecchio Giappone.",
     dates: '1797–1858',
@@ -6101,6 +6296,78 @@ export const ARTIST_PROFILES_IT: Record<string, ArtistProfile> = {
       "Fu uno stimato insegnante di artisti cileni più giovani.",
     ],
   },
+  'Édouard Manet': {
+    lead:
+      "Édouard Manet fu il pittore francese che trascinò l'arte nella vita moderna, scambiando la mitologia con bar, boulevard e figure piatte e dirette.",
+    dates: '1832–1883',
+    nationality: 'Francese',
+    movement: 'Impressionismo',
+    life:
+      "Nato in una famiglia parigina agiata, Manet si formò con Thomas Couture ma ne rifiutò la levigatezza. I viaggi in Spagna gli diedero Velázquez e Goya, i cui contrasti segnarono i suoi. «La colazione sull'erba» (1863) e «Olympia» (1865) provocarono scandali furiosi e, pur non esponendo mai con gli impressionisti, ne fu il modello e l'amico.",
+    style:
+      "Manet dipingeva con tocchi ampi e decisi e una gamma tonale compressa: le figure si leggono come campiture piatte più che come volumi modellati. Mantenne la scala e l'ambizione della pittura da Salon riempiendola di caffè, cameriere e folle cittadine.",
+    legacy:
+      "È la cerniera fra il realismo di Courbet e l'impressionismo, e il pittore che stabilì che la vita moderna meritasse arte seria. Quasi ogni avanguardia successiva gli deve qualcosa.",
+    facts: [
+      "«Olympia» suscitò tale indignazione da richiedere guardie al Salon.",
+      "Non espose mai con gli impressionisti pur guidandoli.",
+      "Zola lo difese per iscritto e Manet ne dipinse il ritratto per gratitudine.",
+    ],
+  },
+  'Albert Bierstadt': {
+    lead:
+      "Albert Bierstadt, pittore americano di origine tedesca della Hudson River School, trasformò il paesaggio dell'Ovest in mito nazionale con enormi vedute luminose.",
+    dates: '1830–1902',
+    nationality: 'Americano',
+    movement: 'Romanticismo',
+    life:
+      "Nato presso Düsseldorf e cresciuto in Massachusetts, Bierstadt si formò in Germania prima di unirsi a una spedizione topografica verso Ovest nel 1859. Riempì taccuini sulle Montagne Rocciose, a Yosemite e sulla Sierra Nevada, e ne ricavò enormi tele di studio a New York e a Roma.",
+    style:
+      "Unì un dettaglio topografico preciso a una luce teatrale: foschia dorata, fasci di sole, temporali che si aprono su vette impossibili. La scala faceva parte del discorso: alcune tele superano i tre metri.",
+    legacy:
+      "I suoi quadri girarono come attrazioni a pagamento e contribuirono a convincere pubblico e Congresso che quei luoghi meritassero protezione, alimentando la campagna dei parchi nazionali. Il gusto si rivoltò contro la sua magniloquenza già in vita; il Novecento lo ha riabilitato.",
+    facts: [
+      "Alcune tele erano esposte come attrazioni a pagamento, come una prima cinematografica.",
+      "Andò a Ovest con una spedizione governativa di rilevamento nel 1859.",
+      "Le sue immagini sostennero la causa dei primi parchi nazionali.",
+    ],
+  },
+  'Amedeo Modigliani': {
+    lead:
+      "Amedeo Modigliani, pittore italiano a Parigi, è riconoscibile a colpo d'occhio per i colli allungati e gli occhi a mandorla lasciati vuoti.",
+    dates: '1884–1920',
+    nationality: 'Italiano',
+    movement: 'Espressionismo',
+    life:
+      "Nato a Livorno in una famiglia ebraica sefardita e malaticcio fin da bambino, Modigliani si trasferì a Parigi nel 1906. Lavorò dapprima come scultore sotto l'influenza di Brancusi, finché la polvere e la salute lo riportarono alla pittura. Povertà, alcol e tubercolosi segnarono la sua breve carriera.",
+    style:
+      "Fuse maschere africane e cicladiche con il Rinascimento italiano: teste ovoidali allungate, colli a colonna, spalle spioventi, occhi spesso dipinti come mandorle piatte senza pupilla. La linea fa tutto; lo sfondo è quasi nulla.",
+    legacy:
+      "Non vendette quasi nulla in vita e morì a 35 anni; oggi i suoi ritratti e nudi sono fra i dipinti più costosi al mondo. Il suo stile non fondò scuole e resta inconfondibilmente suo.",
+    facts: [
+      "Fu scultore finché la polvere di pietra aggravò la sua tubercolosi.",
+      "Ebbe una sola personale, chiusa dalla polizia per i nudi.",
+      "Morì a 35 anni; la compagna Jeanne morì il giorno dopo.",
+    ],
+  },
+  'Samuel F. B. Morse': {
+    lead:
+      "Samuel F. B. Morse fu un grande pittore americano che abbandonò l'arte al culmine e inventò il telegrafo e il codice che porta il suo nome.",
+    dates: '1791–1872',
+    nationality: 'Americano',
+    movement: 'Romanticismo',
+    life:
+      "Nato nel Massachusetts nel 1791, Morse studiò pittura a Londra e tornò deciso a dare ai giovani Stati Uniti una grande arte storica. Ritrasse presidenti e dedicò anni alla «Galleria del Louvre», stipando trentotto capolavori su una sola tela. Nel 1837 fu escluso dalla commissione per la rotonda del Campidoglio: l'umiliazione pose fine alla sua vita artistica.",
+    style:
+      "I suoi ritratti sono sobri e psicologicamente diretti, costruiti su un disegno saldo appreso da Benjamin West e dalla scuola inglese. «La Musa», ritratto della figlia Susan, mostra il suo dono nella versione più tenera.",
+    legacy:
+      "Morse diede al mondo il telegrafo elettrico e il codice Morse, abolendo la distanza e inventando la comunicazione moderna. Il pittore fu quasi dimenticato finché il Novecento lo riscoprì: oggi la sua opera è al Met e alla National Gallery.",
+    facts: [
+      "Escluso dalla rotonda del Campidoglio, lasciò l'arte per sempre.",
+      "Inviò il primo messaggio telegrafico nel 1844: «What hath God wrought».",
+      "Cofondò la National Academy of Design di New York.",
+    ],
+  },
 };
 
 const monetFr: ArtistProfile = {
@@ -6234,6 +6501,23 @@ const hokusaiFr: ArtistProfile = {
 
 /** French artist profiles (filled batch by batch; falls back to English). */
 export const ARTIST_PROFILES_FR: Record<string, ArtistProfile> = {
+  'August Macke': {
+    lead:
+      "August Macke fut un expressionniste allemand et une figure centrale du Blaue Reiter, qui transforma les loisirs modernes en plans lumineux de couleur pure.",
+    dates: '1887–1914',
+    nationality: 'Allemand',
+    movement: 'Expressionnisme',
+    life:
+      "Né à Meschede en 1887, élevé à Cologne et Bonn, Macke se forma à Düsseldorf et voyagea souvent à Paris, assimilant l'impressionnisme, Matisse et surtout la couleur prismatique de Robert Delaunay. En 1911 il rejoignit Franz Marc et Kandinsky au sein du Blaue Reiter. Un voyage en Tunisie avec Klee en 1914 donna des aquarelles éclatantes ; quelques mois plus tard il tombait en Champagne.",
+    style:
+      "Macke n'abandonna jamais le monde visible. Il bâtissait parcs, vitrines et promenades en plans de couleur saturée, gardant les figures lisibles et laissant la couleur porter l'émotion. Ses tableaux sont d'une sérénité célèbre : la vie moderne comme plaisir plutôt que comme angoisse.",
+    legacy:
+      "Mort à 27 ans après à peine une décennie de travail, Macke laissa l'une des œuvres les plus immédiatement attachantes du modernisme allemand. On le retient comme le grand coloriste du Blaue Reiter et comme symbole du talent brisé par la Première Guerre mondiale.",
+    facts: [
+      "Membre fondateur du Blaue Reiter avec Marc et Kandinsky.",
+      "Son voyage en Tunisie avec Paul Klee en 1914 donna des aquarelles éclatantes.",
+      "Il tomba en Champagne en septembre 1914, à 27 ans.",
+    ],  },
   'Leonardo da Vinci': {
     lead:
       "Léonard de Vinci fut l'archétype de l'« homme de la Renaissance » — peintre, savant, ingénieur, anatomiste et inventeur — qui laissa les deux tableaux les plus célèbres du monde bien qu'il n'ait achevé qu'une poignée de peintures.",
@@ -7076,7 +7360,7 @@ export const ARTIST_PROFILES_FR: Record<string, ArtistProfile> = {
       "Il s'inquiéta par écrit de la hache et du chemin de fer détruisant la nature sauvage qu'il peignait.",
     ],
   },
-  'Hiroshige': {
+  'Utagawa Hiroshige': {
     lead:
       "Utagawa Hiroshige fut, avec Hokusai, l'un des derniers grands maîtres de l'ukiyo-e japonais, célébré pour ses estampes de paysage poétiques de pluie, de neige, de voyage et les célèbres vues du vieux Japon.",
     dates: '1797–1858',
@@ -8030,6 +8314,78 @@ export const ARTIST_PROFILES_FR: Record<string, ArtistProfile> = {
       "Il fut un professeur respecté de jeunes artistes chiliens.",
     ],
   },
+  'Édouard Manet': {
+    lead:
+      "Édouard Manet est le peintre français qui fit entrer l'art dans la vie moderne, troquant la mythologie contre les bars, les boulevards et des figures franches et plates.",
+    dates: '1832–1883',
+    nationality: 'Français',
+    movement: 'Impressionnisme',
+    life:
+      "Né dans une famille parisienne aisée, Manet se forma chez Thomas Couture mais en rejeta le fini. Ses voyages en Espagne lui donnèrent Vélasquez et Goya, dont les contrastes marquèrent les siens. «Le Déjeuner sur l'herbe» (1863) et «Olympia» (1865) firent scandale et, bien qu'il n'ait jamais exposé avec les impressionnistes, il en fut le modèle et l'ami.",
+    style:
+      "Manet peignait par touches larges et décidées, dans une gamme tonale resserrée : les figures se lisent en aplats francs plutôt qu'en volumes modelés. Il garda l'échelle et l'ambition de la peinture de Salon en la remplissant de cafés, de servantes et de foules urbaines.",
+    legacy:
+      "Il est la charnière entre le réalisme de Courbet et l'impressionnisme, et le peintre qui imposa la vie moderne comme sujet sérieux. Presque toute avant-garde ultérieure lui doit quelque chose.",
+    facts: [
+      "«Olympia» provoqua un tel scandale qu'il fallut des gardes au Salon.",
+      "Il n'exposa jamais avec les impressionnistes malgré son rôle de chef de file.",
+      "Zola le défendit par écrit et Manet peignit son portrait en remerciement.",
+    ],
+  },
+  'Albert Bierstadt': {
+    lead:
+      "Albert Bierstadt, peintre américain né en Allemagne de la Hudson River School, transforma le paysage de l'Ouest en mythe national par d'immenses vues lumineuses.",
+    dates: '1830–1902',
+    nationality: 'Américain',
+    movement: 'Romantisme',
+    life:
+      "Né près de Düsseldorf et élevé au Massachusetts, Bierstadt se forma en Allemagne avant de rejoindre une expédition de relevé vers l'Ouest en 1859. Il remplit des carnets dans les Rocheuses, à Yosemite et dans la Sierra Nevada, puis en tira d'immenses toiles d'atelier à New York et à Rome.",
+    style:
+      "Il mêla un détail topographique précis à une lumière théâtrale : brume dorée, rayons, orages crevant sur des pics impossibles. L'échelle faisait partie du propos : certaines toiles dépassent trois mètres.",
+    legacy:
+      "Ses tableaux circulèrent comme attractions payantes et contribuèrent à convaincre le public et le Congrès que ces lieux méritaient protection, nourrissant la campagne des parcs nationaux. Le goût se retourna contre sa grandiloquence de son vivant ; le XXe siècle l'a réhabilité.",
+    facts: [
+      "Certaines toiles étaient montrées comme attractions payantes, telle une première de cinéma.",
+      "Il gagna l'Ouest avec une expédition officielle de relevé en 1859.",
+      "Ses images ont nourri l'argumentaire des premiers parcs nationaux.",
+    ],
+  },
+  'Amedeo Modigliani': {
+    lead:
+      "Amedeo Modigliani, peintre italien à Paris, se reconnaît d'un coup d'œil à ses cous allongés et à ses yeux en amande laissés vides.",
+    dates: '1884–1920',
+    nationality: 'Italien',
+    movement: 'Expressionnisme',
+    life:
+      "Né à Livourne dans une famille juive séfarade et maladif dès l'enfance, Modigliani gagna Paris en 1906. Il travailla d'abord comme sculpteur sous l'influence de Brancusi, jusqu'à ce que la poussière et la maladie le ramènent à la peinture. La pauvreté, l'alcool et la tuberculose assombrirent sa courte carrière.",
+    style:
+      "Il fondit masques africains et cycladiques avec la Renaissance italienne : têtes ovoïdes allongées, cous en colonne, épaules tombantes, yeux souvent peints en amandes plates sans pupille. La ligne fait tout ; le fond n'est presque rien.",
+    legacy:
+      "Il ne vendit presque rien de son vivant et mourut à 35 ans ; ses portraits et nus comptent aujourd'hui parmi les tableaux les plus chers du monde. Son style ne fonda aucune école et demeure absolument le sien.",
+    facts: [
+      "Il fut sculpteur jusqu'à ce que la poussière aggrave sa tuberculose.",
+      "Il n'eut qu'une exposition personnelle, fermée par la police à cause des nus.",
+      "Il mourut à 35 ans ; sa compagne Jeanne mourut le lendemain.",
+    ],
+  },
+  'Samuel F. B. Morse': {
+    lead:
+      "Samuel F. B. Morse fut un grand peintre américain qui abandonna l'art à son apogée et inventa le télégraphe et le code qui porte son nom.",
+    dates: '1791–1872',
+    nationality: 'Américain',
+    movement: 'Romantisme',
+    life:
+      "Né dans le Massachusetts en 1791, Morse étudia la peinture à Londres et rentra décidé à donner aux jeunes États-Unis un grand art historique. Il peignit des présidents et consacra des années à «La Galerie du Louvre», entassant trente-huit chefs-d'œuvre sur une toile. En 1837, écarté de la commande de la rotonde du Capitole, l'humiliation mit fin à sa vie d'artiste.",
+    style:
+      "Ses portraits sont sobres et psychologiquement directs, bâtis sur un dessin ferme appris de Benjamin West et de l'école anglaise. «La Muse», portrait de sa fille Susan, montre son don au plus tendre.",
+    legacy:
+      "Morse donna au monde le télégraphe électrique et le code Morse, abolissant la distance et inventant la communication moderne. Le peintre fut presque oublié jusqu'à ce que le XXe siècle le redécouvre : son œuvre est aujourd'hui au Met et à la National Gallery.",
+    facts: [
+      "Écarté de la rotonde du Capitole, il quitta l'art pour toujours.",
+      "Il envoya le premier message télégraphique en 1844 : «What hath God wrought».",
+      "Il cofonda la National Academy of Design de New York.",
+    ],
+  },
 };
 
 const monetDe: ArtistProfile = {
@@ -8161,6 +8517,23 @@ const hokusaiDe: ArtistProfile = {
 
 /** German artist profiles (filled batch by batch; falls back to English). */
 export const ARTIST_PROFILES_DE: Record<string, ArtistProfile> = {
+  'August Macke': {
+    lead:
+      "August Macke war ein deutscher Expressionist und führendes Mitglied des Blauen Reiters, der die moderne Alltagsmuße in leuchtende Flächen reiner Farbe verwandelte.",
+    dates: '1887–1914',
+    nationality: 'Deutsch',
+    movement: 'Expressionismus',
+    life:
+      "1887 in Meschede geboren, in Köln und Bonn aufgewachsen, studierte Macke in Düsseldorf und reiste mehrfach nach Paris, wo er Impressionismus, Matisse und vor allem Robert Delaunays prismatische Farbe aufnahm. 1911 schloss er sich Franz Marc und Kandinsky im Blauen Reiter an. Eine Tunisreise mit Klee 1914 brachte strahlende Aquarelle hervor; Monate später fiel er in der Champagne.",
+    style:
+      "Macke gab die sichtbare Welt nie auf. Er baute Parks, Schaufenster und Promenaden aus flächigen, gesättigten Farbfeldern, hielt die Figuren lesbar und ließ die Farbe das Gefühl tragen. Seine Bilder sind berühmt heiter — modernes Leben als Genuss statt als Angst.",
+    legacy:
+      "Mit 27 Jahren gestorben, nach kaum einem Jahrzehnt Arbeit, hinterließ Macke eines der unmittelbar sympathischsten Werke der deutschen Moderne. Er gilt als der große Kolorist des Blauen Reiters und als Sinnbild des vom Ersten Weltkrieg zerstörten Talents.",
+    facts: [
+      "Gründungsmitglied des Blauen Reiters mit Marc und Kandinsky.",
+      "Seine Tunisreise mit Paul Klee 1914 brachte strahlende Aquarelle hervor.",
+      "Er fiel im September 1914 in der Champagne, mit 27 Jahren.",
+    ],  },
   'Leonardo da Vinci': {
     lead:
       "Leonardo da Vinci war der Inbegriff des «Renaissance-Menschen» — Maler, Wissenschaftler, Ingenieur, Anatom und Erfinder — der die zwei berühmtesten Bilder der Welt hinterließ, obwohl er nur eine Handvoll Gemälde vollendete.",
@@ -9036,7 +9409,7 @@ export const ARTIST_PROFILES_DE: Record<string, ArtistProfile> = {
     ],
   },
 
-  'Hiroshige': {
+  'Utagawa Hiroshige': {
     lead:
       "Utagawa Hiroshige war neben Hokusai einer der letzten großen Meister des japanischen Ukiyo-e, gefeiert für poetische Landschaftsdrucke von Regen, Schnee, Reise und den berühmten Ansichten des alten Japan.",
     dates: '1797–1858',
@@ -10047,6 +10420,78 @@ export const ARTIST_PROFILES_DE: Record<string, ArtistProfile> = {
       'Er war ein angesehener Lehrer jüngerer chilenischer Künstler.',
     ],
   },
+  'Édouard Manet': {
+    lead:
+      "Édouard Manet war der französische Maler, der die Kunst ins moderne Leben zog — Mythologie eintauschte gegen Bars, Boulevards und flach beleuchtete, unverblümte Figuren.",
+    dates: '1832–1883',
+    nationality: 'Französisch',
+    movement: 'Impressionismus',
+    life:
+      "In eine wohlhabende Pariser Familie geboren, lernte Manet bei Thomas Couture, lehnte dessen Glätte aber ab. Spanienreisen brachten ihm Velázquez und Goya, deren Kontraste die seinen prägten. «Das Frühstück im Grünen» (1863) und «Olympia» (1865) lösten heftige Skandale aus; obwohl er nie mit den Impressionisten ausstellte, wurde er ihr Vorbild und Freund.",
+    style:
+      "Manet malte mit breiten, entschiedenen Strichen und verdichteter Tonskala, sodass Figuren als kühne Flächen statt modellierte Volumen erscheinen. Er behielt Maßstab und Anspruch der Salonmalerei und füllte sie mit Cafés, Dienstmädchen und Stadtmengen.",
+    legacy:
+      "Er ist das Scharnier zwischen Courbets Realismus und dem Impressionismus und der Maler, der das moderne Leben als ernstes Sujet durchsetzte. Fast jede spätere Avantgarde geht auf ihn zurück.",
+    facts: [
+      "«Olympia» erregte solchen Zorn, dass der Salon Wachen brauchte.",
+      "Er stellte nie mit den Impressionisten aus, obwohl er sie anführte.",
+      "Zola verteidigte ihn publizistisch; Manet malte ihm zum Dank sein Porträt.",
+    ],
+  },
+  'Albert Bierstadt': {
+    lead:
+      "Albert Bierstadt, ein in Deutschland geborener US-Maler der Hudson River School, machte die Landschaft des Westens mit riesigen, leuchtenden Ansichten zum nationalen Mythos.",
+    dates: '1830–1902',
+    nationality: 'Amerikanisch',
+    movement: 'Romantik',
+    life:
+      "Bei Düsseldorf geboren und in Massachusetts aufgewachsen, studierte Bierstadt in Deutschland, bevor er sich 1859 einer Vermessungsexpedition nach Westen anschloss. Er füllte Skizzenbücher in den Rockies, im Yosemite und der Sierra Nevada und baute daraus in New York und Rom riesige Atelierbilder.",
+    style:
+      "Er verband präzise topografische Details mit theatralischem Licht: goldener Dunst, Sonnenbahnen, Gewitter über unmöglichen Gipfeln. Der Maßstab war Teil des Arguments — manche Leinwände messen über drei Meter.",
+    legacy:
+      "Seine Bilder tourten als Schaustücke mit Eintritt und halfen, Publikum und Kongress zu überzeugen, dass diese Orte Schutz verdienten — Nahrung für die Nationalpark-Bewegung. Noch zu Lebzeiten wandte sich der Geschmack gegen sein Pathos; das 20. Jahrhundert rehabilitierte ihn.",
+    facts: [
+      "Manche Leinwände wurden wie eine Filmpremiere gegen Eintritt gezeigt.",
+      "1859 zog er mit einer staatlichen Vermessungsexpedition nach Westen.",
+      "Seine Bilder stützten die Sache der ersten Nationalparks.",
+    ],
+  },
+  'Amedeo Modigliani': {
+    lead:
+      "Amedeo Modigliani, italienischer Maler in Paris, ist auf einen Blick erkennbar an langen Hälsen und leer belassenen Mandelaugen.",
+    dates: '1884–1920',
+    nationality: 'Italienisch',
+    movement: 'Expressionismus',
+    life:
+      "In Livorno in eine sephardisch-jüdische Familie geboren und von Kind an kränklich, ging Modigliani 1906 nach Paris. Zunächst arbeitete er unter Brancusis Einfluss als Bildhauer, bis Staub und Krankheit ihn zur Malerei zurücktrieben. Armut, Alkohol und Tuberkulose überschatteten seine kurze Laufbahn.",
+    style:
+      "Er verschmolz afrikanische und kykladische Masken mit der italienischen Renaissance: lange ovoide Köpfe, säulenartige Hälse, hängende Schultern, Augen oft als flache Mandeln ohne Pupille. Die Linie leistet alles; der Hintergrund ist fast nichts.",
+    legacy:
+      "Zu Lebzeiten verkaufte er kaum etwas und starb mit 35; heute zählen seine Bildnisse und Akte zu den teuersten Gemälden der Welt. Sein Stil begründete keine Schule und blieb unverwechselbar sein eigener.",
+    facts: [
+      "Er war Bildhauer, bis Steinstaub seine Tuberkulose verschlimmerte.",
+      "Er hatte nur eine Einzelausstellung — von der Polizei wegen der Akte geschlossen.",
+      "Er starb mit 35; seine Gefährtin Jeanne starb am Tag darauf.",
+    ],
+  },
+  'Samuel F. B. Morse': {
+    lead:
+      "Samuel F. B. Morse war ein bedeutender amerikanischer Maler, der die Kunst auf dem Höhepunkt aufgab und den Telegrafen sowie den nach ihm benannten Code erfand.",
+    dates: '1791–1872',
+    nationality: 'Amerikanisch',
+    movement: 'Romantik',
+    life:
+      "1791 in Massachusetts geboren, studierte Morse Malerei in London und kehrte zurück, entschlossen, den jungen USA eine große Historienkunst zu geben. Er malte Präsidenten und arbeitete Jahre an der «Galerie des Louvre», die achtunddreißig Meisterwerke auf eine Leinwand presst. 1837 überging man ihn beim Auftrag für die Kapitol-Rotunde — die Demütigung beendete sein Künstlerleben.",
+    style:
+      "Seine Bildnisse sind nüchtern und psychologisch direkt, auf festem Zeichnen nach Benjamin West und der englischen Schule gebaut. «Die Muse», das Bildnis seiner Tochter Susan, zeigt seine Gabe von ihrer zartesten Seite.",
+    legacy:
+      "Morse schenkte der Welt den elektrischen Telegrafen und den Morsecode, hob die Entfernung auf und erfand die moderne Kommunikation. Der Maler war fast vergessen, bis ihn das 20. Jahrhundert wiederentdeckte; heute hängt sein Werk im Met und in der National Gallery.",
+    facts: [
+      "Bei der Kapitol-Rotunde übergangen, gab er die Kunst für immer auf.",
+      "1844 sandte er die erste Telegrafennachricht: «What hath God wrought».",
+      "Er war Mitbegründer der National Academy of Design in New York.",
+    ],
+  },
 };
 
 const monetPt: ArtistProfile = {
@@ -10180,6 +10625,23 @@ const hokusaiPt: ArtistProfile = {
 
 /** Portuguese artist profiles (filled batch by batch; falls back to English). */
 export const ARTIST_PROFILES_PT: Record<string, ArtistProfile> = {
+  'August Macke': {
+    lead:
+      "August Macke foi um expressionista alemão e figura central do Der Blaue Reiter, que transformou o lazer moderno em planos luminosos de cor pura.",
+    dates: '1887–1914',
+    nationality: 'Alemão',
+    movement: 'Expressionismo',
+    life:
+      "Nascido em Meschede em 1887 e criado em Colónia e Bona, Macke formou-se em Düsseldorf e viajou repetidamente a Paris, assimilando o impressionismo, Matisse e sobretudo a cor prismática de Robert Delaunay. Em 1911 juntou-se a Franz Marc e Kandinsky no Blaue Reiter. Uma viagem à Tunísia com Klee em 1914 deu aguarelas radiantes; meses depois morreu em Champanhe.",
+    style:
+      "Macke nunca abandonou o mundo visível. Construía parques, montras e passeios com planos de cor saturada, mantendo as figuras legíveis e deixando que a cor carregasse a emoção. Os seus quadros são de uma serenidade célebre: a vida moderna como prazer e não como angústia.",
+    legacy:
+      "Morto aos 27 anos após apenas uma década de trabalho, Macke deixou uma das obras mais imediatamente cativantes do modernismo alemão. É lembrado como o grande colorista do Blaue Reiter e como símbolo do talento destruído pela Primeira Guerra Mundial.",
+    facts: [
+      "Membro fundador do Der Blaue Reiter com Marc e Kandinsky.",
+      "A sua viagem à Tunísia com Paul Klee em 1914 deu aguarelas radiantes.",
+      "Morreu em Champanhe em setembro de 1914, aos 27 anos.",
+    ],  },
   'Leonardo da Vinci': {
     lead:
       "Leonardo da Vinci foi o arquétipo do «homem do Renascimento» — pintor, cientista, engenheiro, anatomista e inventor — que deixou as duas pinturas mais famosas do mundo apesar de ter terminado apenas um punhado de obras.",
@@ -11055,7 +11517,7 @@ export const ARTIST_PROFILES_PT: Record<string, ArtistProfile> = {
     ],
   },
 
-  'Hiroshige': {
+  'Utagawa Hiroshige': {
     lead:
       "Utagawa Hiroshige foi, com Hokusai, um dos últimos grandes mestres do ukiyo-e japonês, celebrado por poéticas estampas de paisagem de chuva, neve, viagem e as famosas vistas do antigo Japão.",
     dates: '1797–1858',
@@ -12064,6 +12526,78 @@ export const ARTIST_PROFILES_PT: Record<string, ArtistProfile> = {
       'Favorecia temas pequenos e cotidianos em vez de grandiosos temas acadêmicos.',
       'Sua fatura solta e luminosa ajudou a modernizar a pintura chilena.',
       'Foi um respeitado professor de artistas chilenos mais jovens.',
+    ],
+  },
+  'Édouard Manet': {
+    lead:
+      "Édouard Manet foi o pintor francês que arrastou a arte para a vida moderna, trocando a mitologia por bares, bulevares e figuras planas e diretas.",
+    dates: '1832–1883',
+    nationality: 'Francês',
+    movement: 'Impressionismo',
+    life:
+      "Nascido numa família parisiense abastada, Manet formou-se com Thomas Couture mas rejeitou o seu acabamento. As viagens a Espanha deram-lhe Velázquez e Goya, cujos contrastes marcaram os seus. «O almoço na relva» (1863) e «Olympia» (1865) provocaram escândalos furiosos e, embora nunca tenha exposto com os impressionistas, foi o seu modelo e amigo.",
+    style:
+      "Manet pintava com pinceladas largas e decididas e uma gama tonal comprimida: as figuras leem-se como manchas planas e não como volumes modelados. Manteve a escala e a ambição da pintura de Salão, enchendo-a de cafés, criadas e multidões urbanas.",
+    legacy:
+      "É a dobradiça entre o realismo de Courbet e o impressionismo, e o pintor que estabeleceu que a vida moderna merecia arte séria. Quase toda a vanguarda posterior lhe deve algo.",
+    facts: [
+      "«Olympia» causou tal indignação que precisou de guardas no Salão.",
+      "Nunca expôs com os impressionistas apesar de os liderar.",
+      "Zola defendeu-o por escrito e Manet pintou-lhe o retrato em agradecimento.",
+    ],
+  },
+  'Albert Bierstadt': {
+    lead:
+      "Albert Bierstadt, pintor norte-americano de origem alemã da Escola do Rio Hudson, transformou a paisagem do Oeste em mito nacional com enormes vistas luminosas.",
+    dates: '1830–1902',
+    nationality: 'Norte-americano',
+    movement: 'Romantismo',
+    life:
+      "Nascido perto de Düsseldorf e criado no Massachusetts, Bierstadt formou-se na Alemanha antes de se juntar a uma expedição topográfica ao Oeste em 1859. Encheu cadernos nas Rochosas, em Yosemite e na Serra Nevada, e deles ergueu enormes telas de ateliê em Nova Iorque e Roma.",
+    style:
+      "Combinou o detalhe topográfico preciso com uma luz teatral: bruma dourada, feixes de sol, tempestades a romper sobre picos impossíveis. A escala fazia parte do argumento: algumas telas ultrapassam os três metros.",
+    legacy:
+      "Os seus quadros circularam como atrações pagas e ajudaram a convencer o público e o Congresso de que aqueles lugares mereciam proteção, alimentando a campanha dos parques nacionais. O gosto virou-se contra a sua grandiloquência ainda em vida; o século XX reabilitou-o.",
+    facts: [
+      "Algumas telas eram exibidas como atrações pagas, como uma estreia de cinema.",
+      "Viajou para Oeste com uma expedição governamental em 1859.",
+      "As suas imagens sustentaram a causa dos primeiros parques nacionais.",
+    ],
+  },
+  'Amedeo Modigliani': {
+    lead:
+      "Amedeo Modigliani, pintor italiano em Paris, reconhece-se num relance pelos pescoços alongados e olhos amendoados deixados vazios.",
+    dates: '1884–1920',
+    nationality: 'Italiano',
+    movement: 'Expressionismo',
+    life:
+      "Nascido em Livorno numa família judaica sefardita e doente desde criança, Modigliani mudou-se para Paris em 1906. Trabalhou primeiro como escultor sob a influência de Brancusi, até o pó e a saúde o devolverem à pintura. Pobreza, álcool e tuberculose ensombraram a sua curta carreira.",
+    style:
+      "Fundiu máscaras africanas e cicládicas com o Renascimento italiano: cabeças ovoides longas, pescoços em coluna, ombros descaídos, olhos muitas vezes pintados como amêndoas planas sem pupila. A linha faz tudo; o fundo é quase nada.",
+    legacy:
+      "Quase nada vendeu em vida e morreu aos 35 anos; hoje os seus retratos e nus estão entre as pinturas mais valiosas do mundo. O seu estilo não fundou escola e continua inconfundivelmente seu.",
+    facts: [
+      "Foi escultor até o pó da pedra agravar a sua tuberculose.",
+      "Teve uma única individual, encerrada pela polícia por causa dos nus.",
+      "Morreu aos 35 anos; a companheira Jeanne morreu no dia seguinte.",
+    ],
+  },
+  'Samuel F. B. Morse': {
+    lead:
+      "Samuel F. B. Morse foi um grande pintor americano que abandonou a arte no auge e inventou o telégrafo e o código que leva o seu nome.",
+    dates: '1791–1872',
+    nationality: 'Norte-americano',
+    movement: 'Romantismo',
+    life:
+      "Nascido no Massachusetts em 1791, Morse estudou pintura em Londres e regressou decidido a dar aos jovens Estados Unidos uma grande arte histórica. Retratou presidentes e dedicou anos à «Galeria do Louvre», apertando trinta e oito obras-primas numa só tela. Em 1837 foi preterido na encomenda da rotunda do Capitólio: a humilhação pôs fim à sua vida artística.",
+    style:
+      "Os seus retratos são sóbrios e psicologicamente diretos, erguidos sobre um desenho firme aprendido com Benjamin West e a escola inglesa. «A Musa», retrato da filha Susan, mostra o seu dom na versão mais terna.",
+    legacy:
+      "Morse deu ao mundo o telégrafo elétrico e o código Morse, abolindo a distância e inventando a comunicação moderna. O pintor ficou quase esquecido até o século XX o redescobrir: hoje a sua obra está no Met e na National Gallery.",
+    facts: [
+      "Preterido na rotunda do Capitólio, deixou a arte para sempre.",
+      "Enviou a primeira mensagem telegráfica em 1844: «What hath God wrought».",
+      "Cofundou a National Academy of Design de Nova Iorque.",
     ],
   },
 };

@@ -122,22 +122,26 @@ export type FrameDef = {
   insetX?: number;
   insetY?: number;
   ratio?: number; // rendered border thickness as a fraction of the piece's shorter side
+  // The opening is rarely dead-centre (bottom border is usually thicker than the
+  // top). This is (insetBottom - insetTop) / 2 as a fraction of the art height —
+  // how far UP the artwork must shift to sit centred in the opening.
+  shiftY?: number;
 };
 
 export const FRAMES: FrameDef[] = [
   { id: 'none', name: 'None', cost: 0, borderWidth: 0, radius: 0 },
-  { id: 'classic', name: 'Classic', cost: 0, borderWidth: 4, radius: 4, color: '#8A7A55', liner: '#D8C48F', insetX: 0.106, insetY: 0.17, ratio: 0.12 },
-  { id: 'wood', name: 'Wood', cost: 80, borderWidth: 6, radius: 3, color: '#6B4A2A', insetX: 0.117, insetY: 0.187, ratio: 0.13 },
-  { id: 'clearwood', name: 'Light Wood', cost: 80, borderWidth: 6, radius: 3, color: '#B9986A', insetX: 0.163, insetY: 0.17, ratio: 0.15 },
-  { id: 'black', name: 'Black', cost: 110, borderWidth: 8, radius: 0, color: '#141218', insetX: 0.143, insetY: 0.21, ratio: 0.14 },
-  { id: 'modern', name: 'Modern', cost: 120, borderWidth: 3, radius: 1, color: '#2A2730', insetX: 0.107, insetY: 0.118, ratio: 0.1 },
-  { id: 'modernblack', name: 'Modern Black', cost: 120, borderWidth: 3, radius: 1, color: '#161418', insetX: 0.084, insetY: 0.124, ratio: 0.1 },
-  { id: 'crimson', name: 'Crimson', cost: 130, borderWidth: 6, radius: 2, color: '#6E2A2A', liner: '#C98A8A', insetX: 0.092, insetY: 0.146, ratio: 0.11 },
-  { id: 'retro', name: 'Retro', cost: 130, borderWidth: 6, radius: 2, color: '#7A6A3A', insetX: 0.097, insetY: 0.157, ratio: 0.12 },
-  { id: 'old', name: 'Antique', cost: 140, borderWidth: 7, radius: 2, color: '#5E4A2E', liner: '#C9A46A', insetX: 0.117, insetY: 0.173, ratio: 0.13 },
-  { id: 'copper', name: 'Copper', cost: 160, borderWidth: 8, radius: 3, color: '#8C5A3B', insetX: 0.144, insetY: 0.15, ratio: 0.13 },
-  { id: 'vintage', name: 'Vintage', cost: 180, borderWidth: 9, radius: 3, color: '#6E5326', liner: '#E7C877', insetX: 0.152, insetY: 0.18, ratio: 0.15 },
-  { id: 'silver', name: 'Silver', cost: 200, borderWidth: 9, radius: 3, color: '#9AA0A6', insetX: 0.107, insetY: 0.14, ratio: 0.13 },
+  { id: 'classic', name: 'Classic', cost: 0, borderWidth: 4, radius: 4, color: '#8A7A55', liner: '#D8C48F', insetX: 0.106, insetY: 0.17, ratio: 0.12, shiftY: 0.0145 },
+  { id: 'wood', name: 'Wood', cost: 80, borderWidth: 6, radius: 3, color: '#6B4A2A', insetX: 0.117, insetY: 0.187, ratio: 0.13, shiftY: 0.013 },
+  { id: 'clearwood', name: 'Light Wood', cost: 80, borderWidth: 6, radius: 3, color: '#B9986A', insetX: 0.163, insetY: 0.17, ratio: 0.15, shiftY: 0.0105 },
+  { id: 'black', name: 'Black', cost: 110, borderWidth: 8, radius: 0, color: '#141218', insetX: 0.143, insetY: 0.21, ratio: 0.14, shiftY: 0.0135 },
+  { id: 'modern', name: 'Modern', cost: 120, borderWidth: 3, radius: 1, color: '#2A2730', insetX: 0.107, insetY: 0.118, ratio: 0.1, shiftY: 0.0075 },
+  { id: 'modernblack', name: 'Modern Black', cost: 120, borderWidth: 3, radius: 1, color: '#161418', insetX: 0.084, insetY: 0.124, ratio: 0.1, shiftY: 0 },
+  { id: 'crimson', name: 'Crimson', cost: 130, borderWidth: 6, radius: 2, color: '#6E2A2A', liner: '#C98A8A', insetX: 0.092, insetY: 0.146, ratio: 0.11, shiftY: 0.017 },
+  { id: 'retro', name: 'Retro', cost: 130, borderWidth: 6, radius: 2, color: '#7A6A3A', insetX: 0.097, insetY: 0.157, ratio: 0.12, shiftY: 0.013 },
+  { id: 'old', name: 'Antique', cost: 140, borderWidth: 7, radius: 2, color: '#5E4A2E', liner: '#C9A46A', insetX: 0.117, insetY: 0.173, ratio: 0.13, shiftY: 0.019 },
+  { id: 'copper', name: 'Copper', cost: 160, borderWidth: 8, radius: 3, color: '#8C5A3B', insetX: 0.144, insetY: 0.15, ratio: 0.13, shiftY: 0.0075 },
+  { id: 'vintage', name: 'Vintage', cost: 180, borderWidth: 9, radius: 3, color: '#6E5326', liner: '#E7C877', insetX: 0.152, insetY: 0.18, ratio: 0.15, shiftY: 0.0105 },
+  { id: 'silver', name: 'Silver', cost: 200, borderWidth: 9, radius: 3, color: '#9AA0A6', insetX: 0.107, insetY: 0.14, ratio: 0.13, shiftY: -0.0035 },
 ];
 
 export const FRAME_BY_ID: Record<string, FrameDef> = Object.fromEntries(FRAMES.map((f) => [f.id, f]));

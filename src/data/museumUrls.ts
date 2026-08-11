@@ -135,6 +135,7 @@ export const MUSEUM_URLS: Record<string, string> = {
   'Museo Nacional de Kioto': 'https://www.kyohaku.go.jp',
   'Nezu Art Museum': 'https://www.nezu-muse.or.jp',
   'MOA': 'https://www.moaart.or.jp',
+  'Smithsonian American Art Museum': 'https://americanart.si.edu',
 };
 
 /**

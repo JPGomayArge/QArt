@@ -24,6 +24,21 @@ async function prefetchAll(urls: string[], chunk: number, pauseMs: number) {
   }
 }
 
+/**
+ * Warm the pieces hanging in My Room at the exact size the wall renders them.
+ * Without this, opening the room kicks off ten fresh downloads and the walls
+ * come up blank; with it they're already on disk. Runs first and fast (at most
+ * ROOM_MAX pieces), before the broader collection warm-up.
+ */
+export async function warmRoom(roomIds: string[]) {
+  const urls: string[] = [];
+  for (const id of roomIds) {
+    const url = ARTWORK_IMAGES[id];
+    if (url) urls.push(sizedUrl(url, IMG_DETAIL));
+  }
+  await prefetchAll(urls, 3, 120);
+}
+
 export async function warmImageCache(ownedIds: string[]) {
   if (warmed) return;
   warmed = true;

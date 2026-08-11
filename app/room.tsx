@@ -18,6 +18,7 @@ import {
 import Svg, { Defs, RadialGradient, Rect, Stop } from 'react-native-svg';
 import React, { useEffect, useMemo, useRef, useState } from 'react';
 import {
+  ActivityIndicator,
   Animated,
   Easing,
   FlatList,
@@ -157,13 +158,38 @@ export default function RoomScreen() {
   ).current;
 
   const skin = SKIN_BY_ID[activeSkin] ?? SKIN_BY_ID[DEFAULT_SKIN];
+  // Warm the active room's backdrops so the wall is decoded and ready before the
+  // first wall scrolls in (and immediately after a skin change).
+  useEffect(() => {
+    const srcs = [skin.bg, skin.bgHero].filter(Boolean);
+    for (const s of srcs) {
+      const r = RNImage.resolveAssetSource(s as any);
+      if (r?.uri) ExpoImage.prefetch(r.uri, { cachePolicy: 'memory-disk' }).catch(() => {});
+    }
+  }, [skin.bg, skin.bgHero]);
   const frameFor = (id: string) => FRAME_BY_ID[roomFrames[id]] ?? FRAME_BY_ID[activeFrame] ?? FRAME_BY_ID[DEFAULT_FRAME];
 
   const favs = useMemo(
     () => Object.keys(favorites).map((id) => ARTWORK_BY_ID[id]).filter(Boolean) as Artwork[],
     [favorites]
   );
-  const pieces = useMemo(() => room.map((id) => ARTWORK_BY_ID[id]).filter(Boolean) as Artwork[], [room]);
+  // A multi-part work (folding screen, triptych) hangs ONCE: its fragments share
+  // one image, so keeping both would show the same painting twice.
+  const pieces = useMemo(() => {
+    const seen = new Set<string>();
+    const out: Artwork[] = [];
+    for (const id of room) {
+      const a = ARTWORK_BY_ID[id];
+      if (!a) continue;
+      if (a.partGroup) {
+        if (seen.has(a.partGroup)) continue;
+        seen.add(a.partGroup);
+      }
+      out.push(a);
+    }
+    return out;
+  }, [room]);
+
   // Largest real dimension (cm) among the hung pieces — the reference for
   // real-scale display. Pieces without a known size (e.g. Camera degli Sposi)
   // are treated as the largest.
@@ -223,6 +249,22 @@ export default function RoomScreen() {
     if (loop) listRef.current?.scrollToIndex({ index: N + idx + d, animated: true });
     else go(Math.max(0, Math.min(N - 1, idx + d)));
   };
+
+  // Warm the hung pieces at the size the wall renders them, so scrolling the
+  // exhibition doesn't wait on a download for each wall.
+  useEffect(() => {
+    let alive = true;
+    (async () => {
+      for (const a of pieces) {
+        if (!alive) return;
+        const u = await resolveArtworkImage(a);
+        if (u) ExpoImage.prefetch(sizedUrl(u, IMG_DETAIL), { cachePolicy: 'memory-disk' }).catch(() => {});
+      }
+    })();
+    return () => {
+      alive = false;
+    };
+  }, [pieces]);
 
   useEffect(() => {
     let alive = true;
@@ -479,6 +521,23 @@ export default function RoomScreen() {
     );
   }
 
+  // A brief curtain while the first wall's backdrop and painting decode, so the
+  // room never opens on a half-drawn frame. Cleared as soon as the hero piece's
+  // aspect is known (that resolve is the last thing the first wall waits on).
+  if (hero && !ASPECTS[hero.id]) {
+    return (
+      <View style={[styles.container, { backgroundColor: skin.wall }]}>
+        {skin.bg && <ExpoImage source={skin.bg} style={StyleSheet.absoluteFill} contentFit="cover" transition={0} priority="high" />}
+        <View style={[StyleSheet.absoluteFill, { backgroundColor: 'rgba(8,8,12,0.55)' }]} />
+        {topBar}
+        <View style={styles.empty}>
+          <ActivityIndicator color={skin.frame} />
+          <Text style={[styles.emptyText, { color: LIGHT, fontSize: 14 }]}>{t(locale, 'room.preparing')}</Text>
+        </View>
+      </View>
+    );
+  }
+
   // ---- The room: swipe along your exhibition, each piece on its own wall ---
   const cap = skin.wallH ?? 0.42;
   const centerY = Hs * (skin.wallY ?? 0.36);
@@ -516,7 +575,12 @@ export default function RoomScreen() {
           const f = frameFor(item.id);
           const main = item.id === roomHero;
           const scaleUp = main ? 1.06 : 1; // the main exhibit gets a touch more wall
-          const a = ASPECTS[item.id] || 1.25;
+          // Aspect: measured from the image when available, else derived from the
+          // real dimensions. A multi-part work hangs as the assembled whole, so
+          // its width is the panel width times the number of panels.
+          const dim = DIMENSIONS[item.id];
+          const dimAspect = dim ? (dim[1] * (item.partTotal ?? 1)) / dim[0] : 0;
+          const a = ASPECTS[item.id] || dimAspect || 1.25;
           let pw = W * 0.72 * scaleUp,
             ph = pw / a;
           const mh = Hs * cap * scaleUp;
@@ -575,7 +639,19 @@ export default function RoomScreen() {
           const liteRx = Math.min(52, (oW / W) * 58);
           return (
             <View style={{ width: W, height: '100%' }}>
-              {bg && <ExpoImage source={bg} style={StyleSheet.absoluteFill} contentFit="cover" />}
+              {bg && (
+                // No fade + high priority + memory cache: the wall should be
+                // there the instant you open the room, not blend in.
+                <ExpoImage
+                  source={bg}
+                  style={StyleSheet.absoluteFill}
+                  contentFit="cover"
+                  transition={0}
+                  priority="high"
+                  cachePolicy="memory-disk"
+                  recyclingKey={`${activeSkin}:${main ? 'hero' : 'wall'}`}
+                />
+              )}
               {/* Picture light: warm glow centered above the hung piece */}
               <Svg style={StyleSheet.absoluteFill} pointerEvents="none">
                 <Defs>
@@ -626,6 +702,8 @@ export default function RoomScreen() {
                 {frameArt ? (
                   <View style={{ shadowColor: '#000', shadowOpacity: 0.55, shadowRadius: 18, shadowOffset: { width: 0, height: 14 } }}>
                     <NineSliceFrame source={frameArt} insetX={f.insetX ?? 0.2} insetY={f.insetY ?? 0.2} border={b9} width={pw} height={ph} radius={2}>
+                      {/* Multi-part works (screens/triptychs) are very wide — show
+                          them whole rather than cropped to the frame box. */}
                       <ArtImage artwork={item} radius={2} showQrMark={false} width={IMG_DETAIL} />
                     </NineSliceFrame>
                   </View>
@@ -646,7 +724,9 @@ export default function RoomScreen() {
                     <View style={{ width: pw, height: ph, borderRadius: bare ? 1 : 2, overflow: 'hidden', backgroundColor: COLORS.mat, borderWidth: !bare && f.liner ? 2 : 0, borderColor: f.liner ?? 'transparent' }}>
                       {/* cover (not contain): the box is already the painting's aspect, so
                           it shows the whole piece — and cover never letterboxes, so no
-                          black bars even while the exact aspect is still resolving. */}
+                          black bars even while the exact aspect is still resolving.
+                          Multi-part works are the exception: they're far wider than the
+                          default box, so show them whole. */}
                       <ArtImage artwork={item} radius={2} showQrMark={false} width={IMG_DETAIL} />
                     </View>
                   </View>

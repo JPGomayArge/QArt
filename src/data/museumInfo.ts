@@ -23,6 +23,25 @@ export type MuseumInfo = {
 };
 
 export const MUSEUM_INFO: Record<string, MuseumInfo> = {
+  "Ca' Pesaro": {
+    lead:
+      "Venice's international gallery of modern art, housed in a Baroque palace on the Grand Canal.",
+    city: "Venice, Italy",
+    founded: '1902',
+    highlights: [
+      "Works bought from the Venice Biennale",
+      "Klimt's 'Judith II'",
+      "Sorolla, Chagall, Kandinsky, Moore",
+      "A Baroque palace by Longhena",
+    ],
+    about:
+      "Ca' Pesaro is a monumental 17th-century palace designed by Baldassare Longhena, given to the city in 1898 by Duchess Felicita Bevilacqua La Masa on condition that it house modern art.\n\nIts collection grew largely from purchases at the Venice Biennale, so it reads as a record of what the art world valued year by year — Italian painting alongside Klimt, Sorolla, Chagall, Kandinsky and Moore. The upper floor holds a museum of Oriental art.",
+    facts: [
+      "It was given to the city on condition it show modern art.",
+      "Much of the collection was bought at the Venice Biennale.",
+      "The palace was designed by Baldassare Longhena.",
+    ],
+  },
   'Museo del Prado': {
     lead:
       "Spain's national art museum in Madrid, and one of the greatest picture galleries in the world.",
@@ -753,6 +772,25 @@ export const MUSEUM_INFO: Record<string, MuseumInfo> = {
 };
 
 export const MUSEUM_INFO_ES: Record<string, MuseumInfo> = {
+  "Ca' Pesaro": {
+    lead:
+      "La galería internacional de arte moderno de Venecia, en un palacio barroco del Gran Canal.",
+    city: "Venecia, Italia",
+    founded: '1902',
+    highlights: [
+      "Obras compradas en la Bienal de Venecia",
+      "'Judith II' de Klimt",
+      "Sorolla, Chagall, Kandinsky, Moore",
+      "Un palacio barroco de Longhena",
+    ],
+    about:
+      "Ca' Pesaro es un monumental palacio del siglo XVII diseñado por Baldassare Longhena, cedido a la ciudad en 1898 por la duquesa Felicita Bevilacqua La Masa con la condición de que albergara arte moderno.\n\nSu colección creció sobre todo con adquisiciones en la Bienal de Venecia, así que se lee como un registro de lo que el mundo del arte valoró año tras año: pintura italiana junto a Klimt, Sorolla, Chagall, Kandinsky y Moore. La planta alta acoge un museo de arte oriental.",
+    facts: [
+      "Se cedió a la ciudad con la condición de exhibir arte moderno.",
+      "Buena parte de la colección se compró en la Bienal de Venecia.",
+      "El palacio fue diseñado por Baldassare Longhena.",
+    ],
+  },
   'Museo del Prado': {
     lead:
       "El museo de arte nacional de España, en Madrid, y una de las mayores pinacotecas del mundo.",
@@ -1484,6 +1522,25 @@ export const MUSEUM_INFO_ES: Record<string, MuseumInfo> = {
 
 /** French museum profiles (falls back to English). */
 export const MUSEUM_INFO_FR: Record<string, MuseumInfo> = {
+  "Ca' Pesaro": {
+    lead:
+      "La galerie internationale d'art moderne de Venise, dans un palais baroque du Grand Canal.",
+    city: "Venise, Italie",
+    founded: '1902',
+    highlights: [
+      "Œuvres achetées à la Biennale de Venise",
+      "«Judith II» de Klimt",
+      "Sorolla, Chagall, Kandinsky, Moore",
+      "Un palais baroque de Longhena",
+    ],
+    about:
+      "Ca' Pesaro est un monumental palais du XVIIe siècle conçu par Baldassare Longhena, cédé à la ville en 1898 par la duchesse Felicita Bevilacqua La Masa à condition qu'il abrite l'art moderne.\n\nSa collection s'est constituée surtout par des achats à la Biennale de Venise : elle se lit comme un relevé de ce que le monde de l'art a valorisé année après année — peinture italienne aux côtés de Klimt, Sorolla, Chagall, Kandinsky et Moore. L'étage supérieur abrite un musée d'art oriental.",
+    facts: [
+      "Il fut cédé à la ville à condition d'exposer l'art moderne.",
+      "Une grande part de la collection vient de la Biennale de Venise.",
+      "Le palais fut conçu par Baldassare Longhena.",
+    ],
+  },
   'Museo del Prado': {
     lead:
       "Le musée national d'art de l'Espagne, à Madrid, et l'une des plus grandes pinacothèques du monde.",
@@ -2215,6 +2272,25 @@ export const MUSEUM_INFO_FR: Record<string, MuseumInfo> = {
 
 /** Italian museum profiles (falls back to English). */
 export const MUSEUM_INFO_IT: Record<string, MuseumInfo> = {
+  "Ca' Pesaro": {
+    lead:
+      "La galleria internazionale d'arte moderna di Venezia, in un palazzo barocco sul Canal Grande.",
+    city: "Venezia, Italia",
+    founded: '1902',
+    highlights: [
+      "Opere acquistate alla Biennale di Venezia",
+      "«Giuditta II» di Klimt",
+      "Sorolla, Chagall, Kandinsky, Moore",
+      "Un palazzo barocco del Longhena",
+    ],
+    about:
+      "Ca' Pesaro è un monumentale palazzo seicentesco progettato da Baldassare Longhena, donato alla città nel 1898 dalla duchessa Felicita Bevilacqua La Masa a condizione che ospitasse arte moderna.\n\nLa collezione è cresciuta soprattutto con acquisti alla Biennale di Venezia, e si legge come un registro di ciò che il mondo dell'arte apprezzò anno dopo anno: pittura italiana accanto a Klimt, Sorolla, Chagall, Kandinsky e Moore. Il piano superiore ospita un museo d'arte orientale.",
+    facts: [
+      "Fu donato alla città a condizione che esponesse arte moderna.",
+      "Gran parte della collezione fu acquistata alla Biennale.",
+      "Il palazzo fu progettato da Baldassare Longhena.",
+    ],
+  },
   'Museo del Prado': {
     lead:
       "Il museo d'arte nazionale della Spagna, a Madrid, e una delle più grandi pinacoteche del mondo.",
@@ -2946,6 +3022,25 @@ export const MUSEUM_INFO_IT: Record<string, MuseumInfo> = {
 
 /** German museum profiles (filled batch by batch; falls back to English). */
 export const MUSEUM_INFO_DE: Record<string, MuseumInfo> = {
+  "Ca' Pesaro": {
+    lead:
+      "Venedigs internationale Galerie für moderne Kunst in einem Barockpalast am Canal Grande.",
+    city: "Venedig, Italien",
+    founded: '1902',
+    highlights: [
+      "Auf der Biennale erworbene Werke",
+      "Klimts «Judith II»",
+      "Sorolla, Chagall, Kandinsky, Moore",
+      "Ein Barockpalast von Longhena",
+    ],
+    about:
+      "Ca' Pesaro ist ein monumentaler Palast des 17. Jahrhunderts von Baldassare Longhena, den Herzogin Felicita Bevilacqua La Masa der Stadt 1898 unter der Bedingung überließ, dort moderne Kunst zu zeigen.\n\nDie Sammlung wuchs vor allem durch Ankäufe auf der Biennale von Venedig und liest sich wie ein Protokoll dessen, was die Kunstwelt Jahr für Jahr schätzte — italienische Malerei neben Klimt, Sorolla, Chagall, Kandinsky und Moore. Im Obergeschoss liegt ein Museum für orientalische Kunst.",
+    facts: [
+      "Der Palast wurde der Stadt für moderne Kunst überlassen.",
+      "Vieles wurde auf der Biennale von Venedig gekauft.",
+      "Entworfen wurde er von Baldassare Longhena.",
+    ],
+  },
   'Museo del Prado': {
     lead:
       "Spaniens nationales Kunstmuseum in Madrid und eine der größten Gemäldegalerien der Welt.",
@@ -3677,6 +3772,25 @@ export const MUSEUM_INFO_DE: Record<string, MuseumInfo> = {
 
 /** Portuguese museum profiles (filled batch by batch; falls back to English). */
 export const MUSEUM_INFO_PT: Record<string, MuseumInfo> = {
+  "Ca' Pesaro": {
+    lead:
+      "A galeria internacional de arte moderna de Veneza, num palácio barroco do Grande Canal.",
+    city: "Veneza, Itália",
+    founded: '1902',
+    highlights: [
+      "Obras compradas na Bienal de Veneza",
+      "«Judite II» de Klimt",
+      "Sorolla, Chagall, Kandinsky, Moore",
+      "Um palácio barroco de Longhena",
+    ],
+    about:
+      "Ca' Pesaro é um monumental palácio do século XVII projetado por Baldassare Longhena, cedido à cidade em 1898 pela duquesa Felicita Bevilacqua La Masa com a condição de albergar arte moderna.\n\nA coleção cresceu sobretudo com aquisições na Bienal de Veneza, pelo que se lê como um registo do que o mundo da arte valorizou ano após ano — pintura italiana ao lado de Klimt, Sorolla, Chagall, Kandinsky e Moore. O piso superior acolhe um museu de arte oriental.",
+    facts: [
+      "Foi cedido à cidade com a condição de expor arte moderna.",
+      "Boa parte da coleção foi comprada na Bienal de Veneza.",
+      "O palácio foi projetado por Baldassare Longhena.",
+    ],
+  },
   'Museo del Prado': {
     lead:
       "O museu nacional de arte da Espanha, em Madri, e uma das maiores galerias de pintura do mundo.",

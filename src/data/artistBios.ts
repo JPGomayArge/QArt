@@ -135,7 +135,7 @@ export const ARTIST_BIOS: Record<string, string> = {
   'Turner': turner,
   'Hokusai': hokusai,
   'Katsushika Hokusai': hokusai,
-  'Hiroshige':
+  'Utagawa Hiroshige':
     "Utagawa Hiroshige (1797–1858) was, with Hokusai, one of the last great masters of Japanese ukiyo-e. He specialized in poetic landscape prints, above all his series of the highway stations of the Tōkaidō and 'One Hundred Famous Views of Edo.' His atmospheric scenes of rain, snow and travel were widely copied in the West — Van Gogh painted oil versions of them.",
   'Jean-François Millet':
     "Jean-François Millet (1814–1875) was a French Realist and a founder of the Barbizon school who devoted his art to peasants and rural labour. Works like 'The Gleaners' and 'The Angelus' gave the rural poor a monumental dignity that unsettled bourgeois viewers. His images of humble toil deeply influenced Van Gogh.",
@@ -171,6 +171,8 @@ export const ARTIST_BIOS: Record<string, string> = {
     "Henri Rousseau (1844–1910) was a French self-taught 'naïve' painter who worked as a customs officer (earning the nickname 'Le Douanier'). Never having left France, he conjured lush, dreamlike jungles from botanical gardens and imagination, as in 'The Dream.' Mocked in his day, his flat, poetic strangeness enchanted the avant-garde and the Surrealists.",
   'Egon Schiele':
     "Egon Schiele (1890–1918) was an Austrian Expressionist and protégé of Klimt, known for his raw, unsettling and intensely erotic figures. His gaunt, twisting bodies and jagged line probe desire, anxiety and mortality with startling honesty. He died at just 28 in the 1918 flu pandemic, days after his pregnant wife.",
+  'August Macke':
+    "August Macke (1887-1914) was a German Expressionist and a leading member of Der Blaue Reiter alongside Franz Marc and Paul Klee. He painted ordinary modern leisure - strollers in parks, women at shop windows - in luminous planes of pure colour learned from Delaunay. He was killed in the opening weeks of the First World War, aged 27.",
 
   // --- Japan ---
   'Tawaraya Sōtatsu':
@@ -253,4 +255,12 @@ export const ARTIST_BIOS: Record<string, string> = {
     "Johann Moritz Rugendas (1802–1858) was a widely travelled German painter who spent years in Chile and across Latin America in the 1830s–40s. His countless studies of the region's people, landscapes and customs are invaluable, affectionate documents of 19th-century Latin American life.",
   'Juan Francisco González':
     "Juan Francisco González (1853–1933) was a key modernizer of Chilean painting around 1900. He loosened rigid academic technique toward a free, luminous, almost Impressionist handling, and his unpretentious scenes of towns, gardens and everyday life broke new ground for Chilean art.",
+  'Édouard Manet':
+    "Édouard Manet (1832-1883) was a French painter whose blunt, flatly lit scenes of modern Paris broke with academic tradition and set the stage for Impressionism. Scandals over 'Olympia' and 'Le Déjeuner sur l'herbe' made him the reluctant leader of a new generation.",
+  'Albert Bierstadt':
+    "Albert Bierstadt (1830-1902) was a German-born American painter of the Hudson River School, famous for vast, luminous canvases of the American West that were exhibited as paid spectacles and shaped how the nation pictured its frontier.",
+  'Amedeo Modigliani':
+    "Amedeo Modigliani (1884-1920) was an Italian painter and sculptor working in Paris, instantly recognisable for elongated necks, tilted mask-like faces and almond eyes often left blank. He died at 35 after years of illness and poverty.",
+  'Samuel F. B. Morse':
+    "Samuel F. B. Morse (1791-1872) was a leading American painter who studied in London and Paris, then abandoned art after being passed over for a major commission. He devoted the rest of his life to the electric telegraph and to Morse code, the system of dots and dashes that carries his name.",
 };

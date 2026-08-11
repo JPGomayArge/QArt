@@ -555,13 +555,6 @@ export const ABOUT_TEXT: Record<string, AboutText> = {
       "Van Gogh painted his famous sunflower still lifes in Arles in 1888 to decorate the Yellow House for the arrival of his friend Paul Gauguin, whose bedroom he wanted to fill with pictures of nothing but great blazing blossoms. For Van Gogh the flowers and their radiant yellows were a private language of gratitude, friendship and the warmth of the south.\n\nHe pushed himself technically, working in what he called 'yellow on yellow' — flowers, vase, table and background all in shades of gold — a daring near-monochrome that few painters had dared. He was proud enough of the results to sign the vase, something he rarely did.\n\nGauguin admired them and later asked for one; Van Gogh instead painted repetitions to keep. Today the surviving versions hang in London, Munich, Amsterdam, Tokyo and Philadelphia, ranking among the most recognizable and beloved images in all of art.",
   },
 
-  'col-2-terraza-de-cafe-por-la-noche': {
-    description:
-      "A café terrace glows warm yellow under its awning on a cobbled square, set against a deep blue night sky scattered with oversized stars — all painted without a single black.",
-    history:
-      "Van Gogh painted this Arles café at night in September 1888, thrilled by the challenge of capturing darkness using only colour — the clash of the gaslit yellow terrace against a star-filled blue sky, without resorting to black at all. He wrote to his sister that the night was richer and more alive with colour than the day.\n\nHe painted it outdoors after dark, working by the light of the café itself, part of a burst of night scenes that autumn as he tested how far pure colour could carry mood and atmosphere. The cobbles, the awning and the deep sky are all charged with an almost supernatural glow.\n\nThe picture was a crucial step toward the swirling skies of the following year's 'Starry Night,' and some viewers have read the lit table with a central figure and cross-shaped window behind as a quiet echo of a Last Supper. It hangs in the Kröller-Müller Museum in the Netherlands.",
-  },
-
   'col-2-mujer-con-sombrilla': {
     description:
       "A woman with a green parasol stands on a windswept grassy rise, seen from below against a bright, cloud-scattered sky, her veil and dress blown sideways as a child looks on behind.",
@@ -644,20 +637,6 @@ export const ABOUT_TEXT: Record<string, AboutText> = {
       "Under a deep blue night, the gas lamps of Arles blaze along the far bank of the Rhône and trail in long reflections across the water, the Big Dipper glittering overhead, a couple strolling in the foreground.",
     history:
       "Van Gogh painted this riverside night scene in Arles in September 1888, roughly nine months before the more famous, more turbulent 'Starry Night' he made at the asylum in Saint-Rémy. Here the sky is calm and jewelled rather than swirling, and painted from direct observation on the bank of the Rhône.\n\nHe was thrilled by the challenge of the night, working outdoors under gaslight and, he joked, sometimes with candles fixed to his hat. He carefully rendered the Big Dipper overhead and the long reflections of the town's gas lamps trailing across the water, adding two lovers strolling arm in arm at the lower edge.\n\nWriting to his brother Theo, he confessed he had 'a terrible need of — shall I say the word — religion,' and went out to paint the stars. Shown at the Salon des Indépendants in 1889, it now hangs in the Musée d'Orsay in Paris.",
-  },
-
-  'col-2-el-puente-japones': {
-    description:
-      "A green wooden footbridge arches over the lily pond at Giverny, half-swallowed by hanging willows and dense foliage that fill the canvas in a tapestry of greens.",
-    history:
-      "Monet built an arched, Japanese-style footbridge over the water-lily pond in his garden at Giverny in the 1890s, inspired by the Japanese prints he collected and hung throughout his house. He painted it many times, treating the bridge, willows and floating lilies as a single green tapestry.\n\nThe early versions are serene and clearly drawn; the later ones, made after 1918 as cataracts clouded and yellowed his vision, grow violently coloured and near-abstract, the bridge almost swallowed by furious reds and tangled strokes. These late canvases astonished mid-century abstract painters who saw a forerunner in them.\n\nMonet spent decades and a small fortune designing and tending the garden expressly as a subject to paint, blurring the line between gardener and artist. The bridge series is now spread across museums worldwide, including the Musée d'Orsay and the National Gallery of Art in Washington.",
-  },
-
-  'col-2-jardin-del-artista-en-giverny': {
-    description:
-      "Rows of purple and pink irises blaze in the artist's garden, receding in bold diagonal bands beneath trees, the whole surface alive with quick, saturated strokes.",
-    history:
-      "Monet treated the garden he built at Giverny as a living work of art and his chief subject through his later decades, designing its beds and paths with a painter's eye for colour harmonies before he ever set up an easel. This view from around 1900 looks down a path blazing with purple and pink irises.\n\nHe organizes the flowerbeds into bold diagonal bands that sweep back toward the trees, dissolving individual blooms into ribbons and flecks of pure, saturated colour. The boundary between horticulture and painting is all but erased — the garden is the painting's true studio.\n\nMonet employed a team of gardeners and imported rare plants specifically for their pictorial effect, and pictures like this celebrate that fusion of nature and art. It hangs in the Musée d'Orsay in Paris.",
   },
 
   'col-2-acantilados-en-etretat': {
@@ -1258,32 +1237,12 @@ export const ABOUT_TEXT: Record<string, AboutText> = {
       "John Constable painted 'The Cornfield' in 1826, showing a shady lane said to be one he walked as a boy on his way to school near his native East Bergholt. A shepherd boy sprawls to drink from a stream while his flock straggles toward sunlit fields of ripe grain and a distant church.\n\nThe picture is packed with lovingly observed English detail — wildflowers, a broken gate, a stray sheep, a dog — and steeped in the warm nostalgia Constable felt for the working countryside of his youth. He worried it might be too full of incident, and added the church tower on the horizon partly to please conventional taste.\n\nA group of his admirers bought it by subscription after his death and presented it to the nation, and it became one of his most popular works. It hangs in the National Gallery in London.",
   },
 
-  'col-4-recuerdo-de-mortefontaine': {
-    description:
-      "In a soft, silvery haze at the edge of a lake, feathery trees frame a woman and two children gathering blossoms, the whole scene dreamlike and gently blurred.",
-    history:
-      "Camille Corot painted 'Souvenir de Mortefontaine' in 1864, at the height of his late fame, taking the name of a real park north of Paris but treating it only as a starting point. His 'souvenirs' were not topographical records but poetic recollections, half-remembered and half-invented.\n\nHe dissolved the scene into a soft, silvery haze of feathery trees, still water and a woman reaching into the branches, muting all sharp detail into a tender, dreamlike reverie. This misty, atmospheric manner was hugely popular with collectors and made the aging Corot both rich and beloved.\n\nBy loosening drawing into mood and light, and by mentoring younger painters like Pissarro and Berthe Morisot, he quietly helped point the way from classical landscape toward Impressionism. It hangs in the Louvre.",
-  },
 
   'col-4-el-puente-en-argenteuil': {
     description:
       "Sailboats with tall masts rest on the calm blue Seine beside a road bridge at Argenteuil, the water and sky rendered in bright, broken strokes of a clear summer day.",
     history:
       "Monet lived at Argenteuil, a river town just downstream from Paris, for much of the 1870s, and it became the sunlit heartland of early Impressionism. The Seine there was a fashionable spot for sailing and weekend leisure, and Monet even fitted out a floating studio boat to paint the river from the water.\n\nThis road bridge, rebuilt after wartime destruction, appears in several of his canvases; he was drawn to the crisp geometry of its piers set against the loose shimmer of moored sailboats and rippling reflections. The bright palette and broken, confident strokes show the new style at its most optimistic.\n\nFriends including Renoir, Sisley, Manet and Caillebotte visited and painted alongside him there, making Argenteuil a kind of open-air laboratory for the movement. Versions of the bridge hang in the Musée d'Orsay and the National Gallery of Art in Washington.",
-  },
-
-  'col-4-los-acantilados-de-etretat': {
-    description:
-      "The great chalk cliffs and stone arch of Étretat on the Normandy coast loom over a churning green sea, painted in swift, vigorous strokes that catch the wind and spray.",
-    history:
-      "The chalk coast of Étretat, with its three natural arches and a needle of rock rising from the sea, had been a magnet for painters and writers — Courbet, Delacroix and the novelist Maupassant among them — long before Monet made it his own in the 1880s. He returned in different seasons, lodging in the village and hauling his easel down to the shingle.\n\nHe was fascinated less by the rock itself than by how it changed: the same cliff under storm and calm, at dawn and dusk, backlit or blazing, painted in swift, vigorous strokes that seize the wind, the spray and the shifting colour of the water. Working at the tide's edge, he once nearly lost his gear — and himself — to a wave.\n\nThis obsession with capturing one motif across many canvases fed directly into the great series — haystacks, poplars, cathedrals — that would occupy his later career. Canvases of Étretat are held in museums across the world.",
-  },
-
-  'col-4-la-casa-amarilla': {
-    description:
-      "A bright yellow house on a street corner glows under a deep blue sky, a train crossing a bridge behind it, the whole scene painted in Van Gogh's vivid, contrasting colour.",
-    history:
-      "Van Gogh painted 'The Yellow House' in September 1888, portraying the modest corner building in Arles whose right wing he had rented as a home and studio. He was thrilled by it, filling letters to his brother Theo with plans to make it the heart of a shared 'studio of the south' where like-minded artists could live and work together.\n\nHe set the sun-baked yellow house and its green shutters against an intense cobalt sky, a train steaming over the bridge behind — a picture radiant with hope for the community he dreamed of founding. To welcome his first guest he decorated the rooms with his sunflower paintings.\n\nThat guest, Paul Gauguin, did come to stay, but their intense, quarrelsome two months together ended in December with Van Gogh's breakdown and the severing of part of his own ear. The dream collapsed; the painting survives in the Van Gogh Museum in Amsterdam.",
   },
 
   'col-4-el-rio-hudson': {
@@ -1502,11 +1461,11 @@ export const ABOUT_TEXT: Record<string, AboutText> = {
       "Joaquín Sorolla painted 'Strolling along the Seashore' in 1909, portraying his wife Clotilde and their daughter María walking at the water's edge in flowing white summer dresses and gauzy veils. The two women, elegant and self-possessed, are caught mid-step in a gust of sea breeze.\n\nSorolla, the Spanish master of sunlight, made the real subject the light itself: the dazzling glare of the Mediterranean, the play of sun through translucent fabric, the shimmer of skin and gauze, all seized in brilliant, rapid, confident brushwork. His virtuoso handling of blinding coastal sun earned his style the name 'luminism.'\n\nInternationally famous in his day, Sorolla filled his canvases with the joy and vitality of the Spanish coast. It hangs in the Museo Sorolla in Madrid, the artist's own house.",
   },
 
-  'col-4-ninos-en-la-playa': {
+  'col-4-cosiendo-la-vela': {
     description:
-      "Three naked boys lie in the wet sand at the edge of the surf, their bodies and the shallow water shimmering with reflected sunlight in strokes of violet, pink and gold.",
+      "Fishermen and their families sit in a vine-shaded courtyard stitching an enormous white sail, dappled sunlight falling across the cloth.",
     history:
-      "Sorolla painted 'Children on the Beach' in 1910, on the sands of his native Valencia, where boys from fishing families bathed and lay in the surf. He shows three of them stretched out naked in the wet sand at the water's edge, seen from above as the shallow foam washes over their bodies.\n\nIt is a supreme display of his gift for painting sunlight on skin and water: the flesh glows violet, pink and gold, and the reflective film of water dissolves the boys and the foam into a single shimmer of luminous colour. There is almost no anecdote, only light, bodies and the sea — pure sensation.\n\nWorks like this, radiant and free, made Sorolla one of the most admired painters in Europe and America in the years before the First World War. It hangs in the Prado in Madrid.",
+      "Sorolla painted 'Sewing the Sail' in Valencia in 1896, working outdoors on a canvas over three metres wide so the scene would keep the scale and immediacy of life itself.\n\nThe subject is ordinary labour, but the real subject is light: sunlight filtering through the vine breaks into moving patches across the white sailcloth, the faces and the ground. The picture won a medal in Munich and was bought for Venice, helping establish Sorolla's international reputation as the painter of Mediterranean light.",
   },
 
   'col-4-el-angelus': {
@@ -1710,13 +1669,6 @@ export const ABOUT_TEXT: Record<string, AboutText> = {
       "Henri Rousseau painted 'The Dream' in 1910, the last year of his life, and it is the largest and most ambitious of his jungle pictures. A nude woman reclines on a red velvet sofa improbably set in the middle of a moonlit jungle teeming with lions, an elephant, birds, a snake and a shadowy flute-playing charmer.\n\nRousseau attached a short poem explaining the paradox: the sleeping woman, dreaming on her couch, hears the charmer's music and is transported in her dream into the enchanted forest around her. The self-taught painter built these lush, imaginary jungles entirely from Paris greenhouses, zoo animals and picture books, never having seen a real one, which gives them their flat, meticulous, hallucinatory strangeness.\n\nLong ridiculed, Rousseau lived just long enough to see the young avant-garde embrace him, and his dreamlike vision made him a hero to the Surrealists. 'The Dream' hangs in the Museum of Modern Art in New York.",
   },
 
-  'col-5-judith-y-la-cabeza-de-holofernes': {
-    description:
-      "A bejeweled, half-undressed woman gazes out with heavy-lidded, ecstatic eyes, the severed head of Holofernes just visible at the lower edge of a golden, patterned background.",
-    history:
-      "Klimt painted 'Judith I' in 1901, taking the Old Testament heroine who saved her people by beheading the enemy general Holofernes and remaking her as a thoroughly modern Viennese femme fatale. Bejewelled and half-undressed, she gazes out with heavy-lidded, ecstatic eyes, the severed head barely visible at the lower edge against a gilded background.\n\nKlimt deliberately blurs the line between triumph and erotic reverie, so that Judith looks less like an avenging patriot than a woman lost in dangerous, almost orgasmic pleasure. The picture belongs to the fin-de-siècle Viennese fascination with the seductive, threatening woman, and the gold background looks ahead to his Golden Period.\n\nSo unlike the traditional pious Judith that it is sometimes confused with Salome, it caused a scandal in its day. It hangs in the Belvedere in Vienna.",
-  },
-
   'col-5-danae': {
     description:
       "A sleeping woman curls in a golden shower — the god Zeus visiting her as falling gold — her flushed body wrapped in swirling cloth and pattern in an image of dreaming sensuality.",
@@ -1769,11 +1721,11 @@ export const ABOUT_TEXT: Record<string, AboutText> = {
       "Munch painted the first of six versions of 'The Sick Child' in 1885–86, reaching back to the most searing wound of his childhood: the death of his beloved older sister Sophie from tuberculosis when he was a boy, an illness that had also killed their mother. A pale, red-haired girl gazes toward the light while a grieving woman bows her head at the bedside.\n\nMunch scraped, scratched and reworked the surface until it looked blurred and unfinished, as if seen through tears, deliberately refusing to prettify sickness and grief. Critics of the day attacked it as a botched sketch, but he defended the rawness as truer to feeling than any polished finish could be.\n\nHe called it a breakthrough, and it launched the deeply personal, emotionally exposed art that would define his career. Versions hang in the National Museum in Oslo and elsewhere.",
   },
 
-  'col-5-pubertad': {
+  'col-5-tres-chicas-con-sombreros-de-paja': {
     description:
-      "A naked adolescent girl sits stiffly on the edge of a bed, arms crossed protectively over her lap, a large dark shadow looming ominously on the wall behind her.",
+      "Three young women in broad yellow straw hats stand against flat planes of luminous colour, their faces barely described.",
     history:
-      "Munch painted 'Puberty' around 1894–95, showing a naked adolescent girl seated stiffly on the edge of a bed, arms crossed protectively over her lap, her wide eyes fixed on the viewer. Behind her a large, dark shadow looms up the wall, out of all proportion to her small body.\n\nThe picture captures the vulnerable, anxious moment of a child on the threshold of adulthood, and that ominous shadow — detached from her actual form — reads as a projection of undefined dread, of awakening sexuality and the unknown future pressing in on her. Munch turns a private, awkward moment into a study of fear itself.\n\nHis willingness to probe such uncomfortable psychological states set him apart from the polite art of his day and made him a father of Expressionism. 'Puberty' hangs in the National Museum in Oslo.",
+      "Macke painted this in Bonn in 1913, the year he reached full maturity as a colourist. A member of Der Blaue Reiter alongside Franz Marc and Paul Klee, he had absorbed Robert Delaunay's prismatic colour without giving up the visible world.\n\nHis subject is always ordinary modern leisure — strollers in parks, women at shop windows, hats and sunlight. A year later Macke was killed in Champagne in the opening weeks of the First World War, at 27, cutting short one of the most luminous talents of his generation.",
   },
 
   'col-5-ansiedad': {
@@ -1783,18 +1735,11 @@ export const ABOUT_TEXT: Record<string, AboutText> = {
       "Munch painted 'Anxiety' in 1894, reusing the blazing blood-red sky and steep fjord-side bridge he had invented for 'The Scream' the year before. But instead of one lone figure clutching its head, a whole crowd of hollow-eyed, mask-like faces presses forward toward the viewer, staring blankly out.\n\nBy multiplying the dread across a procession of grim, identical faces, Munch extends his vision of existential anguish from the single tormented soul to the modern urban crowd — a mass of isolated individuals sharing the same nameless fear. The image draws on both his own inner turmoil and the fin-de-siècle mood of collective unease.\n\nPart of his 'Frieze of Life,' it shows how Munch reworked a handful of charged motifs into an interlocking meditation on love, fear and death. 'Anxiety' hangs in the Munch Museum in Oslo.",
   },
 
-  'col-5-atardecer-en-karl-johan': {
+  'col-5-dama-con-abanico': {
     description:
-      "A tide of pale, wide-eyed faces floats toward the viewer down a Kristiania boulevard at dusk, the crowd blank and ghostly against the yellow-lit buildings.",
+      "A woman with one bare shoulder holds a fan against a flat gold-yellow ground scattered with Chinese phoenixes and lotus flowers.",
     history:
-      "Munch painted 'Evening on Karl Johan' in 1892, turning a stroll down the main boulevard of Kristiania (now Oslo) into a waking nightmare. The scene is said to draw on his own anguished walks there, when he hoped and dreaded to meet a former love.\n\nA tide of pale, wide-eyed, mask-like faces floats toward the viewer down the dusk-lit street, blank and ghostly against the yellow-lit buildings, while a single dark figure walks away from the crowd — often read as the artist himself, utterly alone amid the throng. The bourgeois evening promenade becomes an image of dread and estrangement.\n\nThis dissolving of ordinary life into psychological terror looks ahead to Expressionism and to his own 'Scream.' 'Evening on Karl Johan' hangs in the KODE museums in Bergen, Norway.",
-  },
-
-  'col-5-retrato-de-emilie-floge': {
-    description:
-      "A tall woman stands wrapped in a slim, richly patterned blue-and-gold gown of Klimt's own design, her pale face and hands emerging from a shimmering column of ornament.",
-    history:
-      "Klimt painted this portrait of Emilie Flöge in 1902. Flöge was a successful fashion designer who ran a fashionable Vienna salon, and she was Klimt's closest lifelong companion — his muse, business partner and, by some accounts, the great love of his life, though the exact nature of their bond stayed private.\n\nShe stands wrapped in a slim, richly patterned blue-and-gold gown, very likely one of the flowing, unstructured 'reform' dresses she and Klimt promoted as a liberation from the rigid corsets of the era. The portrait fuses her real, self-possessed presence with the shimmering decorative pattern that was becoming Klimt's signature.\n\nKlimt reportedly disliked the finished work, but it stands as a tender monument to their partnership; on his deathbed he is said to have called for Emilie. It hangs in the Wien Museum in Vienna.",
+      "This was the last picture Klimt worked on. When he died of a stroke in February 1918, aged 55, it was still on the easel in his Vienna studio, close to finished but not signed.\n\nThe flat gold ground and the phoenixes and lotus flowers come from the Chinese and Japanese art Klimt collected; the sitter is unknown, probably a dancer or model rather than a society client. In 2023 it sold in London for £85.3 million, the highest price ever paid for a work of art in Europe.",
   },
 
   'col-5-las-tres-edades-de-la-mujer': {
@@ -2186,6 +2131,60 @@ export const ABOUT_TEXT: Record<string, AboutText> = {
       "A brilliantly coloured rooster and hen strut among blue hydrangeas, every feather and petal rendered with dazzling, almost hallucinatory precision.",
     history:
       "Itō Jakuchū, an eccentric 18th-century Kyoto painter, made his name above all with brilliantly coloured studies of birds, and here a rooster and hen strut among blue hydrangeas, every feather and petal rendered with dazzling, almost hallucinatory precision. He kept live fowl in his garden to study them endlessly from life.\n\nThe son of a prosperous Kyoto grocer, Jakuchū gave up the family business to devote himself wholly to painting, working with a patient, obsessive exactness and a jeweller's love of intense colour and pattern. His masterpiece was a vast series of some thirty silk scrolls of birds, flowers and animals, of which vivid rooster pictures like this are among the most admired.\n\nLong a somewhat cult figure, Jakuchū has enjoyed a huge revival and is now ranked among the most beloved of all Japanese painters. His bird paintings are treasured in Japanese collections, including the imperial collection.",
+  },
+  'col-2-un-bar-del-folies-bergere': {
+    description:
+      "A barmaid stands behind a marble counter of bottles and fruit, facing us with a distant expression while a mirror reflects the crowded music hall.",
+    history:
+      "Manet painted this in his studio in 1882, a year before his death, working from a real barmaid named Suzon who posed for him. It was his last major work and his farewell to the Paris of cafés and spectacle he had painted all his life.\n\nThe picture's fame rests on its impossible mirror: the reflection shows the woman from an angle no viewer could occupy, and the man she faces is absent from our view. Critics attacked the 'error' immediately; ever since, the painting has been read as a deliberate meditation on looking, on being looked at, and on the loneliness inside a crowd.",
+  },
+  'col-2-el-pifano': {
+    description:
+      "A boy soldier in red trousers and a black jacket plays a fife against a plain grey ground, with no floor or horizon behind him.",
+    history:
+      "Painted in 1866 after Manet's trip to Spain, 'The Fifer' owes everything to Velázquez, whose figures he had just seen in Madrid standing free against neutral space. The boy was a real bandsman from the Imperial Guard.\n\nThe Salon jury rejected it, and Émile Zola published a furious defence that launched his career as an art critic. What looked like incompetence — no shadow, no setting, colour laid down in flat shapes — is now read as the first step toward modern painting: the picture as surface rather than window.",
+  },
+  'col-2-banistas-en-asnieres': {
+    description:
+      "Working men rest on a riverbank in the sun, one sitting at the water with a straw hat, factory chimneys smoking on the far shore.",
+    history:
+      "Seurat was twenty-four when he painted this vast canvas, his first, after months of oil studies made on the spot at Asnières, an industrial suburb north-west of Paris.\n\nHe gave ordinary factory workers the scale and stillness of classical sculpture, and later reworked parts of the surface with the dots of pure colour he would soon make famous. Rejected by the Salon, it was shown instead at the first Salon des Indépendants — the beginning of Neo-Impressionism.",
+  },
+  'col-4-entre-las-sierras-nevadas': {
+    description:
+      "A still lake mirrors jagged peaks wrapped in golden mist, with deer at the shoreline and birds crossing shafts of light.",
+    history:
+      "Bierstadt travelled west with a survey expedition in 1863, filling sketchbooks in the Rocky Mountains and California. This canvas, painted in Rome in 1868, is not a record of a place but a composite vision — an American Eden assembled from many views.\n\nEnormous paintings like this were shown as ticketed spectacles, drawing crowds who had never seen the West. They shaped how a nation imagined its own frontier, and they helped build the argument for the national parks.",
+  },
+  'col-4-recuerdo-de-mortefontaine': {
+    description:
+      "A silvery lake at dawn, a great tree leaning over the water and small figures gathering blossom on the bank, all veiled in soft grey-green light.",
+    history:
+      "Corot painted this in his Paris studio in 1864, recalling the park at Mortefontaine north of the city. He called such pictures 'souvenirs': not records of a site but distilled memories, with the detail burned away and only mood left.\n\nBought by Napoleon III, it became the model for the silvery, feathery late Corot that made him hugely popular — and hugely forged. The younger Impressionists revered him: Monet, Pissarro and Berthe Morisot all learned from the way he let light dissolve edges.",
+  },
+  'col-5-retrato-de-jeanne-hebuterne': {
+    description:
+      "A young woman with a long neck and tilted, mask-like face sits calmly, her almond eyes left almost blank.",
+    history:
+      "Jeanne Hébuterne was an art student who met Modigliani in Paris in 1917 and became his companion and constant model. He painted her more than twenty times, always with the elongated neck and hollowed eyes he had learned from African masks and from his own abandoned career as a sculptor.\n\nModigliani died of tubercular meningitis in January 1920, at 35. Jeanne, pregnant with their second child, took her own life the following day. The tragedy has coloured every reading of these portraits since — though what they actually show is tenderness, not doom.",
+  },
+  'col-5-escena-callejera-de-berlin': {
+    description:
+      "Sharp-angled figures in city clothes brush past each other on a crowded pavement, painted in acid pinks and greens with nervous, hatching strokes.",
+    history:
+      "Kirchner moved to Berlin in 1911 and found his subject in its streets: the crowds, the electric light, the coded glances of a modern city. Between 1913 and 1915 he painted eleven street scenes, the summit of German Expressionism.\n\nHe stretched the figures, tilted the pavements and used colour against nature to make the viewer feel the nervous energy rather than observe it. The war broke him — discharged after a collapse, he retreated to the Swiss Alps — and the Nazis later branded his art 'degenerate'.",
+  },
+  'col-4-la-corriente-del-golfo': {
+    description:
+      "A black sailor lies on the deck of a dismasted boat in a heaving sea, sharks circling and a waterspout on the horizon.",
+    history:
+      "Homer painted 'The Gulf Stream' in 1899 after winters spent in the Bahamas and Florida, working up a subject he had sketched in watercolour years earlier. Dealers found it too bleak and it went unsold for a decade.\n\nWhen collectors asked anxiously what became of the man, Homer replied with irritation that the sailor would be rescued by the ship on the horizon. Read today as a meditation on isolation, danger and the Atlantic history of slavery, it is among the most discussed pictures in American art.",
+  },
+  'final-la-musa': {
+    description:
+      "A young woman sits with a pencil poised over a blank sketchbook, looking up as if waiting for the idea to arrive.",
+    history:
+      "Samuel F. B. Morse painted his daughter Susan around 1836-37 and called it 'The Muse'. He was one of the finest American painters of his generation and had spent years in Europe copying the masters — his 'Gallery of the Louvre' packs thirty-eight paintings onto one canvas.\n\nAnd then he stopped. Passed over for a major government commission, bitter and broke, Morse abandoned art entirely. He turned to a machine for sending messages down a wire, and to a code of dots and dashes that carried his name around the world. The blank sketchbook in his daughter's lap is the last page of his life as a painter.\n\nEvery code you have scanned to reach this point descends, in a way, from what he did next.",
   },
 };
 
@@ -2781,12 +2780,6 @@ export const ABOUT_TEXT_ES: Record<string, AboutText> = {
     history:
       "Van Gogh pintó sus famosos bodegones de girasoles en Arlés en 1888 para decorar la Casa amarilla ante la llegada de su amigo Paul Gauguin, cuyo dormitorio quería llenar con cuadros de nada más que grandes flores ardientes. Para Van Gogh las flores y sus amarillos radiantes eran un lenguaje privado de gratitud, amistad y la calidez del sur.\n\nSe exigió a sí mismo en lo técnico, trabajando en lo que llamaba 'amarillo sobre amarillo' —flores, jarrón, mesa y fondo todos en tonos de oro—, un atrevido casi monocromo que pocos pintores se habían atrevido a hacer. Estaba lo bastante orgulloso del resultado como para firmar el jarrón, algo que rara vez hacía.\n\nGauguin los admiró y luego pidió uno; Van Gogh, en cambio, pintó repeticiones para quedárselas. Hoy las versiones conservadas cuelgan en Londres, Múnich, Ámsterdam, Tokio y Filadelfia, entre las imágenes más reconocibles y queridas de todo el arte.",
   },
-  'col-2-terraza-de-cafe-por-la-noche': {
-    description:
-      "Una terraza de café brilla de amarillo cálido bajo su toldo en una plaza empedrada, contra un cielo nocturno azul profundo salpicado de estrellas enormes, todo pintado sin un solo negro.",
-    history:
-      "Van Gogh pintó este café de Arlés de noche en septiembre de 1888, entusiasmado por el reto de captar la oscuridad usando solo el color: el choque de la terraza amarilla iluminada por el gas contra un cielo azul cuajado de estrellas, sin recurrir al negro en absoluto. Escribió a su hermana que la noche era más rica y viva de color que el día.\n\nLo pintó al aire libre tras oscurecer, trabajando a la luz del propio café, parte de un estallido de escenas nocturnas aquel otoño mientras probaba hasta dónde podía llevar el clima y la atmósfera el color puro. El empedrado, el toldo y el cielo profundo están cargados de un fulgor casi sobrenatural.\n\nEl cuadro fue un paso crucial hacia los cielos arremolinados de 'La noche estrellada' del año siguiente, y algunos espectadores han leído la mesa iluminada con una figura central y la ventana en forma de cruz al fondo como un callado eco de una Última Cena. Cuelga en el Museo Kröller-Müller de los Países Bajos.",
-  },
   'col-2-mujer-con-sombrilla': {
     description:
       "Una mujer con una sombrilla verde está en pie sobre una loma de hierba batida por el viento, vista desde abajo contra un cielo brillante y salpicado de nubes, su velo y su vestido volados de lado mientras un niño la observa detrás.",
@@ -2858,18 +2851,6 @@ export const ABOUT_TEXT_ES: Record<string, AboutText> = {
       "Bajo una noche azul profunda, las farolas de gas de Arlés arden a lo largo de la orilla lejana del Ródano y se prolongan en largos reflejos por el agua, con la Osa Mayor reluciendo en lo alto y una pareja paseando en primer plano.",
     history:
       "Van Gogh pintó esta escena nocturna a orillas del río en Arlés en septiembre de 1888, unos nueve meses antes de la más famosa y turbulenta 'Noche estrellada' que hizo en el asilo de Saint-Rémy. Aquí el cielo es sereno y de joyas más que arremolinado, y pintado de observación directa en la orilla del Ródano.\n\nLe entusiasmaba el reto de la noche, trabajando al aire libre bajo la luz de gas y, bromeaba, a veces con velas fijadas al sombrero. Plasmó con cuidado la Osa Mayor en lo alto y los largos reflejos de las farolas de gas del pueblo prolongándose por el agua, añadiendo a dos enamorados paseando del brazo en el borde inferior.\n\nEscribiendo a su hermano Theo, confesó tener 'una terrible necesidad de —diré la palabra— religión', y salió a pintar las estrellas. Mostrado en el Salón de los Independientes en 1889, cuelga hoy en el Museo de Orsay de París.",
-  },
-  'col-2-el-puente-japones': {
-    description:
-      "Un puente peatonal de madera verde se arquea sobre el estanque de nenúfares de Giverny, medio tragado por los sauces colgantes y el follaje denso que llenan el lienzo en un tapiz de verdes.",
-    history:
-      "Monet construyó un puente peatonal arqueado, de estilo japonés, sobre el estanque de nenúfares de su jardín de Giverny en la década de 1890, inspirado en las estampas japonesas que coleccionaba y colgaba por toda su casa. Lo pintó muchas veces, tratando el puente, los sauces y los nenúfares flotantes como un solo tapiz verde.\n\nLas versiones tempranas son serenas y de dibujo claro; las posteriores, hechas después de 1918 cuando las cataratas nublaban y amarilleaban su visión, se vuelven de color violento y casi abstractas, con el puente casi tragado por rojos furiosos y trazos enredados. Estos lienzos tardíos asombraron a los pintores abstractos de mediados de siglo, que vieron en ellos un precursor.\n\nMonet dedicó décadas y una pequeña fortuna a diseñar y cuidar el jardín expresamente como tema para pintar, difuminando la línea entre jardinero y artista. La serie del puente se reparte hoy por museos del mundo, incluidos el Museo de Orsay y la National Gallery of Art de Washington.",
-  },
-  'col-2-jardin-del-artista-en-giverny': {
-    description:
-      "Hileras de lirios morados y rosas arden en el jardín del artista, retrocediendo en audaces bandas diagonales bajo los árboles, toda la superficie viva de trazos rápidos y saturados.",
-    history:
-      "Monet trató el jardín que construyó en Giverny como una obra de arte viva y su principal tema en sus últimas décadas, diseñando sus arriates y senderos con ojo de pintor para las armonías de color antes siquiera de plantar el caballete. Esta vista de hacia 1900 mira por un sendero ardiente de lirios morados y rosas.\n\nOrganiza los arriates en audaces bandas diagonales que barren hacia atrás hacia los árboles, disolviendo las flores individuales en cintas y motas de color puro y saturado. La frontera entre la jardinería y la pintura queda casi borrada: el jardín es el verdadero estudio del cuadro.\n\nMonet empleaba a un equipo de jardineros e importaba plantas raras específicamente por su efecto pictórico, y cuadros como este celebran esa fusión de naturaleza y arte. Cuelga en el Museo de Orsay de París.",
   },
   'col-2-tejados-rojos': {
     description:
@@ -3268,29 +3249,11 @@ export const ABOUT_TEXT_ES: Record<string, AboutText> = {
     history:
       "John Constable pintó 'El trigal' en 1826, mostrando un camino umbrío que, según se dice, era uno que recorría de niño camino de la escuela cerca de su East Bergholt natal. Un pastorcillo se tiende a beber de un arroyo mientras su rebaño se desperdiga hacia campos soleados de grano maduro y una iglesia lejana.\n\nEl cuadro está repleto de detalle inglés amorosamente observado —flores silvestres, una cancela rota, una oveja descarriada, un perro— y empapado de la cálida nostalgia que Constable sentía por la campiña de trabajo de su juventud. Temió que estuviera demasiado lleno de incidentes, y añadió la torre de la iglesia en el horizonte en parte para complacer el gusto convencional.\n\nUn grupo de sus admiradores lo compró por suscripción tras su muerte y lo entregó a la nación, y se volvió una de sus obras más populares. Cuelga en la National Gallery de Londres.",
   },
-  'col-4-recuerdo-de-mortefontaine': {
-    description:
-      "En una suave y plateada bruma al borde de un lago, unos árboles plumosos enmarcan a una mujer y dos niños que recogen flores, toda la escena onírica y suavemente difuminada.",
-    history:
-      "Camille Corot pintó 'Recuerdo de Mortefontaine' en 1864, en la cumbre de su fama tardía, tomando el nombre de un parque real al norte de París pero tratándolo solo como punto de partida. Sus 'recuerdos' no eran registros topográficos, sino evocaciones poéticas, medio recordadas y medio inventadas.\n\nDisolvió la escena en una suave y plateada bruma de árboles plumosos, agua quieta y una mujer que se estira hacia las ramas, atenuando todo detalle nítido en una tierna ensoñación onírica. Esta manera brumosa y atmosférica fue enormemente popular entre los coleccionistas e hizo al anciano Corot rico y querido a la vez.\n\nAl soltar el dibujo hacia el clima y la luz, y al tutelar a pintores más jóvenes como Pissarro y Berthe Morisot, ayudó en voz baja a señalar el camino del paisaje clásico hacia el Impresionismo. Cuelga en el Louvre.",
-  },
   'col-4-el-puente-en-argenteuil': {
     description:
       "Veleros de altos mástiles reposan en el azul y sereno Sena junto a un puente de carretera en Argenteuil, el agua y el cielo plasmados en trazos brillantes y fragmentados de un claro día de verano.",
     history:
       "Monet vivió en Argenteuil, una localidad ribereña justo aguas abajo de París, durante buena parte de la década de 1870, y se volvió el soleado corazón del primer Impresionismo. El Sena era allí un lugar de moda para navegar y el ocio de fin de semana, y Monet incluso habilitó una barca-estudio flotante para pintar el río desde el agua.\n\nEste puente de carretera, reconstruido tras la destrucción de la guerra, aparece en varios de sus lienzos; le atraía la nítida geometría de sus pilares frente al suelto relumbre de los veleros amarrados y los reflejos ondulantes. La paleta brillante y los trazos fragmentados y seguros muestran el nuevo estilo en su punto más optimista.\n\nAmigos como Renoir, Sisley, Manet y Caillebotte lo visitaron y pintaron junto a él allí, haciendo de Argenteuil una especie de laboratorio al aire libre del movimiento. Versiones del puente cuelgan en el Museo de Orsay y la National Gallery of Art de Washington.",
-  },
-  'col-4-los-acantilados-de-etretat': {
-    description:
-      "Los grandes acantilados de tiza y el arco de piedra de Étretat, en la costa de Normandía, se ciernen sobre un mar verde y agitado, pintados en trazos veloces y vigorosos que atrapan el viento y la espuma.",
-    history:
-      "La costa de tiza de Étretat, con sus tres arcos naturales y una aguja de roca alzándose del mar, había sido un imán para pintores y escritores —Courbet, Delacroix y el novelista Maupassant entre ellos— mucho antes de que Monet la hiciera suya en la década de 1880. Volvió en distintas estaciones, alojándose en el pueblo y bajando el caballete a los guijarros.\n\nLe fascinaba menos la roca en sí que cómo cambiaba: el mismo acantilado bajo tormenta y calma, al alba y al crepúsculo, a contraluz o ardiente, pintado en trazos veloces y vigorosos que apresan el viento, la espuma y el color cambiante del agua. Trabajando al borde de la marea, una vez estuvo a punto de perder su equipo —y a sí mismo— ante una ola.\n\nEsta obsesión por captar un mismo motivo a lo largo de muchos lienzos alimentó directamente las grandes series —almiares, álamos, catedrales— que ocuparían su carrera posterior. Hay lienzos de Étretat en museos de todo el mundo.",
-  },
-  'col-4-la-casa-amarilla': {
-    description:
-      "Una casa de un amarillo brillante en una esquina resplandece bajo un cielo azul profundo, un tren cruzando un puente detrás, toda la escena pintada en el color vivo y contrastado de Van Gogh.",
-    history:
-      "Van Gogh pintó 'La casa amarilla' en septiembre de 1888, retratando el modesto edificio de esquina de Arlés cuya ala derecha había alquilado como hogar y estudio. Le entusiasmaba, y llenaba las cartas a su hermano Theo de planes para hacer de ella el corazón de un 'taller del sur' compartido, donde artistas afines pudieran vivir y trabajar juntos.\n\nRecortó la casa amarilla, tostada por el sol, y sus contraventanas verdes contra un cielo cobalto intenso, con un tren humeando sobre el puente detrás: un cuadro radiante de esperanza por la comunidad que soñaba fundar. Para recibir a su primer invitado decoró las habitaciones con sus cuadros de girasoles.\n\nEse invitado, Paul Gauguin, llegó a quedarse, pero sus intensos y pendencieros dos meses juntos acabaron en diciembre con la crisis de Van Gogh y el corte de parte de su propia oreja. El sueño se derrumbó; el cuadro sobrevive en el Museo Van Gogh de Ámsterdam.",
   },
   'col-4-el-rio-hudson': {
     description:
@@ -3476,11 +3439,11 @@ export const ABOUT_TEXT_ES: Record<string, AboutText> = {
     history:
       "Joaquín Sorolla pintó 'Paseo a orillas del mar' en 1909, retratando a su esposa Clotilde y a su hija María caminando por la orilla del agua con vaporosos vestidos blancos de verano y velos de gasa. Las dos mujeres, elegantes y seguras de sí, están captadas a media zancada en una racha de brisa marina.\n\nSorolla, el maestro español de la luz del sol, hizo del tema verdadero la luz misma: el deslumbre del Mediterráneo, el juego del sol a través de la tela translúcida, el relumbre de la piel y la gasa, todo apresado en una pincelada brillante, rápida y segura. Su virtuoso manejo del cegador sol costero dio a su estilo el nombre de 'luminismo'.\n\nInternacionalmente famoso en su día, Sorolla llenó sus lienzos de la alegría y la vitalidad de la costa española. Cuelga en el Museo Sorolla de Madrid, la propia casa del artista.",
   },
-  'col-4-ninos-en-la-playa': {
+  'col-4-cosiendo-la-vela': {
     description:
-      "Tres muchachos desnudos yacen en la arena mojada al borde de la rompiente, sus cuerpos y el agua poco profunda relumbrando con la luz reflejada del sol en trazos de violeta, rosa y oro.",
+      "Pescadores y sus familias, sentados en un patio bajo un parral, cosen una enorme vela blanca mientras la luz moteada cae sobre la tela.",
     history:
-      "Sorolla pintó 'Niños en la playa' en 1910, en las arenas de su Valencia natal, donde los muchachos de familias de pescadores se bañaban y se tendían en la rompiente. Muestra a tres de ellos estirados y desnudos en la arena mojada al borde del agua, vistos desde arriba mientras la espuma poco profunda lava sus cuerpos.\n\nEs un alarde supremo de su don para pintar la luz del sol sobre la piel y el agua: la carne resplandece de violeta, rosa y oro, y la película reflectante del agua disuelve a los muchachos y la espuma en un solo relumbre de color luminoso. Casi no hay anécdota, solo luz, cuerpos y mar: pura sensación.\n\nObras como esta, radiantes y libres, hicieron de Sorolla uno de los pintores más admirados de Europa y América en los años previos a la Primera Guerra Mundial. Cuelga en el Prado de Madrid.",
+      "Sorolla pintó 'Cosiendo la vela' en Valencia en 1896, trabajando al aire libre sobre un lienzo de más de tres metros para que la escena conservara la escala y la inmediatez de la vida misma.\n\nEl asunto es un trabajo cotidiano, pero el verdadero tema es la luz: el sol que atraviesa el parral se rompe en manchas móviles sobre la lona blanca, los rostros y el suelo. La obra obtuvo medalla en Múnich y fue adquirida para Venecia, consolidando la fama internacional de Sorolla como pintor de la luz mediterránea.",
   },
   'col-4-el-angelus': {
     description:
@@ -3652,12 +3615,6 @@ export const ABOUT_TEXT_ES: Record<string, AboutText> = {
     history:
       "Henri Rousseau pintó 'El sueño' en 1910, el último año de su vida, y es el más grande y ambicioso de sus cuadros de jungla. Una mujer desnuda se reclina en un sofá de terciopelo rojo situado inverosímilmente en medio de una jungla iluminada por la luna, rebosante de leones, un elefante, aves, una serpiente y un sombrío encantador que toca la flauta.\n\nRousseau adjuntó un breve poema explicando la paradoja: la mujer dormida, soñando en su diván, oye la música del encantador y es transportada en su sueño a la selva encantada que la rodea. El pintor autodidacta construyó estas frondosas junglas imaginarias enteramente a partir de invernaderos de París, animales de zoológico y libros ilustrados, sin haber visto nunca una real, lo que les da su plana, meticulosa y alucinatoria extrañeza.\n\nLargamente ridiculizado, Rousseau vivió lo justo para ver a la joven vanguardia acogerlo, y su visión onírica lo hizo un héroe para los surrealistas. 'El sueño' cuelga en el Museo de Arte Moderno de Nueva York.",
   },
-  'col-5-judith-y-la-cabeza-de-holofernes': {
-    description:
-      "Una mujer enjoyada y medio desnuda mira de frente con ojos entornados y extáticos, la cabeza cortada de Holofernes apenas visible en el borde inferior de un fondo dorado y con patrones.",
-    history:
-      "Klimt pintó 'Judith I' en 1901, tomando a la heroína del Antiguo Testamento que salvó a su pueblo decapitando al general enemigo Holofernes y rehaciéndola como una femme fatale vienesa del todo moderna. Enjoyada y medio desnuda, mira de frente con ojos entornados y extáticos, la cabeza cortada apenas visible en el borde inferior contra un fondo dorado.\n\nKlimt difumina deliberadamente la línea entre el triunfo y el arrobo erótico, de modo que Judith parece menos una patriota vengadora que una mujer perdida en un placer peligroso, casi orgásmico. El cuadro pertenece a la fascinación vienesa del fin de siglo por la mujer seductora y amenazante, y el fondo dorado anticipa su Período dorado.\n\nTan distinta de la Judith piadosa tradicional que a veces se la confunde con Salomé, causó un escándalo en su día. Cuelga en el Belvedere de Viena.",
-  },
   'col-5-danae': {
     description:
       "Una mujer dormida se acurruca en una lluvia dorada —el dios Zeus visitándola como oro que cae— su cuerpo ruborizado envuelto en telas y patrones arremolinados en una imagen de sensualidad soñadora.",
@@ -3702,11 +3659,11 @@ export const ABOUT_TEXT_ES: Record<string, AboutText> = {
     history:
       "Munch pintó la primera de seis versiones de 'El niño enfermo' en 1885-86, remontándose a la herida más lacerante de su infancia: la muerte de su querida hermana mayor Sophie por tuberculosis cuando él era niño, una enfermedad que también había matado a su madre. Una niña pálida y pelirroja mira hacia la luz mientras una mujer afligida inclina la cabeza a la cabecera.\n\nMunch raspó, rayó y reelaboró la superficie hasta que pareció difuminada e inacabada, como vista a través de lágrimas, negándose deliberadamente a embellecer la enfermedad y el duelo. Los críticos de la época lo atacaron como un bosquejo chapucero, pero él defendió la crudeza como más fiel al sentimiento de lo que ningún acabado pulido podría ser.\n\nLo llamó un avance decisivo, y lanzó el arte hondamente personal y emocionalmente expuesto que definiría su carrera. Hay versiones en el Museo Nacional de Oslo y otros lugares.",
   },
-  'col-5-pubertad': {
+  'col-5-tres-chicas-con-sombreros-de-paja': {
     description:
-      "Una niña adolescente desnuda se sienta rígida al borde de una cama, los brazos cruzados protectoramente sobre el regazo, una gran sombra oscura cerniéndose ominosamente en la pared tras ella.",
+      "Tres jóvenes con anchos sombreros de paja amarillos se recortan contra planos lisos de color luminoso, con los rostros apenas descritos.",
     history:
-      "Munch pintó 'Pubertad' hacia 1894-95, mostrando a una niña adolescente desnuda sentada rígida al borde de una cama, los brazos cruzados protectoramente sobre el regazo, sus ojos muy abiertos fijos en el espectador. Tras ella una gran sombra oscura se alza por la pared, del todo desproporcionada respecto a su pequeño cuerpo.\n\nEl cuadro capta el vulnerable y angustioso momento de una niña en el umbral de la adultez, y esa sombra ominosa —desprendida de su forma real— se lee como una proyección de un pavor indefinido, de la sexualidad que despierta y del futuro incierto que la acecha. Munch convierte un momento privado y embarazoso en un estudio del miedo mismo.\n\nSu disposición a sondear estados psicológicos tan incómodos lo apartó del arte cortés de su día y lo hizo un padre del Expresionismo. 'Pubertad' cuelga en el Museo Nacional de Oslo.",
+      "Macke pintó esta obra en Bonn en 1913, el año en que alcanzó su plena madurez como colorista. Miembro de Der Blaue Reiter junto a Franz Marc y Paul Klee, había asimilado el color prismático de Robert Delaunay sin renunciar al mundo visible.\n\nSu tema es siempre el ocio moderno y cotidiano: paseantes en parques, mujeres ante escaparates, sombreros y luz de sol. Un año después Macke murió en Champaña, en las primeras semanas de la Primera Guerra Mundial, a los 27 años, truncando uno de los talentos más luminosos de su generación.",
   },
   'col-5-ansiedad': {
     description:
@@ -3714,17 +3671,11 @@ export const ABOUT_TEXT_ES: Record<string, AboutText> = {
     history:
       "Munch pintó 'Ansiedad' en 1894, reutilizando el ardiente cielo rojo de sangre y el empinado puente junto al fiordo que había inventado para 'El grito' el año anterior. Pero en lugar de una sola figura solitaria apretándose la cabeza, toda una multitud de rostros de ojos hundidos, como máscaras, avanza hacia el espectador, mirando vacíamente hacia fuera.\n\nAl multiplicar el pavor por una procesión de rostros sombríos e idénticos, Munch extiende su visión de la angustia existencial del alma atormentada individual a la multitud urbana moderna: una masa de individuos aislados compartiendo el mismo miedo sin nombre. La imagen se nutre tanto de su propia agitación interior como del ánimo finisecular de inquietud colectiva.\n\nParte de su 'Friso de la vida', muestra cómo Munch reelaboró un puñado de motivos cargados en una meditación entrelazada sobre el amor, el miedo y la muerte. 'Ansiedad' cuelga en el Museo Munch de Oslo.",
   },
-  'col-5-atardecer-en-karl-johan': {
+  'col-5-dama-con-abanico': {
     description:
-      "Una marea de rostros pálidos y de ojos muy abiertos flota hacia el espectador por un bulevar de Kristiania al anochecer, la multitud vacía y fantasmal contra los edificios iluminados de amarillo.",
+      "Una mujer con un hombro desnudo sostiene un abanico ante un fondo dorado plano sembrado de fénix chinos y flores de loto.",
     history:
-      "Munch pintó 'Atardecer en Karl Johan' en 1892, convirtiendo un paseo por el bulevar principal de Kristiania (hoy Oslo) en una pesadilla despierta. Se dice que la escena se nutre de sus propios paseos angustiados por allí, cuando esperaba y temía a la vez encontrarse con un antiguo amor.\n\nUna marea de rostros pálidos, de ojos muy abiertos, como máscaras, flota hacia el espectador por la calle iluminada del anochecer, vacía y fantasmal contra los edificios iluminados de amarillo, mientras una sola figura oscura se aleja de la multitud, leída a menudo como el propio artista, del todo solo entre el gentío. El burgués paseo vespertino se vuelve una imagen de pavor y extrañamiento.\n\nEsta disolución de la vida corriente en terror psicológico anticipa el Expresionismo y su propio 'Grito'. 'Atardecer en Karl Johan' cuelga en los museos KODE de Bergen, Noruega.",
-  },
-  'col-5-retrato-de-emilie-floge': {
-    description:
-      "Una mujer alta está de pie envuelta en un ceñido vestido azul y oro ricamente estampado del propio diseño de Klimt, su pálido rostro y sus manos emergiendo de una reluciente columna de ornamento.",
-    history:
-      "Klimt pintó este retrato de Emilie Flöge en 1902. Flöge era una exitosa diseñadora de moda que llevaba un elegante salón vienés, y fue la compañera más cercana de Klimt de toda la vida: su musa, socia y, según algunos relatos, el gran amor de su vida, aunque la naturaleza exacta de su vínculo quedó en privado.\n\nEstá de pie envuelta en un ceñido vestido azul y oro ricamente estampado, muy probablemente uno de los fluidos y sin estructura vestidos 'reforma' que ella y Klimt promovían como una liberación de los rígidos corsés de la época. El retrato funde su presencia real y dueña de sí con el reluciente patrón decorativo que se estaba volviendo el sello de Klimt.\n\nSe dice que a Klimt le disgustó la obra terminada, pero se yergue como un tierno monumento a su sociedad; en su lecho de muerte se cuenta que llamó a Emilie. Cuelga en el Wien Museum de Viena.",
+      "Fue el último cuadro en el que Klimt trabajó. Cuando murió de un ictus en febrero de 1918, a los 55 años, seguía en el caballete de su estudio vienés, casi terminado pero sin firmar.\n\nEl fondo dorado plano y los fénix y lotos proceden del arte chino y japonés que Klimt coleccionaba; se desconoce quién es la retratada, probablemente una bailarina o modelo antes que una clienta de la alta sociedad. En 2023 se vendió en Londres por 85,3 millones de libras, el precio más alto jamás pagado por una obra de arte en Europa.",
   },
   'col-5-las-tres-edades-de-la-mujer': {
     description:
@@ -4059,6 +4010,60 @@ export const ABOUT_TEXT_ES: Record<string, AboutText> = {
       "Un gallo y una gallina de brillantes colores se pavonean entre hortensias azules, cada pluma y pétalo plasmado con una precisión deslumbrante, casi alucinatoria.",
     history:
       "Itō Jakuchū, un excéntrico pintor de Kioto del siglo XVIII, se hizo un nombre sobre todo con estudios de aves de brillantes colores, y aquí un gallo y una gallina se pavonean entre hortensias azules, cada pluma y pétalo plasmado con una precisión deslumbrante, casi alucinatoria. Mantenía aves vivas en su jardín para estudiarlas sin fin del natural.\n\nHijo de un próspero tendero de Kioto, Jakuchū abandonó el negocio familiar para consagrarse por entero a la pintura, trabajando con una exactitud paciente y obsesiva y un amor de joyero por el color y el patrón intensos. Su obra maestra fue una vasta serie de unos treinta rollos de seda de aves, flores y animales, de los que los vívidos cuadros de gallos como este están entre los más admirados.\n\nDurante mucho tiempo una figura algo de culto, Jakuchū ha disfrutado de un enorme resurgimiento y hoy se le sitúa entre los más queridos de todos los pintores japoneses. Sus pinturas de aves se atesoran en colecciones japonesas, incluida la colección imperial.",
+  },
+  'col-2-un-bar-del-folies-bergere': {
+    description:
+      "Una camarera está tras una barra de mármol con botellas y fruta, mirándonos con expresión ausente mientras un espejo refleja la sala abarrotada.",
+    history:
+      "Manet lo pintó en su estudio en 1882, un año antes de morir, con una camarera real llamada Suzon posando para él. Fue su última obra importante y su despedida del París de los cafés y el espectáculo que había pintado toda su vida.\n\nLa fama del cuadro descansa en su espejo imposible: el reflejo muestra a la mujer desde un ángulo que ningún espectador podría ocupar, y el hombre al que ella mira no aparece en nuestra vista. Los críticos atacaron el 'error' de inmediato; desde entonces la obra se lee como una meditación deliberada sobre mirar, ser mirado y la soledad dentro de una multitud.",
+  },
+  'col-2-el-pifano': {
+    description:
+      "Un niño soldado de pantalón rojo y chaqueta negra toca un pífano sobre un fondo gris liso, sin suelo ni horizonte tras él.",
+    history:
+      "Pintado en 1866 tras el viaje de Manet a España, 'El pífano' se lo debe todo a Velázquez, cuyas figuras acababa de ver en Madrid recortadas libremente sobre un espacio neutro. El niño era un músico real de la Guardia Imperial.\n\nEl jurado del Salón lo rechazó, y Émile Zola publicó una defensa furiosa que lanzó su carrera como crítico de arte. Lo que parecía torpeza —sin sombra, sin escenario, color en manchas planas— se lee hoy como el primer paso hacia la pintura moderna: el cuadro como superficie y no como ventana.",
+  },
+  'col-2-banistas-en-asnieres': {
+    description:
+      "Obreros descansan al sol en la orilla del río, uno sentado junto al agua con sombrero de paja, con chimeneas humeando en la ribera opuesta.",
+    history:
+      "Seurat tenía veinticuatro años cuando pintó este enorme lienzo, el primero, tras meses de estudios al óleo hechos in situ en Asnières, un suburbio industrial al noroeste de París.\n\nDio a unos obreros corrientes la escala y la quietud de la escultura clásica, y más tarde reelaboró partes de la superficie con los puntos de color puro que pronto le harían célebre. Rechazado por el Salón, se expuso en el primer Salón de los Independientes: el comienzo del neoimpresionismo.",
+  },
+  'col-4-entre-las-sierras-nevadas': {
+    description:
+      "Un lago en calma refleja picos escarpados envueltos en bruma dorada, con ciervos en la orilla y aves cruzando haces de luz.",
+    history:
+      "Bierstadt viajó al Oeste con una expedición topográfica en 1863 y llenó cuadernos en las Rocosas y California. Este lienzo, pintado en Roma en 1868, no retrata un lugar concreto sino una visión compuesta: un Edén americano armado con muchas vistas.\n\nCuadros enormes como este se exhibían como espectáculos de pago, atrayendo multitudes que nunca habían visto el Oeste. Moldearon la manera en que una nación imaginó su propia frontera y ayudaron a sostener el argumento de los parques nacionales.",
+  },
+  'col-4-recuerdo-de-mortefontaine': {
+    description:
+      "Un lago plateado al amanecer, un gran árbol inclinado sobre el agua y figuras pequeñas recogiendo flores en la orilla, veladas por una luz gris verdosa.",
+    history:
+      "Corot lo pintó en su estudio de París en 1864, recordando el parque de Mortefontaine al norte de la ciudad. Llamaba a estas obras 'recuerdos': no registros de un sitio, sino memorias destiladas, con el detalle quemado y solo el estado de ánimo en pie.\n\nComprado por Napoleón III, se volvió el modelo del Corot tardío, plateado y plumoso, que lo hizo enormemente popular y enormemente falsificado. Los impresionistas jóvenes lo veneraban: Monet, Pissarro y Berthe Morisot aprendieron de su modo de dejar que la luz disolviera los contornos.",
+  },
+  'col-5-retrato-de-jeanne-hebuterne': {
+    description:
+      "Una joven de cuello largo y rostro inclinado, como una máscara, posa serena, con los ojos almendrados casi en blanco.",
+    history:
+      "Jeanne Hébuterne era una estudiante de arte que conoció a Modigliani en París en 1917 y se convirtió en su compañera y modelo constante. La pintó más de veinte veces, siempre con el cuello alargado y los ojos vaciados que había aprendido de las máscaras africanas y de su abandonada carrera de escultor.\n\nModigliani murió de meningitis tuberculosa en enero de 1920, a los 35 años. Jeanne, embarazada del segundo hijo, se quitó la vida al día siguiente. La tragedia ha teñido desde entonces toda lectura de estos retratos, aunque lo que muestran en realidad es ternura, no fatalidad.",
+  },
+  'col-5-escena-callejera-de-berlin': {
+    description:
+      "Figuras angulosas con ropa de ciudad se rozan en una acera atestada, pintadas en rosas y verdes ácidos con pinceladas nerviosas.",
+    history:
+      "Kirchner se mudó a Berlín en 1911 y encontró su tema en sus calles: las multitudes, la luz eléctrica, las miradas cifradas de la ciudad moderna. Entre 1913 y 1915 pintó once escenas callejeras, la cumbre del expresionismo alemán.\n\nEstiró las figuras, inclinó las aceras y usó el color contra la naturaleza para que el espectador sintiera la energía nerviosa en vez de observarla. La guerra lo quebró —licenciado tras un colapso, se retiró a los Alpes suizos— y los nazis tacharían después su arte de 'degenerado'.",
+  },
+  'col-4-la-corriente-del-golfo': {
+    description:
+      "Un marinero negro yace en la cubierta de una barca desarbolada en un mar encrespado, con tiburones rodeándola y una tromba en el horizonte.",
+    history:
+      "Homer pintó 'La corriente del Golfo' en 1899, tras inviernos en las Bahamas y Florida, desarrollando un tema que había bosquejado en acuarela años antes. A los marchantes les pareció demasiado sombrío y quedó sin vender una década.\n\nCuando los coleccionistas preguntaban con inquietud qué le ocurría al hombre, Homer respondía irritado que el marinero sería rescatado por el barco del horizonte. Leída hoy como una meditación sobre el aislamiento, el peligro y la historia atlántica de la esclavitud, es de las obras más discutidas del arte estadounidense.",
+  },
+  'final-la-musa': {
+    description:
+      "Una joven se sienta con el lápiz suspendido sobre un cuaderno en blanco, la mirada alzada como si esperara la llegada de la idea.",
+    history:
+      "Samuel F. B. Morse pintó a su hija Susan hacia 1836-37 y tituló la obra 'La Musa'. Era uno de los mejores pintores estadounidenses de su generación y había pasado años en Europa copiando a los maestros; su 'Galería del Louvre' amontona treinta y ocho cuadros en un solo lienzo.\n\nY entonces se detuvo. Descartado para un gran encargo oficial, amargado y sin dinero, Morse abandonó el arte por completo. Se volcó en una máquina para enviar mensajes por un cable y en un código de puntos y rayas que llevó su nombre por todo el mundo. El cuaderno en blanco sobre el regazo de su hija es la última página de su vida como pintor.\n\nCada código que has escaneado para llegar hasta aquí desciende, de algún modo, de lo que hizo después.",
   },
 };
 
@@ -4544,12 +4549,6 @@ export const ABOUT_TEXT_FR: Record<string, AboutText> = {
     history:
       "Van Gogh peignit ses célèbres natures mortes de tournesols à Arles en 1888 pour décorer la Maison jaune en vue de l'arrivée de son ami Paul Gauguin, dont il voulait emplir la chambre de tableaux de rien d'autre que de grandes fleurs flamboyantes. Pour Van Gogh les fleurs et leurs jaunes radieux étaient un langage privé de gratitude, d'amitié et de la chaleur du Midi.\n\nIl se poussa techniquement, travaillant dans ce qu'il appelait « jaune sur jaune » — fleurs, vase, table et fond tous en nuances d'or — un quasi-monochrome audacieux que peu de peintres avaient osé. Il fut assez fier des résultats pour signer le vase, ce qu'il faisait rarement.\n\nGauguin les admira et en demanda un plus tard ; Van Gogh peignit plutôt des répétitions à garder. Aujourd'hui les versions subsistantes sont à Londres, Munich, Amsterdam, Tokyo et Philadelphie, comptant parmi les images les plus reconnaissables et aimées de tout l'art.",
   },
-  'col-2-terraza-de-cafe-por-la-noche': {
-    description:
-      "Une terrasse de café rayonne d'un jaune chaud sous son auvent sur une place pavée, sur un ciel de nuit d'un bleu profond parsemé d'étoiles surdimensionnées — le tout peint sans un seul noir.",
-    history:
-      "Van Gogh peignit ce café d'Arles la nuit en septembre 1888, enthousiasmé par le défi de saisir l'obscurité à l'aide de la seule couleur — le choc de la terrasse jaune éclairée au gaz contre un ciel bleu constellé d'étoiles, sans recourir au noir du tout. Il écrivit à sa sœur que la nuit était plus riche et plus vivante de couleur que le jour.\n\nIl le peignit en plein air après la tombée de la nuit, travaillant à la lumière du café lui-même, part d'un élan de scènes nocturnes cet automne-là tandis qu'il testait jusqu'où la couleur pure pouvait porter l'ambiance et l'atmosphère. Les pavés, l'auvent et le ciel profond sont tous chargés d'un éclat presque surnaturel.\n\nLe tableau fut une étape cruciale vers les ciels tourbillonnants de « La Nuit étoilée » de l'année suivante, et certains spectateurs ont lu la table éclairée avec une figure centrale et la fenêtre en forme de croix derrière comme un écho discret d'une Cène. Il est accroché au musée Kröller-Müller aux Pays-Bas.",
-  },
   'col-2-mujer-con-sombrilla': {
     description:
       "Une femme au parasol vert se tient sur une butte herbeuse balayée par le vent, vue d'en bas sur un ciel clair parsemé de nuages, son voile et sa robe emportés de côté tandis qu'un enfant regarde derrière.",
@@ -4621,18 +4620,6 @@ export const ABOUT_TEXT_FR: Record<string, AboutText> = {
       "Sous une nuit d'un bleu profond, les réverbères d'Arles flamboient le long de la rive lointaine du Rhône et traînent en longs reflets sur l'eau, la Grande Ourse scintillant au-dessus, un couple se promenant au premier plan.",
     history:
       "Van Gogh peignit cette scène nocturne au bord de l'eau à Arles en septembre 1888, environ neuf mois avant la plus célèbre et plus turbulente « Nuit étoilée » qu'il fit à l'asile de Saint-Rémy. Ici le ciel est calme et pareil à un joyau plutôt que tourbillonnant, et peint d'après une observation directe sur la rive du Rhône.\n\nIl était enthousiasmé par le défi de la nuit, travaillant en plein air à la lumière du gaz et, plaisantait-il, parfois avec des bougies fixées à son chapeau. Il rendit soigneusement la Grande Ourse au-dessus et les longs reflets des réverbères de la ville traînant sur l'eau, ajoutant deux amoureux se promenant bras dessus bras dessous au bord inférieur.\n\nÉcrivant à son frère Theo, il confessa avoir « un terrible besoin de — dirai-je le mot — religion », et sortit peindre les étoiles. Montré au Salon des indépendants en 1889, il est aujourd'hui accroché au Musée d'Orsay à Paris.",
-  },
-  'col-2-el-puente-japones': {
-    description:
-      "Une passerelle de bois verte s'arque au-dessus du bassin aux nymphéas de Giverny, à demi engloutie par les saules pleureurs et un feuillage dense qui emplissent la toile en une tapisserie de verts.",
-    history:
-      "Monet fit construire une passerelle arquée de style japonais au-dessus du bassin aux nymphéas de son jardin de Giverny dans les années 1890, inspiré par les estampes japonaises qu'il collectionnait et accrochait dans toute sa maison. Il la peignit maintes fois, traitant le pont, les saules et les nymphéas flottants comme une seule tapisserie verte.\n\nLes versions précoces sont sereines et nettement dessinées ; les plus tardives, faites après 1918 tandis que la cataracte troublait et jaunissait sa vue, deviennent violemment colorées et quasi abstraites, le pont presque englouti par des rouges furieux et des touches emmêlées. Ces toiles tardives étonnèrent les peintres abstraits du milieu du siècle qui y virent un précurseur.\n\nMonet passa des décennies et une petite fortune à concevoir et entretenir le jardin expressément comme un sujet à peindre, brouillant la frontière entre le jardinier et l'artiste. La série du pont est aujourd'hui répartie dans les musées du monde entier, dont le Musée d'Orsay et la National Gallery of Art de Washington.",
-  },
-  'col-2-jardin-del-artista-en-giverny': {
-    description:
-      "Des rangées d'iris violets et roses flamboient dans le jardin de l'artiste, reculant en hardies bandes diagonales sous les arbres, toute la surface vibrante de touches rapides et saturées.",
-    history:
-      "Monet traita le jardin qu'il bâtit à Giverny comme une œuvre d'art vivante et son sujet principal durant ses dernières décennies, concevant ses parterres et ses allées d'un œil de peintre pour les harmonies de couleur avant même d'installer un chevalet. Cette vue vers 1900 regarde une allée flamboyant d'iris violets et roses.\n\nIl organise les parterres en hardies bandes diagonales qui filent vers les arbres, dissolvant les fleurs individuelles en rubans et mouchetures de couleur pure et saturée. La frontière entre l'horticulture et la peinture est presque effacée — le jardin est le véritable atelier du tableau.\n\nMonet employait une équipe de jardiniers et importait des plantes rares spécialement pour leur effet pictural, et des tableaux comme celui-ci célèbrent cette fusion de la nature et de l'art. Il est accroché au Musée d'Orsay à Paris.",
   },
   'col-2-acantilados-en-etretat': {
     description:
@@ -5141,29 +5128,11 @@ export const ABOUT_TEXT_FR: Record<string, AboutText> = {
     history:
       "John Constable peignit « Le Champ de blé » en 1826, montrant un chemin ombragé qui serait l'un de ceux qu'il empruntait enfant sur le chemin de l'école près de son East Bergholt natal. Un jeune berger s'étale pour boire à un ruisseau tandis que son troupeau s'égaille vers des champs ensoleillés de grain mûr et une église lointaine.\n\nLe tableau est bourré de détails anglais amoureusement observés — fleurs sauvages, une barrière brisée, un mouton égaré, un chien — et imprégné de la chaude nostalgie que Constable éprouvait pour la campagne de travail de sa jeunesse. Il craignit qu'il ne fût trop plein d'incidents, et ajouta la tour d'église à l'horizon en partie pour plaire au goût conventionnel.\n\nUn groupe de ses admirateurs l'acheta par souscription après sa mort et l'offrit à la nation, et il devint l'une de ses œuvres les plus populaires. Il est accroché à la National Gallery de Londres.",
   },
-  'col-4-recuerdo-de-mortefontaine': {
-    description:
-      "Dans une douce brume argentée au bord d'un lac, des arbres plumeux encadrent une femme et deux enfants cueillant des fleurs, toute la scène onirique et doucement floue.",
-    history:
-      "Camille Corot peignit « Souvenir de Mortefontaine » en 1864, au faîte de sa gloire tardive, prenant le nom d'un parc réel au nord de Paris mais ne le traitant que comme un point de départ. Ses « souvenirs » n'étaient pas des relevés topographiques mais des réminiscences poétiques, à demi remémorées et à demi inventées.\n\nIl dissout la scène en une douce brume argentée d'arbres plumeux, d'eau immobile et d'une femme se tendant dans les branches, atténuant tout détail net en une rêverie tendre et onirique. Cette manière brumeuse et atmosphérique fut immensément populaire auprès des collectionneurs et rendit le vieux Corot à la fois riche et aimé.\n\nEn assouplissant le dessin en ambiance et en lumière, et en encadrant de jeunes peintres comme Pissarro et Berthe Morisot, il contribua discrètement à ouvrir la voie du paysage classique vers l'impressionnisme. Il est accroché au Louvre.",
-  },
   'col-4-el-puente-en-argenteuil': {
     description:
       "Des voiliers aux mâts élancés reposent sur la Seine calme et bleue à côté d'un pont routier à Argenteuil, l'eau et le ciel rendus en touches vives et fragmentées d'un clair jour d'été.",
     history:
       "Monet vécut à Argenteuil, une ville de rivière juste en aval de Paris, une grande partie des années 1870, et elle devint le cœur ensoleillé du premier impressionnisme. La Seine y était un endroit à la mode pour la voile et les loisirs du week-end, et Monet aménagea même un bateau-atelier flottant pour peindre la rivière depuis l'eau.\n\nCe pont routier, reconstruit après la destruction de la guerre, apparaît dans plusieurs de ses toiles ; il était attiré par la géométrie nette de ses piles opposée au chatoiement libre des voiliers amarrés et des reflets ondulants. La palette vive et les touches fragmentées et assurées montrent le nouveau style à son plus optimiste.\n\nDes amis dont Renoir, Sisley, Manet et Caillebotte lui rendirent visite et peignirent à ses côtés là-bas, faisant d'Argenteuil une sorte de laboratoire en plein air pour le mouvement. Des versions du pont sont au Musée d'Orsay et à la National Gallery of Art de Washington.",
-  },
-  'col-4-los-acantilados-de-etretat': {
-    description:
-      "Les grandes falaises de craie et l'arche de pierre d'Étretat sur la côte normande surplombent une mer verte agitée, peintes en touches vives et vigoureuses qui saisissent le vent et les embruns.",
-    history:
-      "La côte de craie d'Étretat, avec ses trois arches naturelles et une aiguille de roche s'élevant de la mer, avait été un aimant pour peintres et écrivains — Courbet, Delacroix et le romancier Maupassant parmi eux — bien avant que Monet ne se l'approprie dans les années 1880. Il y revint en différentes saisons, logeant au village et hissant son chevalet jusqu'au galet.\n\nIl était fasciné moins par le rocher lui-même que par sa manière de changer : la même falaise sous tempête et calme, à l'aube et au crépuscule, à contre-jour ou flamboyante, peinte en touches vives et vigoureuses qui saisissent le vent, les embruns et la couleur changeante de l'eau. Travaillant au bord de la marée, il faillit une fois perdre son matériel — et lui-même — à cause d'une vague.\n\nCette obsession de saisir un motif à travers de multiples toiles nourrit directement les grandes séries — meules, peupliers, cathédrales — qui occuperaient sa carrière ultérieure. Des toiles d'Étretat sont dans les musées du monde entier.",
-  },
-  'col-4-la-casa-amarilla': {
-    description:
-      "Une maison d'un jaune vif à un coin de rue rougeoie sous un ciel bleu profond, un train traversant un pont derrière elle, toute la scène peinte dans la couleur vive et contrastée de Van Gogh.",
-    history:
-      "Van Gogh peignit « La Maison jaune » en septembre 1888, représentant le modeste bâtiment d'angle d'Arles dont il avait loué l'aile droite comme demeure et atelier. Il en était enthousiasmé, emplissant les lettres à son frère Theo de plans pour en faire le cœur d'un « atelier du Midi » partagé où des artistes de même esprit pourraient vivre et travailler ensemble.\n\nIl plaça la maison jaune cuite de soleil et ses volets verts contre un intense ciel de cobalt, un train fumant sur le pont derrière — un tableau radieux d'espoir pour la communauté qu'il rêvait de fonder. Pour accueillir son premier invité il décora les pièces de ses tableaux de tournesols.\n\nCet invité, Paul Gauguin, vint bien y séjourner, mais leurs deux mois intenses et querelleurs ensemble s'achevèrent en décembre par la crise de Van Gogh et le sectionnement d'une partie de sa propre oreille. Le rêve s'effondra ; le tableau survit au musée Van Gogh à Amsterdam.",
   },
   'col-4-el-rio-hudson': {
     description:
@@ -5349,11 +5318,11 @@ export const ABOUT_TEXT_FR: Record<string, AboutText> = {
     history:
       "Joaquín Sorolla peignit « Promenade au bord de la mer » en 1909, portraiturant sa femme Clotilde et leur fille María marchant au bord de l'eau en fluides robes d'été blanches et voiles vaporeux. Les deux femmes, élégantes et sûres d'elles, sont saisies à mi-pas dans une bourrasque de brise marine.\n\nSorolla, le maître espagnol de la lumière du soleil, fit du véritable sujet la lumière elle-même : l'éblouissement de la Méditerranée, le jeu du soleil à travers l'étoffe translucide, le chatoiement de la peau et de la gaze, tout saisi d'une touche brillante, rapide et assurée. Son traitement virtuose du soleil côtier aveuglant donna à son style le nom de « luminisme ».\n\nInternationalement célèbre de son temps, Sorolla emplit ses toiles de la joie et de la vitalité de la côte espagnole. Il est accroché au Musée Sorolla à Madrid, la propre maison de l'artiste.",
   },
-  'col-4-ninos-en-la-playa': {
+  'col-4-cosiendo-la-vela': {
     description:
-      "Trois garçons nus sont allongés dans le sable mouillé au bord du ressac, leurs corps et l'eau peu profonde chatoyant de lumière réfléchie en touches de violet, de rose et d'or.",
+      "Des pêcheurs et leurs familles, assis dans une cour ombragée d'une treille, cousent une immense voile blanche sous une lumière tachetée.",
     history:
-      "Sorolla peignit « Enfants sur la plage » en 1910, sur les sables de sa Valence natale, où les garçons de familles de pêcheurs se baignaient et s'allongeaient dans le ressac. Il en montre trois étendus nus dans le sable mouillé au bord de l'eau, vus d'en haut tandis que l'écume peu profonde lave leurs corps.\n\nC'est un déploiement suprême de son don pour peindre la lumière du soleil sur la peau et l'eau : la chair rougeoie de violet, de rose et d'or, et la pellicule réfléchissante de l'eau dissout les garçons et l'écume en un seul chatoiement de couleur lumineuse. Il n'y a presque aucune anecdote, seulement la lumière, les corps et la mer — pure sensation.\n\nDes œuvres comme celle-ci, radieuses et libres, firent de Sorolla l'un des peintres les plus admirés d'Europe et d'Amérique dans les années précédant la Première Guerre mondiale. Il est accroché au Prado à Madrid.",
+      "Sorolla peignit «La couture de la voile» à Valence en 1896, en plein air, sur une toile de plus de trois mètres afin que la scène garde l'échelle et l'immédiateté de la vie même.\n\nLe sujet est un travail ordinaire, mais le vrai sujet est la lumière : le soleil traversant la treille se brise en taches mouvantes sur la toile blanche, les visages et le sol. L'œuvre reçut une médaille à Munich et fut acquise pour Venise, asseyant la réputation internationale de Sorolla comme peintre de la lumière méditerranéenne.",
   },
   'col-4-el-angelus': {
     description:
@@ -5525,12 +5494,6 @@ export const ABOUT_TEXT_FR: Record<string, AboutText> = {
     history:
       "Henri Rousseau peignit « Le Rêve » en 1910, la dernière année de sa vie, et c'est le plus grand et le plus ambitieux de ses tableaux de jungle. Une femme nue est allongée sur un canapé de velours rouge improbablement placé au milieu d'une jungle éclairée par la lune, grouillante de lions, d'un éléphant, d'oiseaux, d'un serpent et d'un sombre charmeur jouant de la flûte.\n\nRousseau joignit un court poème expliquant le paradoxe : la femme endormie, rêvant sur son divan, entend la musique du charmeur et est transportée dans son rêve dans la forêt enchantée qui l'entoure. Le peintre autodidacte bâtit ces luxuriantes jungles imaginaires entièrement à partir des serres de Paris, des animaux de zoo et de livres illustrés, sans en avoir jamais vu une vraie, ce qui leur donne leur plate, minutieuse et hallucinatoire étrangeté.\n\nLongtemps ridiculisé, Rousseau vécut juste assez pour voir la jeune avant-garde l'adopter, et sa vision onirique fit de lui un héros pour les surréalistes. « Le Rêve » est accroché au Museum of Modern Art de New York.",
   },
-  'col-5-judith-y-la-cabeza-de-holofernes': {
-    description:
-      "Une femme parée de bijoux et à demi dévêtue regarde de face avec des yeux mi-clos et extatiques, la tête coupée d'Holopherne à peine visible au bord inférieur d'un fond doré et à motifs.",
-    history:
-      "Klimt peignit « Judith I » en 1901, prenant l'héroïne de l'Ancien Testament qui sauva son peuple en décapitant le général ennemi Holopherne et la refaisant en femme fatale viennoise tout à fait moderne. Parée de bijoux et à demi dévêtue, elle regarde de face avec des yeux mi-clos et extatiques, la tête coupée à peine visible au bord inférieur contre un fond doré.\n\nKlimt brouille délibérément la ligne entre le triomphe et le ravissement érotique, de sorte que Judith ressemble moins à une patriote vengeresse qu'à une femme perdue dans un plaisir dangereux, presque orgasmique. Le tableau appartient à la fascination viennoise de fin de siècle pour la femme séduisante et menaçante, et le fond doré anticipe sa Période dorée.\n\nSi peu conforme à la Judith pieuse traditionnelle qu'on la confond parfois avec Salomé, elle causa un scandale de son temps. Elle est accrochée au Belvédère de Vienne.",
-  },
   'col-5-danae': {
     description:
       "Une femme endormie se love dans une pluie dorée — le dieu Zeus la visitant sous forme d'or qui tombe — son corps rougi enveloppé d'étoffe et de motif tourbillonnants en une image de sensualité rêveuse.",
@@ -5575,11 +5538,11 @@ export const ABOUT_TEXT_FR: Record<string, AboutText> = {
     history:
       "Munch peignit la première de six versions de « L'Enfant malade » en 1885-86, remontant à la plaie la plus déchirante de son enfance : la mort de sa chère sœur aînée Sophie de la tuberculose quand il était enfant, une maladie qui avait aussi tué leur mère. Une fillette pâle aux cheveux roux regarde vers la lumière tandis qu'une femme affligée baisse la tête au chevet.\n\nMunch racla, gratta et retravailla la surface jusqu'à ce qu'elle parût floutée et inachevée, comme vue à travers des larmes, refusant délibérément d'embellir la maladie et le deuil. Les critiques de l'époque l'attaquèrent comme une esquisse bâclée, mais il défendit la crudité comme plus fidèle au sentiment qu'aucun fini poli ne pourrait l'être.\n\nIl l'appela une percée, et elle lança l'art profondément personnel et émotionnellement exposé qui définirait sa carrière. Des versions sont au Musée national d'Oslo et ailleurs.",
   },
-  'col-5-pubertad': {
+  'col-5-tres-chicas-con-sombreros-de-paja': {
     description:
-      "Une adolescente nue est assise raidement au bord d'un lit, les bras croisés de manière protectrice sur son giron, une grande ombre sombre se dressant de façon menaçante sur le mur derrière elle.",
+      "Trois jeunes femmes en larges chapeaux de paille jaunes se détachent sur des plans de couleur lumineuse, les visages à peine décrits.",
     history:
-      "Munch peignit « Puberté » vers 1894-95, montrant une adolescente nue assise raidement au bord d'un lit, les bras croisés protectivement sur son giron, ses yeux grands ouverts fixés sur le spectateur. Derrière elle une grande ombre sombre se dresse sur le mur, hors de toute proportion avec son petit corps.\n\nLe tableau saisit le moment vulnérable et anxieux d'un enfant au seuil de l'âge adulte, et cette ombre menaçante — détachée de sa forme réelle — se lit comme une projection d'un effroi indéfini, de la sexualité qui s'éveille et de l'avenir inconnu qui la presse. Munch transforme un moment privé et gauche en une étude de la peur elle-même.\n\nSa disposition à sonder des états psychologiques si inconfortables le mit à part de l'art poli de son jour et fit de lui un père de l'expressionnisme. « Puberté » est accrochée au Musée national d'Oslo.",
+      "Macke peignit cette toile à Bonn en 1913, l'année de sa pleine maturité de coloriste. Membre du Blaue Reiter aux côtés de Franz Marc et Paul Klee, il avait assimilé la couleur prismatique de Robert Delaunay sans renoncer au monde visible.\n\nSon sujet est toujours le loisir moderne et ordinaire : promeneurs dans les parcs, femmes devant les vitrines, chapeaux et lumière. Un an plus tard, Macke tombait en Champagne dans les premières semaines de la Première Guerre mondiale, à 27 ans, fauchant l'un des talents les plus lumineux de sa génération.",
   },
   'col-5-ansiedad': {
     description:
@@ -5587,17 +5550,11 @@ export const ABOUT_TEXT_FR: Record<string, AboutText> = {
     history:
       "Munch peignit « Angoisse » en 1894, réutilisant le flamboyant ciel rouge sang et le pont escarpé au bord du fjord qu'il avait inventés pour « Le Cri » l'année précédente. Mais au lieu d'une seule figure solitaire se serrant la tête, toute une foule de visages aux yeux caves, comme des masques, avance vers le spectateur, fixant le vide.\n\nEn multipliant l'effroi à travers une procession de visages sombres et identiques, Munch étend sa vision de l'angoisse existentielle de l'âme tourmentée individuelle à la foule urbaine moderne — une masse d'individus isolés partageant la même peur sans nom. L'image puise à la fois dans sa propre agitation intérieure et dans l'ambiance de fin de siècle de malaise collectif.\n\nPart de sa « Frise de la vie », elle montre comment Munch retravailla une poignée de motifs chargés en une méditation entrelacée sur l'amour, la peur et la mort. « Angoisse » est accrochée au Musée Munch d'Oslo.",
   },
-  'col-5-atardecer-en-karl-johan': {
+  'col-5-dama-con-abanico': {
     description:
-      "Une marée de visages pâles aux yeux grands ouverts flotte vers le spectateur le long d'un boulevard de Kristiania au crépuscule, la foule vide et fantomatique contre les bâtiments éclairés de jaune.",
+      "Une femme à l'épaule nue tient un éventail devant un fond doré plat semé de phénix chinois et de fleurs de lotus.",
     history:
-      "Munch peignit « Soir sur l'avenue Karl Johan » en 1892, transformant une promenade sur le principal boulevard de Kristiania (aujourd'hui Oslo) en un cauchemar éveillé. La scène puiserait dans ses propres promenades angoissées là-bas, quand il espérait et redoutait à la fois de rencontrer un ancien amour.\n\nUne marée de visages pâles aux yeux grands ouverts, comme des masques, flotte vers le spectateur le long de la rue éclairée du crépuscule, vide et fantomatique contre les bâtiments éclairés de jaune, tandis qu'une seule figure sombre s'éloigne de la foule — souvent lue comme l'artiste lui-même, tout à fait seul au milieu de la foule. La bourgeoise promenade vespérale devient une image d'effroi et d'étrangement.\n\nCette dissolution de la vie ordinaire en terreur psychologique anticipe l'expressionnisme et son propre « Cri ». « Soir sur l'avenue Karl Johan » est accrochée aux musées KODE de Bergen, en Norvège.",
-  },
-  'col-5-retrato-de-emilie-floge': {
-    description:
-      "Une femme de haute taille se tient enveloppée d'une robe ajustée bleu et or richement à motifs du propre dessin de Klimt, son pâle visage et ses mains émergeant d'une colonne chatoyante d'ornement.",
-    history:
-      "Klimt peignit ce portrait d'Emilie Flöge en 1902. Flöge était une styliste de mode à succès qui tenait un salon viennois en vogue, et elle fut la compagne la plus proche de Klimt de toute sa vie — sa muse, associée et, selon certains récits, le grand amour de sa vie, bien que la nature exacte de leur lien soit restée privée.\n\nElle se tient enveloppée d'une robe ajustée bleu et or richement à motifs, très probablement une des robes « réforme » fluides et sans structure qu'elle et Klimt promouvaient comme une libération des corsets rigides de l'époque. Le portrait fond sa présence réelle et sûre d'elle avec le motif décoratif chatoyant qui devenait la signature de Klimt.\n\nKlimt aurait détesté l'œuvre achevée, mais elle se dresse comme un tendre monument à leur partenariat ; sur son lit de mort il aurait appelé Emilie. Il est accroché au Wien Museum de Vienne.",
+      "Ce fut le dernier tableau auquel Klimt travailla. À sa mort d'un accident vasculaire en février 1918, à 55 ans, il était encore sur le chevalet de son atelier viennois, presque achevé mais non signé.\n\nLe fond doré plat, les phénix et les lotus viennent des arts chinois et japonais que Klimt collectionnait ; l'identité du modèle reste inconnue, sans doute une danseuse plutôt qu'une cliente mondaine. En 2023, l'œuvre s'est vendue à Londres 85,3 millions de livres, prix le plus élevé jamais atteint en Europe pour une œuvre d'art.",
   },
   'col-5-las-tres-edades-de-la-mujer': {
     description:
@@ -5932,6 +5889,60 @@ export const ABOUT_TEXT_FR: Record<string, AboutText> = {
       "Un coq et une poule aux couleurs éclatantes se pavanent parmi des hortensias bleus, chaque plume et chaque pétale rendus d'une précision éblouissante, presque hallucinatoire.",
     history:
       "Itō Jakuchū, un excentrique peintre kyotoïte du XVIIIe siècle, se fit un nom avant tout par des études d'oiseaux aux couleurs éclatantes, et ici un coq et une poule se pavanent parmi des hortensias bleus, chaque plume et chaque pétale rendus d'une précision éblouissante, presque hallucinatoire. Il gardait des volailles vivantes dans son jardin pour les étudier sans fin d'après nature.\n\nFils d'un prospère marchand de légumes de Kyoto, Jakuchū abandonna le commerce familial pour se consacrer entièrement à la peinture, travaillant avec une exactitude patiente et obsessionnelle et un amour de joaillier pour la couleur et le motif intenses. Son chef-d'œuvre fut une vaste série de quelque trente rouleaux de soie d'oiseaux, de fleurs et d'animaux, dont de vifs tableaux de coqs comme celui-ci comptent parmi les plus admirés.\n\nLongtemps une figure quelque peu de culte, Jakuchū a connu un immense renouveau et se range aujourd'hui parmi les plus aimés de tous les peintres japonais. Ses tableaux d'oiseaux sont précieusement conservés dans des collections japonaises, dont la collection impériale.",
+  },
+  'col-2-un-bar-del-folies-bergere': {
+    description:
+      "Une serveuse se tient derrière un comptoir de marbre chargé de bouteilles, le regard absent, tandis qu'un miroir reflète la salle bondée.",
+    history:
+      "Manet le peignit dans son atelier en 1882, un an avant sa mort, d'après une véritable serveuse nommée Suzon. Ce fut sa dernière grande œuvre et son adieu au Paris des cafés et du spectacle qu'il avait peint toute sa vie.\n\nSa célébrité tient à son miroir impossible : le reflet montre la femme sous un angle qu'aucun spectateur ne pourrait occuper, et l'homme qu'elle regarde est absent de notre vue. La critique dénonça aussitôt l'«erreur» ; depuis, le tableau se lit comme une méditation délibérée sur le regard et la solitude au sein de la foule.",
+  },
+  'col-2-el-pifano': {
+    description:
+      "Un enfant soldat en pantalon rouge et veste noire joue du fifre sur un fond gris uni, sans sol ni horizon derrière lui.",
+    history:
+      "Peint en 1866 après le voyage de Manet en Espagne, «Le Fifre» doit tout à Vélasquez, dont il venait de voir à Madrid les figures détachées sur un espace neutre. L'enfant était un vrai musicien de la Garde impériale.\n\nLe jury du Salon le refusa, et Émile Zola publia une défense furieuse qui lança sa carrière de critique. Ce qui passait pour de la maladresse — ni ombre, ni décor, la couleur en aplats — se lit aujourd'hui comme le premier pas vers la peinture moderne : le tableau comme surface et non comme fenêtre.",
+  },
+  'col-2-banistas-en-asnieres': {
+    description:
+      "Des ouvriers se reposent au soleil sur la berge, l’un assis au bord de l’eau coiffé d’un canotier, des cheminées fumant sur l’autre rive.",
+    history:
+      "Seurat avait vingt-quatre ans quand il peignit cette immense toile, sa première, après des mois d'études à l'huile faites sur place à Asnières, banlieue industrielle au nord-ouest de Paris.\n\nIl donna à de simples ouvriers l'échelle et l'immobilité de la sculpture classique, puis retravailla certaines zones avec les points de couleur pure qui allaient le rendre célèbre. Refusé au Salon, le tableau fut montré au premier Salon des Indépendants : le début du néo-impressionnisme.",
+  },
+  'col-4-entre-las-sierras-nevadas': {
+    description:
+      "Un lac immobile reflète des pics déchiquetés noyés de brume dorée, des cerfs sur la rive et des oiseaux traversant la lumière.",
+    history:
+      "Bierstadt gagna l'Ouest avec une expédition de relevé en 1863, remplissant des carnets dans les Rocheuses et en Californie. Cette toile, peinte à Rome en 1868, ne montre pas un lieu précis mais une vision composite : un Éden américain assemblé de plusieurs vues.\n\nDe telles toiles immenses étaient présentées comme des spectacles payants, attirant des foules qui n'avaient jamais vu l'Ouest. Elles ont façonné la manière dont une nation imagina sa frontière et nourri l'argumentaire des parcs nationaux.",
+  },
+  'col-4-recuerdo-de-mortefontaine': {
+    description:
+      "Un lac argenté à l’aube, un grand arbre penché sur l’eau et de petites figures cueillant des fleurs sur la rive, voilés d’une lumière gris-vert.",
+    history:
+      "Corot le peignit dans son atelier parisien en 1864, se remémorant le parc de Mortefontaine au nord de la ville. Il appelait ces tableaux des «souvenirs» : non des relevés d'un lieu, mais des mémoires distillées, le détail consumé, seule l'atmosphère demeurant.\n\nAcheté par Napoléon III, il devint le modèle du Corot tardif, argenté et vaporeux, qui le rendit très populaire — et très contrefait. Les jeunes impressionnistes le vénéraient : Monet, Pissarro et Berthe Morisot apprirent de sa façon de laisser la lumière dissoudre les contours.",
+  },
+  'col-5-retrato-de-jeanne-hebuterne': {
+    description:
+      "Une jeune femme au long cou et au visage incliné, tel un masque, pose sereine, les yeux en amande presque vides.",
+    history:
+      "Jeanne Hébuterne était une étudiante en art qui rencontra Modigliani à Paris en 1917 et devint sa compagne et son modèle constant. Il la peignit plus de vingt fois, toujours avec ce cou allongé et ces yeux évidés hérités des masques africains et de sa carrière abandonnée de sculpteur.\n\nModigliani mourut d'une méningite tuberculeuse en janvier 1920, à 35 ans. Jeanne, enceinte de leur second enfant, se donna la mort le lendemain. La tragédie colore depuis toute lecture de ces portraits — alors qu'ils montrent en réalité de la tendresse, non un présage.",
+  },
+  'col-5-escena-callejera-de-berlin': {
+    description:
+      "Des figures anguleuses en tenue de ville se frôlent sur un trottoir bondé, peintes en roses et verts acides à touches nerveuses.",
+    history:
+      "Kirchner s'installa à Berlin en 1911 et trouva son sujet dans ses rues : la foule, la lumière électrique, les regards codés de la ville moderne. Entre 1913 et 1915 il peignit onze scènes de rue, sommet de l'expressionnisme allemand.\n\nIl étira les figures, inclina les trottoirs et employa la couleur contre la nature pour faire ressentir l'énergie nerveuse plutôt que l'observer. La guerre le brisa — réformé après un effondrement, il se retira dans les Alpes suisses — et les nazis qualifièrent plus tard son art de «dégénéré».",
+  },
+  'col-4-la-corriente-del-golfo': {
+    description:
+      "Un marin noir est étendu sur le pont d'une barque démâtée dans une mer houleuse, des requins tournant autour et une trombe à l'horizon.",
+    history:
+      "Homer peignit «Le Gulf Stream» en 1899, après des hivers aux Bahamas et en Floride, reprenant un sujet esquissé à l'aquarelle des années plus tôt. Les marchands le jugèrent trop sombre et il resta invendu une décennie.\n\nQuand les collectionneurs demandaient, inquiets, ce qu'il advenait de l'homme, Homer répondait avec agacement que le marin serait secouru par le navire à l'horizon. Lu aujourd'hui comme une méditation sur l'isolement, le danger et l'histoire atlantique de l'esclavage, c'est l'un des tableaux les plus commentés de l'art américain.",
+  },
+  'final-la-musa': {
+    description:
+      "Une jeune femme est assise, le crayon suspendu au-dessus d'un carnet vierge, le regard levé comme si elle attendait l'idée.",
+    history:
+      "Samuel F. B. Morse peignit sa fille Susan vers 1836-37 et intitula l'œuvre «La Muse». Il était l'un des meilleurs peintres américains de sa génération et avait passé des années en Europe à copier les maîtres ; sa «Galerie du Louvre» entasse trente-huit tableaux sur une seule toile.\n\nEt puis il s'arrêta. Écarté d'une grande commande officielle, amer et ruiné, Morse abandonna l'art. Il se tourna vers une machine à envoyer des messages par un fil et vers un code de points et de traits qui porta son nom autour du monde. Le carnet vierge sur les genoux de sa fille est la dernière page de sa vie de peintre.\n\nChaque code que vous avez scanné pour arriver ici descend, d'une certaine façon, de ce qu'il fit ensuite.",
   },
 };
 
@@ -6480,13 +6491,6 @@ export const ABOUT_TEXT_IT: Record<string, AboutText> = {
       "Van Gogh dipinse le sue celebri nature morte di girasoli ad Arles nel 1888 per decorare la Casa gialla in vista dell'arrivo del suo amico Paul Gauguin, la cui camera da letto voleva riempire di quadri di null'altro che grandi fiori ardenti. Per Van Gogh i fiori e i loro gialli radiosi erano un linguaggio privato di gratitudine, amicizia e del calore del sud.\n\nSi spinse tecnicamente, lavorando in ciò che chiamava «giallo su giallo» — fiori, vaso, tavolo e sfondo tutti in tonalità d'oro — un audace quasi-monocromo che pochi pittori avevano osato. Fu abbastanza fiero dei risultati da firmare il vaso, cosa che raramente faceva.\n\nGauguin li ammirò e in seguito ne chiese uno; Van Gogh dipinse invece delle ripetizioni da tenere. Oggi le versioni superstiti sono appese a Londra, Monaco, Amsterdam, Tokyo e Filadelfia, tra le immagini più riconoscibili e amate di tutta l'arte.",
   },
 
-  'col-2-terraza-de-cafe-por-la-noche': {
-    description:
-      "La terrazza di un caffè risplende di un caldo giallo sotto la sua tenda su una piazza acciottolata, contro un cielo notturno blu profondo cosparso di stelle sovradimensionate — il tutto dipinto senza un solo nero.",
-    history:
-      "Van Gogh dipinse questo caffè di Arles di notte nel settembre 1888, entusiasta della sfida di catturare l'oscurità usando solo il colore — lo scontro della terrazza gialla illuminata a gas contro un cielo blu pieno di stelle, senza ricorrere affatto al nero. Scrisse alla sorella che la notte era più ricca e più viva di colore del giorno.\n\nLo dipinse all'aperto dopo il buio, lavorando alla luce del caffè stesso, parte di un'esplosione di scene notturne quell'autunno mentre metteva alla prova fin dove il colore puro potesse portare atmosfera e clima. L'acciottolato, la tenda e il cielo profondo sono tutti carichi di un bagliore quasi soprannaturale.\n\nIl quadro fu un passo cruciale verso i cieli vorticosi della «Notte stellata» dell'anno seguente, e alcuni spettatori hanno letto il tavolo illuminato con una figura centrale e la finestra a forma di croce dietro come un quieto eco di un'Ultima Cena. È appeso al Kröller-Müller Museum nei Paesi Bassi.",
-  },
-
   'col-2-mujer-con-sombrilla': {
     description:
       "Una donna con un parasole verde sta su un'erbosa altura battuta dal vento, vista dal basso contro un cielo luminoso e sparso di nubi, il velo e l'abito soffiati di lato mentre un bambino osserva dietro.",
@@ -6569,20 +6573,6 @@ export const ABOUT_TEXT_IT: Record<string, AboutText> = {
       "Sotto una notte blu profondo, i lampioni a gas di Arles avvampano lungo la sponda opposta del Rodano e si allungano in lunghi riflessi sull'acqua, l'Orsa Maggiore che scintilla in alto, una coppia a passeggio in primo piano.",
     history:
       "Van Gogh dipinse questa scena notturna sul fiume ad Arles nel settembre 1888, circa nove mesi prima della più celebre e più tumultuosa «Notte stellata» realizzata nel manicomio di Saint-Rémy. Qui il cielo è calmo e ingioiellato anziché vorticoso, e dipinto dall'osservazione diretta sulla sponda del Rodano.\n\nFu entusiasta della sfida della notte, lavorando all'aperto sotto la luce a gas e, scherzava, a volte con candele fissate al cappello. Rese con cura l'Orsa Maggiore in alto e i lunghi riflessi dei lampioni a gas della città che si allungano sull'acqua, aggiungendo due innamorati che passeggiano a braccetto sul bordo inferiore.\n\nScrivendo al fratello Theo, confessò di avere «un terribile bisogno di — devo dire la parola — religione», e uscì a dipingere le stelle. Esposta al Salon des Indépendants nel 1889, è oggi appesa al Musée d'Orsay di Parigi.",
-  },
-
-  'col-2-el-puente-japones': {
-    description:
-      "Un ponticello di legno verde si inarca sullo stagno di ninfee di Giverny, semiinghiottito da salici pendenti e da un fitto fogliame che riempiono la tela in un arazzo di verdi.",
-    history:
-      "Monet costruì un ponticello inarcato in stile giapponese sopra lo stagno di ninfee del suo giardino di Giverny negli anni 1890, ispirato dalle stampe giapponesi che collezionava e appendeva per tutta la casa. Lo dipinse molte volte, trattando il ponte, i salici e le ninfee galleggianti come un unico arazzo verde.\n\nLe versioni precoci sono serene e chiaramente disegnate; quelle successive, realizzate dopo il 1918 mentre la cataratta gli offuscava e ingialliva la vista, diventano violentemente colorate e quasi astratte, il ponte quasi inghiottito da rossi furiosi e pennellate aggrovigliate. Queste tele tarde stupirono i pittori astratti di metà secolo, che vi videro un precursore.\n\nMonet spese decenni e una piccola fortuna a progettare e curare il giardino espressamente come soggetto da dipingere, sfumando il confine tra giardiniere e artista. La serie del ponte è oggi sparsa in musei di tutto il mondo, tra cui il Musée d'Orsay e la National Gallery of Art di Washington.",
-  },
-
-  'col-2-jardin-del-artista-en-giverny': {
-    description:
-      "File di iris viola e rosa avvampano nel giardino dell'artista, allontanandosi in audaci fasce diagonali sotto gli alberi, l'intera superficie viva di pennellate rapide e sature.",
-    history:
-      "Monet trattò il giardino che costruì a Giverny come un'opera d'arte vivente e il suo soggetto principale nei decenni successivi, progettandone aiuole e sentieri con l'occhio di un pittore per le armonie di colore prima ancora di piazzare un cavalletto. Questa veduta del 1900 circa guarda lungo un sentiero che avvampa di iris viola e rosa.\n\nOrganizza le aiuole in audaci fasce diagonali che si slanciano indietro verso gli alberi, dissolvendo i singoli fiori in nastri e chiazze di colore puro e saturo. Il confine tra orticoltura e pittura è quasi cancellato — il giardino è il vero studio del dipinto.\n\nMonet impiegava una squadra di giardinieri e importava piante rare specificamente per il loro effetto pittorico, e quadri come questo celebrano quella fusione di natura e arte. È appeso al Musée d'Orsay di Parigi.",
   },
 
   'col-2-acantilados-en-etretat': {
@@ -7183,32 +7173,12 @@ export const ABOUT_TEXT_IT: Record<string, AboutText> = {
       "John Constable dipinse «Il campo di grano» nel 1826, mostrando un viottolo ombroso che si dice fosse uno che percorreva da ragazzo andando a scuola vicino alla sua East Bergholt natale. Un pastorello si sdraia a bere da un ruscello mentre il suo gregge si sparpaglia verso campi soleggiati di grano maturo e una chiesa lontana.\n\nIl quadro è ricolmo di dettagli inglesi osservati con amore — fiori selvatici, un cancello rotto, una pecora smarrita, un cane — e intriso della calda nostalgia che Constable provava per la campagna operosa della sua giovinezza. Temette che potesse essere troppo pieno di episodi, e aggiunse la torre della chiesa all'orizzonte in parte per compiacere il gusto convenzionale.\n\nUn gruppo di suoi ammiratori lo acquistò per sottoscrizione dopo la sua morte e lo donò alla nazione, e divenne una delle sue opere più popolari. È appeso alla National Gallery di Londra.",
   },
 
-  'col-4-recuerdo-de-mortefontaine': {
-    description:
-      "In una morbida foschia argentea al bordo di un lago, alberi piumati incorniciano una donna e due bambini che raccolgono fiori, l'intera scena onirica e dolcemente sfocata.",
-    history:
-      "Camille Corot dipinse «Ricordo di Mortefontaine» nel 1864, all'apice della sua tarda fama, prendendo il nome di un parco reale a nord di Parigi ma trattandolo solo come punto di partenza. I suoi «souvenirs» non erano registrazioni topografiche ma rievocazioni poetiche, metà ricordate e metà inventate.\n\nDissolse la scena in una morbida foschia argentea di alberi piumati, acqua immobile e una donna che si protende tra i rami, attenuando ogni dettaglio netto in una tenera e onirica fantasticheria. Questa maniera velata e atmosferica ebbe enorme successo tra i collezionisti e rese l'anziano Corot ricco e amato.\n\nAllentando il disegno in atmosfera e luce, e guidando pittori più giovani come Pissarro e Berthe Morisot, contribuì quietamente a indicare la via dal paesaggio classico verso l'Impressionismo. È appeso al Louvre.",
-  },
 
   'col-4-el-puente-en-argenteuil': {
     description:
       "Barche a vela dagli alti alberi riposano sulla calma e azzurra Senna accanto a un ponte stradale ad Argenteuil, l'acqua e il cielo resi in pennellate luminose e spezzate di una limpida giornata estiva.",
     history:
       "Monet visse ad Argenteuil, una città sul fiume appena a valle di Parigi, per gran parte degli anni 1870, e divenne il cuore assolato del primo Impressionismo. La Senna lì era un luogo alla moda per la vela e lo svago del fine settimana, e Monet allestì persino una barca-studio galleggiante per dipingere il fiume dall'acqua.\n\nQuesto ponte stradale, ricostruito dopo la distruzione bellica, compare in diverse sue tele; era attratto dalla nitida geometria dei suoi piloni contrapposta allo scintillio sciolto delle barche ormeggiate e dei riflessi increspati. La tavolozza luminosa e le pennellate spezzate e sicure mostrano il nuovo stile al suo più ottimistico.\n\nAmici tra cui Renoir, Sisley, Manet e Caillebotte lo visitavano e dipingevano al suo fianco lì, facendo di Argenteuil una sorta di laboratorio all'aperto per il movimento. Versioni del ponte sono appese al Musée d'Orsay e alla National Gallery of Art di Washington.",
-  },
-
-  'col-4-los-acantilados-de-etretat': {
-    description:
-      "Le grandi scogliere di gesso e l'arco di pietra di Étretat sulla costa normanna incombono su un mare verde in tumulto, dipinti in pennellate rapide e vigorose che colgono il vento e gli spruzzi.",
-    history:
-      "La costa di gesso di Étretat, con i suoi tre archi naturali e un ago di roccia che si leva dal mare, era stata una calamita per pittori e scrittori — Courbet, Delacroix e il romanziere Maupassant fra loro — molto prima che Monet la facesse sua negli anni 1880. Vi tornò in stagioni diverse, alloggiando nel villaggio e trascinando il cavalletto giù sulla ghiaia.\n\nEra affascinato meno dalla roccia stessa che da come cambiava: la stessa scogliera sotto tempesta e calma, all'alba e al crepuscolo, in controluce o ardente, dipinta in pennellate rapide e vigorose che afferrano il vento, gli spruzzi e il colore mutevole dell'acqua. Lavorando al bordo della marea, una volta per poco non perse l'attrezzatura — e sé stesso — a causa di un'onda.\n\nQuesta ossessione di catturare un motivo su molte tele confluì direttamente nelle grandi serie — pagliai, pioppi, cattedrali — che avrebbero occupato la sua carriera successiva. Tele di Étretat sono custodite in musei di tutto il mondo.",
-  },
-
-  'col-4-la-casa-amarilla': {
-    description:
-      "Una vivace casa gialla all'angolo di una strada risplende sotto un cielo blu profondo, un treno che attraversa un ponte dietro di essa, l'intera scena dipinta nel colore vivido e contrastante di Van Gogh.",
-    history:
-      "Van Gogh dipinse «La casa gialla» nel settembre 1888, ritraendo il modesto edificio d'angolo di Arles la cui ala destra aveva affittato come casa e studio. Ne fu entusiasta, riempiendo le lettere al fratello Theo di progetti per farne il cuore di uno «studio del sud» condiviso dove artisti affini potessero vivere e lavorare insieme.\n\nContrappose la casa gialla arsa dal sole e le sue persiane verdi a un intenso cielo cobalto, un treno che sbuffa sul ponte dietro — un quadro radioso di speranza per la comunità che sognava di fondare. Per accogliere il suo primo ospite decorò le stanze con i suoi dipinti di girasoli.\n\nQuell'ospite, Paul Gauguin, venne davvero a stare da lui, ma i loro intensi e litigiosi due mesi insieme si conclusero a dicembre con il crollo di Van Gogh e il taglio di parte del suo stesso orecchio. Il sogno crollò; il dipinto sopravvive al Van Gogh Museum di Amsterdam.",
   },
 
   'col-4-el-rio-hudson': {
@@ -7427,11 +7397,11 @@ export const ABOUT_TEXT_IT: Record<string, AboutText> = {
       "Joaquín Sorolla dipinse «Passeggiata in riva al mare» nel 1909, ritraendo la moglie Clotilde e la figlia María che camminano al bordo dell'acqua in fluenti abiti bianchi estivi e veli vaporosi. Le due donne, eleganti e sicure di sé, sono colte a mezzo passo in una raffica di brezza marina.\n\nSorolla, il maestro spagnolo della luce solare, fece della luce stessa il vero soggetto: l'abbagliante riverbero del Mediterraneo, il gioco del sole attraverso il tessuto traslucido, lo scintillio della pelle e del velo, tutto colto in una pennellata brillante, rapida e sicura. La sua resa virtuosistica dell'accecante sole costiero valse al suo stile il nome di «luminismo».\n\nInternazionalmente famoso ai suoi tempi, Sorolla riempì le sue tele della gioia e della vitalità della costa spagnola. È appeso al Museo Sorolla di Madrid, la casa stessa dell'artista.",
   },
 
-  'col-4-ninos-en-la-playa': {
+  'col-4-cosiendo-la-vela': {
     description:
-      "Tre ragazzi nudi giacciono nella sabbia bagnata al bordo della risacca, i loro corpi e l'acqua bassa che scintillano di luce solare riflessa in pennellate di viola, rosa e oro.",
+      "Pescatori e famiglie, seduti in un cortile ombreggiato da un pergolato, cuciono un'enorme vela bianca sotto la luce screziata.",
     history:
-      "Sorolla dipinse «Bambini sulla spiaggia» nel 1910, sulle sabbie della sua Valencia natale, dove i ragazzi delle famiglie di pescatori facevano il bagno e giacevano nella risacca. Ne mostra tre stesi nudi nella sabbia bagnata al bordo dell'acqua, visti dall'alto mentre la schiuma bassa lava i loro corpi.\n\nÈ una suprema esibizione del suo dono di dipingere la luce solare sulla pelle e sull'acqua: la carne risplende di viola, rosa e oro, e la pellicola riflettente dell'acqua dissolve i ragazzi e la schiuma in un unico scintillio di colore luminoso. Non c'è quasi alcun aneddoto, solo luce, corpi e mare — pura sensazione.\n\nOpere come questa, radiose e libere, fecero di Sorolla uno dei pittori più ammirati d'Europa e d'America negli anni prima della Prima guerra mondiale. È appeso al Prado di Madrid.",
+      "Sorolla dipinse «Cucire la vela» a Valencia nel 1896, all'aperto, su una tela di oltre tre metri perché la scena conservasse la scala e l'immediatezza della vita stessa.\n\nIl soggetto è un lavoro quotidiano, ma il vero tema è la luce: il sole che attraversa il pergolato si spezza in macchie mobili sulla tela bianca, sui volti e sul suolo. L'opera ottenne una medaglia a Monaco e fu acquistata per Venezia, consolidando la fama internazionale di Sorolla come pittore della luce mediterranea.",
   },
 
   'col-4-el-angelus': {
@@ -7635,13 +7605,6 @@ export const ABOUT_TEXT_IT: Record<string, AboutText> = {
       "Henri Rousseau dipinse «Il sogno» nel 1910, l'ultimo anno della sua vita, ed è il più grande e ambizioso dei suoi quadri di giungla. Una donna nuda è reclinata su un divano di velluto rosso improbabilmente collocato nel mezzo di una giungla al chiaro di luna brulicante di leoni, un elefante, uccelli, un serpente e un ombroso incantatore che suona il flauto.\n\nRousseau allegò una breve poesia che spiegava il paradosso: la donna addormentata, che sogna sul suo divano, ode la musica dell'incantatore ed è trasportata nel suo sogno nella foresta incantata attorno a lei. Il pittore autodidatta costruì queste rigogliose giungle immaginarie interamente da serre parigine, animali dello zoo e libri illustrati, non avendone mai vista una vera, il che dà loro la loro stranezza piatta, minuziosa e allucinatoria.\n\nA lungo deriso, Rousseau visse quel tanto che bastava per vedere la giovane avanguardia abbracciarlo, e la sua visione onirica ne fece un eroe per i surrealisti. «Il sogno» è appeso al Museum of Modern Art di New York.",
   },
 
-  'col-5-judith-y-la-cabeza-de-holofernes': {
-    description:
-      "Una donna ingioiellata e seminuda guarda fuori con occhi socchiusi ed estatici, la testa mozzata di Oloferne appena visibile al bordo inferiore di uno sfondo dorato a motivi.",
-    history:
-      "Klimt dipinse «Giuditta I» nel 1901, prendendo l'eroina dell'Antico Testamento che salvò il suo popolo decapitando il generale nemico Oloferne e rifacendola come una femme fatale viennese del tutto moderna. Ingioiellata e seminuda, guarda fuori con occhi socchiusi ed estatici, la testa mozzata appena visibile al bordo inferiore su uno sfondo dorato.\n\nKlimt sfuma deliberatamente la linea tra trionfo ed estasi erotica, così che Giuditta appare meno una patriota vendicatrice che una donna persa in un piacere pericoloso, quasi orgasmico. Il quadro appartiene al fascino viennese fin de siècle per la donna seducente e minacciosa, e lo sfondo dorato guarda avanti al suo Periodo d'oro.\n\nCosì diversa dalla tradizionale pia Giuditta da essere talvolta confusa con Salomè, fece scandalo al suo tempo. È appesa al Belvedere di Vienna.",
-  },
-
   'col-5-danae': {
     description:
       "Una donna addormentata si raggomitola in una pioggia dorata — il dio Zeus che la visita come oro cadente — il corpo arrossato avvolto in stoffa e motivi vorticosi in un'immagine di sensualità sognante.",
@@ -7694,11 +7657,11 @@ export const ABOUT_TEXT_IT: Record<string, AboutText> = {
       "Munch dipinse la prima di sei versioni de «La bambina malata» nel 1885–86, riaffiorando alla ferita più lacerante della sua infanzia: la morte dell'amata sorella maggiore Sophie per tubercolosi quando era bambino, una malattia che aveva ucciso anche la loro madre. Una pallida ragazza dai capelli rossi rivolge lo sguardo alla luce mentre una donna in lutto china il capo al capezzale.\n\nMunch raschiò, graffiò e rielaborò la superficie finché apparve sfocata e incompiuta, come vista attraverso le lacrime, rifiutando deliberatamente di abbellire la malattia e il dolore. I critici dell'epoca lo attaccarono come uno schizzo pasticciato, ma egli difese la crudezza come più fedele al sentimento di quanto potesse esserlo qualsiasi finitura levigata.\n\nLo definì una svolta, e avviò l'arte profondamente personale ed emotivamente esposta che avrebbe definito la sua carriera. Versioni sono appese al Museo Nazionale di Oslo e altrove.",
   },
 
-  'col-5-pubertad': {
+  'col-5-tres-chicas-con-sombreros-de-paja': {
     description:
-      "Una ragazza adolescente nuda siede rigida sul bordo di un letto, le braccia incrociate protettivamente sul grembo, una grande ombra scura che incombe minacciosa sulla parete dietro di lei.",
+      "Tre giovani donne con ampi cappelli di paglia gialli si stagliano su piani di colore luminoso, i volti appena accennati.",
     history:
-      "Munch dipinse «Pubertà» intorno al 1894–95, mostrando una ragazza adolescente nuda seduta rigida sul bordo di un letto, le braccia incrociate protettivamente sul grembo, gli occhi spalancati fissi sullo spettatore. Dietro di lei una grande ombra scura si leva sulla parete, del tutto sproporzionata al suo piccolo corpo.\n\nIl quadro coglie il momento vulnerabile e ansioso di una bambina sulla soglia dell'età adulta, e quell'ombra minacciosa — staccata dalla sua forma reale — si legge come una proiezione di un terrore indefinito, di una sessualità che si risveglia e del futuro ignoto che le preme addosso. Munch trasforma un momento privato e imbarazzante in uno studio della paura stessa.\n\nLa sua disponibilità a sondare stati psicologici così scomodi lo poneva a parte dall'arte educata del suo tempo e ne fece un padre dell'Espressionismo. «Pubertà» è appesa al Museo Nazionale di Oslo.",
+      "Macke dipinse quest'opera a Bonn nel 1913, l'anno della sua piena maturità di colorista. Membro del Blaue Reiter accanto a Franz Marc e Paul Klee, aveva assimilato il colore prismatico di Robert Delaunay senza rinunciare al mondo visibile.\n\nIl suo soggetto è sempre lo svago moderno e quotidiano: passeggiate nei parchi, donne davanti alle vetrine, cappelli e luce del sole. Un anno dopo Macke cadde in Champagne nelle prime settimane della Prima guerra mondiale, a 27 anni, spezzando uno dei talenti più luminosi della sua generazione.",
   },
 
   'col-5-ansiedad': {
@@ -7708,18 +7671,11 @@ export const ABOUT_TEXT_IT: Record<string, AboutText> = {
       "Munch dipinse «Ansia» nel 1894, riutilizzando l'ardente cielo rosso sangue e il ripido ponte sul fiordo che aveva inventato per «L'urlo» l'anno prima. Ma anziché una sola figura solitaria che si stringe la testa, un'intera folla di volti dagli occhi vuoti e simili a maschere preme in avanti verso lo spettatore, fissando il vuoto.\n\nMoltiplicando il terrore su una processione di volti cupi e identici, Munch estende la sua visione dell'angoscia esistenziale dall'anima singola e tormentata alla moderna folla urbana — una massa di individui isolati che condividono la stessa paura senza nome. L'immagine attinge sia al suo tumulto interiore sia all'atmosfera fin de siècle di disagio collettivo.\n\nParte del suo «Fregio della vita», mostra come Munch rielaborò una manciata di motivi carichi in una meditazione interconnessa su amore, paura e morte. «Ansia» è appesa al Museo Munch di Oslo.",
   },
 
-  'col-5-atardecer-en-karl-johan': {
+  'col-5-dama-con-abanico': {
     description:
-      "Una marea di volti pallidi e dagli occhi spalancati fluttua verso lo spettatore giù per un viale di Kristiania al crepuscolo, la folla vacua e spettrale contro gli edifici illuminati di giallo.",
+      "Una donna con una spalla nuda regge un ventaglio davanti a un fondo dorato piatto cosparso di fenici cinesi e fiori di loto.",
     history:
-      "Munch dipinse «Sera sul viale Karl Johan» nel 1892, trasformando una passeggiata giù per il viale principale di Kristiania (oggi Oslo) in un incubo a occhi aperti. Si dice che la scena attinga alle sue stesse camminate angosciate lì, quando sperava e temeva d'incontrare un vecchio amore.\n\nUna marea di volti pallidi, dagli occhi spalancati e simili a maschere fluttua verso lo spettatore giù per la strada illuminata dal crepuscolo, vacua e spettrale contro gli edifici illuminati di giallo, mentre una sola figura scura si allontana dalla folla — spesso letta come l'artista stesso, del tutto solo in mezzo alla ressa. La borghese passeggiata serale diventa un'immagine di terrore ed estraneità.\n\nQuesto dissolversi della vita ordinaria in terrore psicologico guarda avanti all'Espressionismo e al suo stesso «Urlo». «Sera sul viale Karl Johan» è appesa ai musei KODE di Bergen, in Norvegia.",
-  },
-
-  'col-5-retrato-de-emilie-floge': {
-    description:
-      "Una donna alta sta avvolta in una slanciata veste blu e oro riccamente ornata di disegno di Klimt stesso, il volto pallido e le mani che emergono da una colonna scintillante di ornamento.",
-    history:
-      "Klimt dipinse questo ritratto di Emilie Flöge nel 1902. Flöge era una stilista di successo che dirigeva un elegante salotto viennese, ed era la più stretta compagna di una vita di Klimt — sua musa, socia in affari e, secondo alcuni resoconti, il grande amore della sua vita, anche se la natura esatta del loro legame rimase privata.\n\nSta avvolta in una slanciata veste blu e oro riccamente ornata, con ogni probabilità uno degli abiti «riformati» fluenti e non strutturati che lei e Klimt promuovevano come liberazione dai rigidi corsetti dell'epoca. Il ritratto fonde la sua reale presenza sicura di sé con lo scintillante motivo decorativo che stava diventando il marchio di Klimt.\n\nKlimt, a quanto si dice, non amava l'opera finita, ma essa si erge come tenero monumento alla loro unione; sul letto di morte, si dice, chiamò Emilie. È appeso al Wien Museum di Vienna.",
+      "Fu l'ultimo quadro a cui Klimt lavorò. Quando morì d'ictus nel febbraio 1918, a 55 anni, era ancora sul cavalletto del suo studio viennese, quasi finito ma non firmato.\n\nIl fondo dorato piatto e le fenici e i loti derivano dall'arte cinese e giapponese che Klimt collezionava; l'identità della modella è ignota, probabilmente una ballerina più che una cliente dell'alta società. Nel 2023 è stato venduto a Londra per 85,3 milioni di sterline, il prezzo più alto mai pagato in Europa per un'opera d'arte.",
   },
 
   'col-5-las-tres-edades-de-la-mujer': {
@@ -8111,6 +8067,60 @@ export const ABOUT_TEXT_IT: Record<string, AboutText> = {
       "Un gallo e una gallina dai colori brillanti si pavoneggiano tra ortensie azzurre, ogni piuma e petalo reso con una precisione abbagliante e quasi allucinatoria.",
     history:
       "Itō Jakuchū, eccentrico pittore di Kyoto del Settecento, si fece un nome soprattutto con studi di uccelli dai colori brillanti, e qui un gallo e una gallina si pavoneggiano tra ortensie azzurre, ogni piuma e petalo reso con una precisione abbagliante e quasi allucinatoria. Teneva volatili vivi nel giardino per studiarli senza sosta dal vero.\n\nFiglio di un prospero fruttivendolo di Kyoto, Jakuchū abbandonò l'attività di famiglia per dedicarsi interamente alla pittura, lavorando con una paziente e ossessiva esattezza e un amore da gioielliere per il colore e il motivo intensi. Il suo capolavoro fu una vasta serie di una trentina di rotoli di seta con uccelli, fiori e animali, di cui vividi quadri di galli come questo sono tra i più ammirati.\n\nA lungo una figura piuttosto di culto, Jakuchū ha conosciuto un enorme rilancio ed è oggi annoverato tra i più amati di tutti i pittori giapponesi. I suoi quadri di uccelli sono custoditi in collezioni giapponesi, tra cui la collezione imperiale.",
+  },
+  'col-2-un-bar-del-folies-bergere': {
+    description:
+      "Una cameriera sta dietro un bancone di marmo carico di bottiglie, lo sguardo assente, mentre uno specchio riflette la sala affollata.",
+    history:
+      "Manet lo dipinse nel suo studio nel 1882, un anno prima di morire, con una vera cameriera di nome Suzon a posare. Fu la sua ultima grande opera e il congedo dalla Parigi dei caffè e dello spettacolo che aveva dipinto per tutta la vita.\n\nLa fama del quadro si regge sul suo specchio impossibile: il riflesso mostra la donna da un'angolazione che nessuno spettatore potrebbe occupare, e l'uomo che lei guarda è assente dalla nostra vista. La critica attaccò subito l'«errore»; da allora l'opera è letta come una meditazione voluta sullo sguardo e sulla solitudine dentro la folla.",
+  },
+  'col-2-el-pifano': {
+    description:
+      "Un ragazzo soldato in pantaloni rossi e giacca nera suona il piffero su uno sfondo grigio uniforme, senza pavimento né orizzonte.",
+    history:
+      "Dipinto nel 1866 dopo il viaggio di Manet in Spagna, «Il pifferaio» deve tutto a Velázquez, le cui figure aveva appena visto a Madrid stagliarsi su uno spazio neutro. Il ragazzo era un vero musicante della Guardia Imperiale.\n\nLa giuria del Salon lo rifiutò ed Émile Zola pubblicò una difesa furiosa che lanciò la sua carriera di critico. Ciò che sembrava incapacità — niente ombra, niente ambiente, colore steso in campiture piatte — oggi si legge come il primo passo verso la pittura moderna: il quadro come superficie e non come finestra.",
+  },
+  'col-2-banistas-en-asnieres': {
+    description:
+      "Operai riposano al sole sulla riva, uno seduto in acqua con un cappello di paglia, ciminiere fumanti sulla sponda opposta.",
+    history:
+      "Seurat aveva ventiquattro anni quando dipinse questa enorme tela, la prima, dopo mesi di studi a olio eseguiti sul posto ad Asnières, sobborgo industriale a nord-ovest di Parigi.\n\nDiede a semplici operai la scala e l'immobilità della scultura classica, e più tardi rielaborò parti della superficie con i punti di colore puro che presto lo avrebbero reso celebre. Rifiutato al Salon, fu esposto al primo Salon des Indépendants: l'inizio del neoimpressionismo.",
+  },
+  'col-4-entre-las-sierras-nevadas': {
+    description:
+      "Un lago immobile riflette picchi frastagliati avvolti in foschia dorata, cervi sulla riva e uccelli che attraversano la luce.",
+    history:
+      "Bierstadt raggiunse l'Ovest con una spedizione topografica nel 1863, riempiendo taccuini sulle Montagne Rocciose e in California. Questa tela, dipinta a Roma nel 1868, non ritrae un luogo preciso ma una visione composita: un Eden americano assemblato da molte vedute.\n\nTele enormi come questa venivano esposte come spettacoli a pagamento, attirando folle che non avevano mai visto l'Ovest. Plasmarono il modo in cui una nazione immaginò la propria frontiera e sostennero la causa dei parchi nazionali.",
+  },
+  'col-4-recuerdo-de-mortefontaine': {
+    description:
+      "Un lago argenteo all’alba, un grande albero chinato sull’acqua e piccole figure che colgono fiori sulla riva, velati da una luce grigioverde.",
+    history:
+      "Corot lo dipinse nel suo studio parigino nel 1864, ricordando il parco di Mortefontaine a nord della città. Chiamava questi quadri «ricordi»: non documenti di un luogo, ma memorie distillate, con il dettaglio bruciato via e solo l'atmosfera rimasta.\n\nAcquistato da Napoleone III, divenne il modello del Corot tardo, argenteo e piumoso, che lo rese popolarissimo e falsificatissimo. I giovani impressionisti lo veneravano: Monet, Pissarro e Berthe Morisot impararono dal suo modo di lasciare che la luce dissolvesse i contorni.",
+  },
+  'col-5-retrato-de-jeanne-hebuterne': {
+    description:
+      "Una giovane dal collo lungo e dal volto inclinato, come una maschera, posa serena, con gli occhi a mandorla quasi vuoti.",
+    history:
+      "Jeanne Hébuterne era una studentessa d'arte che incontrò Modigliani a Parigi nel 1917 e ne divenne compagna e modella costante. La dipinse più di venti volte, sempre con il collo allungato e gli occhi svuotati appresi dalle maschere africane e dalla sua abbandonata carriera di scultore.\n\nModigliani morì di meningite tubercolare nel gennaio 1920, a 35 anni. Jeanne, incinta del secondo figlio, si tolse la vita il giorno seguente. La tragedia ha colorato da allora ogni lettura di questi ritratti, benché ciò che mostrano sia in realtà tenerezza, non presagio.",
+  },
+  'col-5-escena-callejera-de-berlin': {
+    description:
+      "Figure spigolose in abiti cittadini si sfiorano su un marciapiede affollato, dipinte in rosa e verdi acidi con tocchi nervosi.",
+    history:
+      "Kirchner si trasferì a Berlino nel 1911 e trovò il suo soggetto nelle strade: la folla, la luce elettrica, gli sguardi cifrati della città moderna. Fra il 1913 e il 1915 dipinse undici scene di strada, vertice dell'espressionismo tedesco.\n\nAllungò le figure, inclinò i marciapiedi e usò il colore contro natura perché lo spettatore sentisse l'energia nervosa invece di osservarla. La guerra lo spezzò — congedato dopo un crollo, si ritirò sulle Alpi svizzere — e i nazisti bollarono poi la sua arte come «degenerata».",
+  },
+  'col-4-la-corriente-del-golfo': {
+    description:
+      "Un marinaio nero giace sul ponte di una barca disalberata in un mare grosso, con squali attorno e una tromba marina all’orizzonte.",
+    history:
+      "Homer dipinse «La corrente del Golfo» nel 1899, dopo inverni alle Bahamas e in Florida, riprendendo un soggetto abbozzato ad acquerello anni prima. I mercanti lo trovarono troppo cupo e restò invenduto per un decennio.\n\nQuando i collezionisti chiedevano ansiosi che ne fosse dell'uomo, Homer rispondeva seccato che il marinaio sarebbe stato salvato dalla nave all'orizzonte. Letta oggi come meditazione sull'isolamento, sul pericolo e sulla storia atlantica della schiavitù, è tra le opere più discusse dell'arte statunitense.",
+  },
+  'final-la-musa': {
+    description:
+      "Una giovane siede con la matita sospesa su un album bianco, lo sguardo alzato come in attesa dell'idea.",
+    history:
+      "Samuel F. B. Morse dipinse la figlia Susan verso il 1836-37 e intitolò l'opera «La Musa». Era uno dei migliori pittori americani della sua generazione e aveva passato anni in Europa a copiare i maestri; la sua «Galleria del Louvre» ammassa trentotto quadri su una sola tela.\n\nPoi si fermò. Escluso da una grande commissione pubblica, amareggiato e senza denaro, Morse abbandonò del tutto l'arte. Si dedicò a una macchina per inviare messaggi lungo un filo e a un codice di punti e linee che portò il suo nome in tutto il mondo. L'album bianco in grembo alla figlia è l'ultima pagina della sua vita di pittore.\n\nOgni codice che hai scansionato per arrivare fin qui discende, in un certo senso, da ciò che fece dopo.",
   },
 };
 
@@ -8660,13 +8670,6 @@ export const ABOUT_TEXT_PT: Record<string, AboutText> = {
       "Van Gogh pintou suas famosas naturezas-mortas de girassóis em Arles em 1888 para decorar a Casa Amarela para a chegada de seu amigo Paul Gauguin, cujo quarto ele queria encher de quadros de nada além de grandes flores ardentes. Para Van Gogh as flores e seus amarelos radiantes eram uma linguagem privada de gratidão, amizade e do calor do sul.\n\nEsforçou-se tecnicamente, trabalhando no que chamava de «amarelo sobre amarelo» — flores, vaso, mesa e fundo todos em tons de ouro — um ousado quase-monocromo que poucos pintores haviam ousado. Ficou orgulhoso o bastante dos resultados para assinar o vaso, algo que raramente fazia.\n\nGauguin os admirou e mais tarde pediu um; Van Gogh, em vez disso, pintou repetições para guardar. Hoje as versões sobreviventes estão penduradas em Londres, Munique, Amsterdã, Tóquio e Filadélfia, entre as imagens mais reconhecíveis e amadas de toda a arte.",
   },
 
-  'col-2-terraza-de-cafe-por-la-noche': {
-    description:
-      "O terraço de um café resplandece de um cálido amarelo sob seu toldo numa praça de paralelepípedos, contra um céu noturno azul profundo salpicado de estrelas sobredimensionadas — tudo pintado sem um único preto.",
-    history:
-      "Van Gogh pintou este café de Arles à noite em setembro de 1888, entusiasmado com o desafio de captar a escuridão usando apenas a cor — o choque do terraço amarelo iluminado a gás contra um céu azul cheio de estrelas, sem recorrer a preto algum. Escreveu à irmã que a noite era mais rica e mais viva de cor que o dia.\n\nPintou-o ao ar livre depois do escuro, trabalhando à luz do próprio café, parte de uma explosão de cenas noturnas naquele outono enquanto testava até onde a cor pura podia levar a atmosfera e o clima. Os paralelepípedos, o toldo e o céu profundo estão todos carregados de um brilho quase sobrenatural.\n\nO quadro foi um passo crucial rumo aos céus rodopiantes da «Noite Estrelada» do ano seguinte, e alguns espectadores leram a mesa iluminada com uma figura central e a janela em forma de cruz atrás como um quieto eco de uma Última Ceia. Está pendurado no Kröller-Müller Museum, nos Países Baixos.",
-  },
-
   'col-2-mujer-con-sombrilla': {
     description:
       "Uma mulher com uma sombrinha verde está numa erbosa elevação batida pelo vento, vista de baixo contra um céu luminoso e salpicado de nuvens, seu véu e seu vestido soprados de lado enquanto uma criança observa atrás.",
@@ -8749,20 +8752,6 @@ export const ABOUT_TEXT_PT: Record<string, AboutText> = {
       "Sob uma noite azul profunda, os lampiões a gás de Arles ardem ao longo da margem oposta do Ródano e se arrastam em longos reflexos sobre a água, a Ursa Maior cintilando no alto, um casal a passeio em primeiro plano.",
     history:
       "Van Gogh pintou esta cena noturna à beira-rio em Arles em setembro de 1888, cerca de nove meses antes da mais famosa e mais tumultuosa «Noite Estrelada» que fez no manicômio de Saint-Rémy. Aqui o céu é calmo e ajoiado em vez de rodopiante, e pintado da observação direta na margem do Ródano.\n\nEstava entusiasmado com o desafio da noite, trabalhando ao ar livre sob a luz a gás e, brincava, às vezes com velas fixadas ao chapéu. Representou com cuidado a Ursa Maior no alto e os longos reflexos dos lampiões a gás da cidade arrastando-se pela água, acrescentando dois enamorados que passeiam de braços dados na borda inferior.\n\nEscrevendo ao irmão Theo, confessou que tinha «uma terrível necessidade de — devo dizer a palavra — religião», e saiu para pintar as estrelas. Exibida no Salão dos Independentes em 1889, está hoje pendurada no Musée d'Orsay, em Paris.",
-  },
-
-  'col-2-el-puente-japones': {
-    description:
-      "Uma ponte de pedestres de madeira verde arqueia-se sobre o lago de ninfeias em Giverny, semiengolida por salgueiros pendentes e por uma densa folhagem que preenchem a tela numa tapeçaria de verdes.",
-    history:
-      "Monet construiu uma ponte de pedestres arqueada em estilo japonês sobre o lago de ninfeias de seu jardim em Giverny na década de 1890, inspirado pelas estampas japonesas que colecionava e pendurava por toda a casa. Pintou-a muitas vezes, tratando a ponte, os salgueiros e as ninfeias flutuantes como uma única tapeçaria verde.\n\nAs versões iniciais são serenas e claramente desenhadas; as posteriores, feitas depois de 1918 enquanto a catarata turvava e amarelava sua visão, tornam-se violentamente coloridas e quase abstratas, a ponte quase engolida por vermelhos furiosos e pinceladas emaranhadas. Essas telas tardias assombraram os pintores abstratos de meados do século, que nelas viram um precursor.\n\nMonet passou décadas e uma pequena fortuna projetando e cuidando do jardim expressamente como um tema para pintar, borrando a linha entre jardineiro e artista. A série da ponte está hoje espalhada por museus do mundo todo, incluindo o Musée d'Orsay e a National Gallery of Art, em Washington.",
-  },
-
-  'col-2-jardin-del-artista-en-giverny': {
-    description:
-      "Fileiras de íris roxos e rosa ardem no jardim do artista, recuando em ousadas faixas diagonais sob as árvores, toda a superfície viva de pinceladas rápidas e saturadas.",
-    history:
-      "Monet tratou o jardim que construiu em Giverny como uma obra de arte viva e seu tema principal ao longo de suas últimas décadas, projetando seus canteiros e caminhos com o olho de um pintor para as harmonias de cor antes mesmo de montar um cavalete. Esta vista de por volta de 1900 olha por um caminho que arde de íris roxos e rosa.\n\nOrganiza os canteiros em ousadas faixas diagonais que se lançam de volta rumo às árvores, dissolvendo as flores individuais em fitas e salpicos de cor pura e saturada. O limite entre a horticultura e a pintura é quase apagado — o jardim é o verdadeiro ateliê do quadro.\n\nMonet empregava uma equipe de jardineiros e importava plantas raras especificamente por seu efeito pictórico, e quadros como este celebram essa fusão de natureza e arte. Está pendurado no Musée d'Orsay, em Paris.",
   },
 
   'col-2-acantilados-en-etretat': {
@@ -9363,32 +9352,12 @@ export const ABOUT_TEXT_PT: Record<string, AboutText> = {
       "John Constable pintou «O Campo de Trigo» em 1826, mostrando uma alameda sombreada que se diz ser uma que ele percorria quando menino a caminho da escola perto de sua East Bergholt natal. Um pastorzinho se esparrama para beber de um riacho enquanto seu rebanho se espalha rumo a campos ensolarados de trigo maduro e a uma igreja distante.\n\nO quadro está repleto de detalhes ingleses amorosamente observados — flores silvestres, um portão quebrado, uma ovelha desgarrada, um cão — e impregnado da cálida nostalgia que Constable sentia pela operosa campina de sua juventude. Preocupou-se que pudesse estar cheio de episódios demais, e acrescentou a torre da igreja no horizonte em parte para agradar ao gosto convencional.\n\nUm grupo de seus admiradores o comprou por subscrição após sua morte e o doou à nação, e ele se tornou uma de suas obras mais populares. Está pendurado na National Gallery, em Londres.",
   },
 
-  'col-4-recuerdo-de-mortefontaine': {
-    description:
-      "Numa suave neblina prateada à beira de um lago, árvores emplumadas emolduram uma mulher e duas crianças colhendo flores, toda a cena onírica e docemente desfocada.",
-    history:
-      "Camille Corot pintou «Recordação de Mortefontaine» em 1864, no auge de sua tardia fama, tomando o nome de um parque real ao norte de Paris mas tratando-o apenas como um ponto de partida. Seus «souvenirs» não eram registros topográficos mas recordações poéticas, meio lembradas e meio inventadas.\n\nDissolveu a cena numa suave neblina prateada de árvores emplumadas, água imóvel e uma mulher que se estende para os galhos, atenuando todo detalhe nítido num terno e onírico devaneio. Essa maneira nebulosa e atmosférica foi enormemente popular entre os colecionadores e tornou o idoso Corot rico e amado.\n\nAo afrouxar o desenho em clima e luz, e ao orientar pintores mais jovens como Pissarro e Berthe Morisot, ajudou quietamente a apontar o caminho da paisagem clássica rumo ao Impressionismo. Está pendurada no Louvre.",
-  },
 
   'col-4-el-puente-en-argenteuil': {
     description:
       "Barcos a vela de altos mastros repousam sobre o calmo e azul Sena ao lado de uma ponte rodoviária em Argenteuil, a água e o céu representados em pinceladas vivas e quebradas de um límpido dia de verão.",
     history:
       "Monet viveu em Argenteuil, uma cidade fluvial logo rio abaixo de Paris, durante boa parte da década de 1870, e ela se tornou o ensolarado coração do primeiro Impressionismo. O Sena ali era um ponto da moda para a vela e o lazer de fim de semana, e Monet até equipou um barco-ateliê flutuante para pintar o rio a partir da água.\n\nEsta ponte rodoviária, reconstruída após a destruição da guerra, aparece em várias de suas telas; era atraído pela nítida geometria de seus pilares contraposta ao solto cintilar dos barcos a vela atracados e dos reflexos encrespados. A paleta viva e as pinceladas quebradas e seguras mostram o novo estilo em seu mais otimista.\n\nAmigos incluindo Renoir, Sisley, Manet e Caillebotte o visitavam e pintavam ao seu lado ali, fazendo de Argenteuil uma espécie de laboratório ao ar livre para o movimento. Versões da ponte estão penduradas no Musée d'Orsay e na National Gallery of Art, em Washington.",
-  },
-
-  'col-4-los-acantilados-de-etretat': {
-    description:
-      "As grandes falésias de giz e o arco de pedra de Étretat, na costa normanda, avultam sobre um mar verde em turbilhão, pintados em pinceladas rápidas e vigorosas que captam o vento e a espuma.",
-    history:
-      "A costa de giz de Étretat, com seus três arcos naturais e uma agulha de rocha erguendo-se do mar, fora um ímã para pintores e escritores — Courbet, Delacroix e o romancista Maupassant entre eles — muito antes de Monet a fazer sua na década de 1880. Voltou em estações diferentes, hospedando-se na aldeia e arrastando o cavalete até o cascalho.\n\nEra fascinado menos pela rocha em si do que por como ela mudava: a mesma falésia sob tempestade e calmaria, ao amanhecer e ao crepúsculo, em contraluz ou ardente, pintada em pinceladas rápidas e vigorosas que agarram o vento, a espuma e a cor cambiante da água. Trabalhando à beira da maré, uma vez por pouco não perdeu o equipamento — e a si mesmo — para uma onda.\n\nEssa obsessão de captar um motivo em muitas telas alimentou diretamente as grandes séries — palheiros, choupos, catedrais — que ocupariam sua carreira posterior. Telas de Étretat estão guardadas em museus do mundo todo.",
-  },
-
-  'col-4-la-casa-amarilla': {
-    description:
-      "Uma vívida casa amarela numa esquina resplandece sob um céu azul profundo, um trem atravessando uma ponte atrás dela, toda a cena pintada na vívida e contrastante cor de Van Gogh.",
-    history:
-      "Van Gogh pintou «A Casa Amarela» em setembro de 1888, retratando o modesto edifício de esquina em Arles cuja ala direita alugara como casa e ateliê. Estava entusiasmado com ela, enchendo cartas ao irmão Theo de planos para fazer dela o coração de um «ateliê do sul» compartilhado onde artistas afins pudessem viver e trabalhar juntos.\n\nContrapôs a casa amarela queimada de sol e suas persianas verdes a um intenso céu cobalto, um trem soltando fumaça sobre a ponte atrás — um quadro radiante de esperança pela comunidade que sonhava fundar. Para dar as boas-vindas a seu primeiro hóspede, decorou os aposentos com suas pinturas de girassóis.\n\nAquele hóspede, Paul Gauguin, de fato veio ficar, mas seus intensos e brigões dois meses juntos terminaram em dezembro com o colapso de Van Gogh e o corte de parte de sua própria orelha. O sonho ruiu; a pintura sobrevive no Van Gogh Museum, em Amsterdã.",
   },
 
   'col-4-el-rio-hudson': {
@@ -9607,11 +9576,11 @@ export const ABOUT_TEXT_PT: Record<string, AboutText> = {
       "Joaquín Sorolla pintou «Passeio à Beira-Mar» em 1909, retratando sua esposa Clotilde e a filha María caminhando pela beira da água em fluentes vestidos brancos de verão e véus vaporosos. As duas mulheres, elegantes e senhoras de si, são apanhadas a meio passo numa rajada de brisa do mar.\n\nSorolla, o mestre espanhol da luz do sol, fez da própria luz o verdadeiro tema: o deslumbrante brilho do Mediterrâneo, o jogo do sol através do tecido translúcido, o cintilar da pele e do véu, tudo apanhado numa pincelada brilhante, rápida e segura. Seu manejo virtuoso do ofuscante sol costeiro valeu ao seu estilo o nome de «luminismo».\n\nInternacionalmente famoso em seu tempo, Sorolla encheu suas telas da alegria e da vitalidade da costa espanhola. Está pendurado no Museo Sorolla, em Madri, a própria casa do artista.",
   },
 
-  'col-4-ninos-en-la-playa': {
+  'col-4-cosiendo-la-vela': {
     description:
-      "Três meninos nus jazem na areia molhada à beira da rebentação, seus corpos e a água rasa cintilando de luz solar refletida em pinceladas de violeta, rosa e ouro.",
+      "Pescadores e as suas famílias, sentados num pátio sombreado por uma parreira, costuram uma enorme vela branca sob a luz salpicada.",
     history:
-      "Sorolla pintou «Crianças na Praia» em 1910, nas areias de sua Valência natal, onde meninos de famílias de pescadores se banhavam e jaziam na rebentação. Mostra três deles estirados nus na areia molhada à beira da água, vistos de cima enquanto a espuma rasa lava seus corpos.\n\nÉ uma suprema exibição de seu dom de pintar a luz do sol sobre a pele e a água: a carne resplandece de violeta, rosa e ouro, e a película reflexiva da água dissolve os meninos e a espuma num único cintilar de cor luminosa. Não há quase anedota alguma, apenas luz, corpos e o mar — pura sensação.\n\nObras como esta, radiantes e livres, fizeram de Sorolla um dos pintores mais admirados da Europa e da América nos anos antes da Primeira Guerra Mundial. Está pendurado no Prado, em Madri.",
+      "Sorolla pintou «Costurando a vela» em Valência em 1896, ao ar livre, numa tela com mais de três metros para que a cena mantivesse a escala e a imediatez da própria vida.\n\nO assunto é um trabalho quotidiano, mas o verdadeiro tema é a luz: o sol que atravessa a parreira parte-se em manchas móveis sobre a lona branca, os rostos e o chão. A obra recebeu medalha em Munique e foi adquirida para Veneza, consolidando a fama internacional de Sorolla como pintor da luz mediterrânica.",
   },
 
   'col-4-el-angelus': {
@@ -9815,13 +9784,6 @@ export const ABOUT_TEXT_PT: Record<string, AboutText> = {
       "Henri Rousseau pintou «O Sonho» em 1910, o último ano de sua vida, e é o maior e mais ambicioso de seus quadros de selva. Uma mulher nua está reclinada num sofá de veludo vermelho improvavelmente posto no meio de uma selva ao luar fervilhante de leões, um elefante, aves, uma serpente e um sombrio encantador que toca flauta.\n\nRousseau anexou um breve poema explicando o paradoxo: a mulher adormecida, sonhando em seu sofá, ouve a música do encantador e é transportada em seu sonho para a floresta encantada ao seu redor. O pintor autodidata construiu essas exuberantes selvas imaginárias inteiramente a partir de estufas de Paris, animais de zoológico e livros ilustrados, sem jamais ter visto uma de verdade, o que lhes dá sua estranheza chapada, minuciosa e alucinatória.\n\nPor muito tempo ridicularizado, Rousseau viveu apenas o bastante para ver a jovem vanguarda abraçá-lo, e sua visão onírica fez dele um herói para os surrealistas. «O Sonho» está pendurado no Museum of Modern Art, em Nova York.",
   },
 
-  'col-5-judith-y-la-cabeza-de-holofernes': {
-    description:
-      "Uma mulher enjoiada e seminua olha para fora com olhos semicerrados e extáticos, a cabeça decepada de Holofernes apenas visível na borda inferior de um fundo dourado e estampado.",
-    history:
-      "Klimt pintou «Judite I» em 1901, tomando a heroína do Antigo Testamento que salvou seu povo decapitando o general inimigo Holofernes e refazendo-a como uma femme fatale vienense inteiramente moderna. Enjoiada e seminua, olha para fora com olhos semicerrados e extáticos, a cabeça decepada apenas visível na borda inferior contra um fundo dourado.\n\nKlimt borra deliberadamente a linha entre o triunfo e o devaneio erótico, de modo que Judite parece menos uma patriota vingadora do que uma mulher perdida num prazer perigoso, quase orgástico. O quadro pertence ao fascínio vienense fin de siècle pela mulher sedutora e ameaçadora, e o fundo dourado olha adiante para seu Período Dourado.\n\nTão diferente da tradicional pia Judite que às vezes é confundida com Salomé, causou escândalo em seu tempo. Está pendurada no Belvedere, em Viena.",
-  },
-
   'col-5-danae': {
     description:
       "Uma mulher adormecida encolhe-se numa chuva dourada — o deus Zeus a visitando como ouro que cai — seu corpo corado envolto em pano e padrão rodopiantes numa imagem de sensualidade sonhadora.",
@@ -9874,11 +9836,11 @@ export const ABOUT_TEXT_PT: Record<string, AboutText> = {
       "Munch pintou a primeira de seis versões de «A Menina Doente» em 1885–86, remontando à mais dilacerante ferida de sua infância: a morte de sua amada irmã mais velha Sophie por tuberculose quando ele era menino, uma doença que também matara a mãe deles. Uma pálida menina de cabelos ruivos volta o olhar rumo à luz enquanto uma mulher enlutada inclina a cabeça à cabeceira.\n\nMunch raspou, arranhou e reelaborou a superfície até que ela parecesse borrada e inacabada, como que vista através das lágrimas, recusando-se deliberadamente a embelezar a doença e o luto. Os críticos da época o atacaram como um esboço malfeito, mas ele defendeu a crueza como mais fiel ao sentimento do que qualquer acabamento polido poderia ser.\n\nChamou-a de um avanço, e ela lançou a arte profundamente pessoal e emocionalmente exposta que definiria sua carreira. Versões estão penduradas no Museu Nacional, em Oslo, e em outros lugares.",
   },
 
-  'col-5-pubertad': {
+  'col-5-tres-chicas-con-sombreros-de-paja': {
     description:
-      "Uma menina adolescente nua senta-se rigidamente na beira de uma cama, os braços cruzados protetoramente sobre o colo, uma grande sombra escura avultando ameaçadora na parede atrás dela.",
+      "Três jovens com largos chapéus de palha amarelos destacam-se sobre planos de cor luminosa, com os rostos apenas esboçados.",
     history:
-      "Munch pintou «Puberdade» por volta de 1894–95, mostrando uma menina adolescente nua sentada rigidamente na beira de uma cama, os braços cruzados protetoramente sobre o colo, os olhos arregalados fixos no espectador. Atrás dela uma grande sombra escura avulta pela parede, inteiramente desproporcional a seu pequeno corpo.\n\nO quadro capta o vulnerável e ansioso momento de uma criança no limiar da idade adulta, e aquela sombra ameaçadora — destacada de sua forma real — lê-se como uma projeção de um pavor indefinido, de uma sexualidade que desperta e do futuro desconhecido que se prensa sobre ela. Munch transforma um momento privado e embaraçoso num estudo do próprio medo.\n\nSua disposição a sondar estados psicológicos tão desconfortáveis o punha à parte da arte educada de seu tempo e fez dele um pai do Expressionismo. «Puberdade» está pendurada no Museu Nacional, em Oslo.",
+      "Macke pintou esta obra em Bona em 1913, o ano em que atingiu a plena maturidade como colorista. Membro do Der Blaue Reiter ao lado de Franz Marc e Paul Klee, assimilara a cor prismática de Robert Delaunay sem abdicar do mundo visível.\n\nO seu tema é sempre o lazer moderno e quotidiano: passeantes nos parques, mulheres diante de montras, chapéus e luz do sol. Um ano depois, Macke morreu em Champanhe nas primeiras semanas da Primeira Guerra Mundial, aos 27 anos, ceifando um dos talentos mais luminosos da sua geração.",
   },
 
   'col-5-ansiedad': {
@@ -9888,18 +9850,11 @@ export const ABOUT_TEXT_PT: Record<string, AboutText> = {
       "Munch pintou «Ansiedade» em 1894, reutilizando o ardente céu vermelho-sangue e a íngreme ponte à beira do fiorde que inventara para «O Grito» no ano anterior. Mas em vez de uma única figura solitária agarrando a cabeça, uma multidão inteira de rostos de olhos vazios e semelhantes a máscaras avança rumo ao espectador, fitando o vazio.\n\nAo multiplicar o pavor por uma procissão de rostos sombrios e idênticos, Munch estende sua visão da angústia existencial da alma solitária e atormentada à moderna multidão urbana — uma massa de indivíduos isolados compartilhando o mesmo medo sem nome. A imagem vale-se tanto de seu próprio tumulto interior quanto do clima fin de siècle de inquietação coletiva.\n\nParte de seu «Friso da Vida», mostra como Munch reelaborou um punhado de motivos carregados numa meditação interligada sobre o amor, o medo e a morte. «Ansiedade» está pendurada no Museu Munch, em Oslo.",
   },
 
-  'col-5-atardecer-en-karl-johan': {
+  'col-5-dama-con-abanico': {
     description:
-      "Uma maré de rostos pálidos e de olhos arregalados flutua rumo ao espectador por um bulevar de Kristiania ao crepúsculo, a multidão vazia e espectral contra os edifícios iluminados de amarelo.",
+      "Uma mulher com um ombro nu segura um leque diante de um fundo dourado plano semeado de fénixes chinesas e flores de lótus.",
     history:
-      "Munch pintou «Noite no Bulevar Karl Johan» em 1892, transformando um passeio pelo bulevar principal de Kristiania (hoje Oslo) num pesadelo a olhos abertos. Diz-se que a cena se vale de suas próprias caminhadas angustiadas ali, quando esperava e temia encontrar um antigo amor.\n\nUma maré de rostos pálidos, de olhos arregalados e semelhantes a máscaras flutua rumo ao espectador pela rua iluminada pelo crepúsculo, vazia e espectral contra os edifícios iluminados de amarelo, enquanto uma única figura escura se afasta da multidão — muitas vezes lida como o próprio artista, inteiramente sozinho em meio à turba. O burguês passeio noturno torna-se uma imagem de pavor e estranhamento.\n\nEsse dissolver da vida comum em terror psicológico olha adiante para o Expressionismo e para seu próprio «Grito». «Noite no Bulevar Karl Johan» está pendurada nos museus KODE, em Bergen, na Noruega.",
-  },
-
-  'col-5-retrato-de-emilie-floge': {
-    description:
-      "Uma mulher alta está envolta numa esguia veste azul e dourada ricamente estampada do próprio desenho de Klimt, seu rosto pálido e suas mãos emergindo de uma reluzente coluna de ornamento.",
-    history:
-      "Klimt pintou este retrato de Emilie Flöge em 1902. Flöge era uma estilista de sucesso que dirigia um elegante salão vienense, e era a mais próxima companheira de toda a vida de Klimt — sua musa, sócia nos negócios e, segundo alguns relatos, o grande amor de sua vida, embora a natureza exata de seu vínculo tenha permanecido privada.\n\nEstá envolta numa esguia veste azul e dourada ricamente estampada, com toda a probabilidade um dos vestidos «reformados» fluentes e sem estrutura que ela e Klimt promoviam como uma libertação dos rígidos espartilhos da época. O retrato funde sua real presença senhora de si com o reluzente padrão decorativo que se tornava a marca de Klimt.\n\nKlimt, ao que se diz, não gostava da obra acabada, mas ela se ergue como um terno monumento à sua parceria; no leito de morte, diz-se, chamou por Emilie. Está pendurado no Wien Museum, em Viena.",
+      "Foi o último quadro em que Klimt trabalhou. Quando morreu de AVC em fevereiro de 1918, aos 55 anos, continuava no cavalete do seu ateliê vienense, quase terminado mas não assinado.\n\nO fundo dourado plano e as fénixes e lótus vêm da arte chinesa e japonesa que Klimt colecionava; desconhece-se a identidade da retratada, provavelmente uma bailarina e não uma cliente da alta sociedade. Em 2023 foi vendido em Londres por 85,3 milhões de libras, o preço mais alto alguma vez pago por uma obra de arte na Europa.",
   },
 
   'col-5-las-tres-edades-de-la-mujer': {
@@ -10291,6 +10246,60 @@ export const ABOUT_TEXT_PT: Record<string, AboutText> = {
       "Um galo e uma galinha de cores brilhantes pavoneiam-se entre hortênsias azuis, cada pena e pétala representada com uma precisão deslumbrante e quase alucinatória.",
     history:
       "Itō Jakuchū, um excêntrico pintor de Quioto do século XVIII, fez seu nome acima de tudo com estudos de aves de cores brilhantes, e aqui um galo e uma galinha se pavoneiam entre hortênsias azuis, cada pena e pétala representada com uma precisão deslumbrante e quase alucinatória. Mantinha aves vivas em seu jardim para estudá-las sem fim do natural.\n\nFilho de um próspero quitandeiro de Quioto, Jakuchū abandonou o negócio da família para dedicar-se inteiramente à pintura, trabalhando com uma paciente e obsessiva exatidão e um amor de joalheiro pela cor e pelo padrão intensos. Sua obra-prima foi uma vasta série de umas trinta rolos de seda de aves, flores e animais, dos quais vívidos quadros de galos como este estão entre os mais admirados.\n\nPor muito tempo uma figura algo de culto, Jakuchū desfrutou de um enorme renascimento e é hoje contado entre os mais amados de todos os pintores japoneses. Seus quadros de aves são estimados em coleções japonesas, incluindo a coleção imperial.",
+  },
+  'col-2-un-bar-del-folies-bergere': {
+    description:
+      "Uma empregada está atrás de um balcão de mármore com garrafas, olhando-nos com expressão ausente enquanto um espelho reflete a sala cheia.",
+    history:
+      "Manet pintou-o no seu ateliê em 1882, um ano antes de morrer, com uma verdadeira empregada chamada Suzon a posar. Foi a sua última grande obra e a despedida da Paris dos cafés e do espetáculo que pintara toda a vida.\n\nA fama do quadro assenta no seu espelho impossível: o reflexo mostra a mulher de um ângulo que nenhum espectador poderia ocupar, e o homem que ela encara está ausente da nossa vista. A crítica atacou logo o «erro»; desde então a obra é lida como uma meditação deliberada sobre o olhar e a solidão dentro da multidão.",
+  },
+  'col-2-el-pifano': {
+    description:
+      "Um menino soldado de calças vermelhas e casaco preto toca um pífaro sobre um fundo cinzento liso, sem chão nem horizonte.",
+    history:
+      "Pintado em 1866 após a viagem de Manet a Espanha, «O pífaro» deve tudo a Velázquez, cujas figuras acabara de ver em Madrid recortadas sobre um espaço neutro. O rapaz era um verdadeiro músico da Guarda Imperial.\n\nO júri do Salão recusou-o, e Émile Zola publicou uma defesa furiosa que lançou a sua carreira de crítico. O que parecia falta de perícia — sem sombra, sem cenário, cor em manchas planas — lê-se hoje como o primeiro passo para a pintura moderna: o quadro como superfície e não como janela.",
+  },
+  'col-2-banistas-en-asnieres': {
+    description:
+      "Operários descansam ao sol na margem do rio, um sentado junto à água com chapéu de palha, chaminés a fumegar na outra margem.",
+    history:
+      "Seurat tinha vinte e quatro anos quando pintou esta enorme tela, a primeira, após meses de estudos a óleo feitos no local em Asnières, subúrbio industrial a noroeste de Paris.\n\nDeu a simples operários a escala e a quietude da escultura clássica e mais tarde retrabalhou partes da superfície com os pontos de cor pura que em breve o tornariam célebre. Recusado pelo Salão, foi mostrado no primeiro Salão dos Independentes: o início do neoimpressionismo.",
+  },
+  'col-4-entre-las-sierras-nevadas': {
+    description:
+      "Um lago imóvel reflete picos recortados envoltos em bruma dourada, veados na margem e aves a cruzar a luz.",
+    history:
+      "Bierstadt viajou para Oeste com uma expedição topográfica em 1863, enchendo cadernos nas Montanhas Rochosas e na Califórnia. Esta tela, pintada em Roma em 1868, não retrata um lugar concreto mas uma visão composta: um Éden americano montado a partir de muitas vistas.\n\nTelas enormes como esta eram exibidas como espetáculos pagos, atraindo multidões que nunca tinham visto o Oeste. Moldaram o modo como uma nação imaginou a sua fronteira e ajudaram a sustentar o argumento dos parques nacionais.",
+  },
+  'col-4-recuerdo-de-mortefontaine': {
+    description:
+      "Um lago prateado ao amanhecer, uma grande árvore inclinada sobre a água e pequenas figuras a colher flores na margem, velados por luz cinzento-esverdeada.",
+    history:
+      "Corot pintou-o no seu ateliê parisiense em 1864, recordando o parque de Mortefontaine a norte da cidade. Chamava a estes quadros «recordações»: não registos de um sítio, mas memórias destiladas, com o detalhe queimado e apenas a atmosfera de pé.\n\nComprado por Napoleão III, tornou-se o modelo do Corot tardio, prateado e plumoso, que o fez enormemente popular — e enormemente falsificado. Os jovens impressionistas veneravam-no: Monet, Pissarro e Berthe Morisot aprenderam com o seu modo de deixar a luz dissolver os contornos.",
+  },
+  'col-5-retrato-de-jeanne-hebuterne': {
+    description:
+      "Uma jovem de pescoço longo e rosto inclinado, como uma máscara, posa serena, com os olhos amendoados quase vazios.",
+    history:
+      "Jeanne Hébuterne era uma estudante de arte que conheceu Modigliani em Paris em 1917 e se tornou sua companheira e modelo constante. Pintou-a mais de vinte vezes, sempre com o pescoço alongado e os olhos vazados que aprendera das máscaras africanas e da sua abandonada carreira de escultor.\n\nModigliani morreu de meningite tuberculosa em janeiro de 1920, aos 35 anos. Jeanne, grávida do segundo filho, tirou a vida no dia seguinte. A tragédia tingiu desde então toda a leitura destes retratos, embora o que mostrem seja na verdade ternura, não fatalidade.",
+  },
+  'col-5-escena-callejera-de-berlin': {
+    description:
+      "Figuras angulosas em roupa citadina roçam-se num passeio apinhado, pintadas em rosas e verdes ácidos com pinceladas nervosas.",
+    history:
+      "Kirchner mudou-se para Berlim em 1911 e encontrou o seu tema nas ruas: a multidão, a luz elétrica, os olhares cifrados da cidade moderna. Entre 1913 e 1915 pintou onze cenas de rua, o cume do expressionismo alemão.\n\nAlongou as figuras, inclinou os passeios e usou a cor contra a natureza para que o espectador sentisse a energia nervosa em vez de a observar. A guerra quebrou-o — dispensado após um colapso, retirou-se para os Alpes suíços — e os nazis viriam a rotular a sua arte de «degenerada».",
+  },
+  'col-4-la-corriente-del-golfo': {
+    description:
+      "Um marinheiro negro jaz no convés de um barco desmastreado num mar revolto, com tubarões em redor e uma tromba de água no horizonte.",
+    history:
+      "Homer pintou «A corrente do Golfo» em 1899, após invernos nas Bahamas e na Florida, retomando um tema esboçado a aguarela anos antes. Os negociantes acharam-no sombrio demais e ficou por vender uma década.\n\nQuando os colecionadores perguntavam, inquietos, o que era feito do homem, Homer respondia irritado que o marinheiro seria salvo pelo navio no horizonte. Lida hoje como meditação sobre o isolamento, o perigo e a história atlântica da escravatura, é das obras mais discutidas da arte norte-americana.",
+  },
+  'final-la-musa': {
+    description:
+      "Uma jovem senta-se com o lápis suspenso sobre um caderno em branco, o olhar erguido como se esperasse a ideia.",
+    history:
+      "Samuel F. B. Morse pintou a filha Susan por volta de 1836-37 e chamou à obra «A Musa». Era um dos melhores pintores americanos da sua geração e passara anos na Europa a copiar os mestres; a sua «Galeria do Louvre» amontoa trinta e oito quadros numa só tela.\n\nE então parou. Preterido numa grande encomenda oficial, amargurado e sem dinheiro, Morse abandonou a arte por completo. Voltou-se para uma máquina de enviar mensagens por um fio e para um código de pontos e traços que levou o seu nome pelo mundo. O caderno em branco no colo da filha é a última página da sua vida de pintor.\n\nCada código que digitalizaste para chegar aqui descende, de certo modo, do que ele fez a seguir.",
   },
 };
 
@@ -10839,13 +10848,6 @@ export const ABOUT_TEXT_DE: Record<string, AboutText> = {
       "Van Gogh malte seine berühmten Sonnenblumen-Stillleben 1888 in Arles, um das Gelbe Haus für die Ankunft seines Freundes Paul Gauguin zu schmücken, dessen Schlafzimmer er mit Bildern von nichts als großen, lodernden Blüten füllen wollte. Für van Gogh waren die Blumen und ihre strahlenden Gelbtöne eine private Sprache der Dankbarkeit, Freundschaft und Wärme des Südens.\n\nEr forderte sich technisch heraus und arbeitete in dem, was er «Gelb auf Gelb» nannte — Blumen, Vase, Tisch und Hintergrund allesamt in Goldtönen —, ein kühnes Beinahe-Monochrom, das wenige Maler gewagt hatten. Er war stolz genug auf die Ergebnisse, um die Vase zu signieren, was er selten tat.\n\nGauguin bewunderte sie und bat später um eine; van Gogh malte stattdessen Wiederholungen, um sie zu behalten. Heute hängen die erhaltenen Fassungen in London, München, Amsterdam, Tokio und Philadelphia und zählen zu den wiedererkennbarsten und beliebtesten Bildern der gesamten Kunst.",
   },
 
-  'col-2-terraza-de-cafe-por-la-noche': {
-    description:
-      "Eine Caféterrasse glüht warm gelb unter ihrer Markise auf einem gepflasterten Platz, vor einem tiefblauen Nachthimmel, der mit überdimensionierten Sternen übersät ist — alles ohne ein einziges Schwarz gemalt.",
-    history:
-      "Van Gogh malte dieses Café in Arles bei Nacht im September 1888, begeistert von der Herausforderung, die Dunkelheit allein mit Farbe einzufangen — den Zusammenprall der gasbeleuchteten gelben Terrasse mit einem sternenübersäten blauen Himmel, ganz ohne auf Schwarz zurückzugreifen. Er schrieb seiner Schwester, die Nacht sei reicher und lebendiger an Farbe als der Tag.\n\nEr malte es im Freien nach Einbruch der Dunkelheit, im Licht des Cafés selbst arbeitend, Teil eines Ausbruchs von Nachtszenen in jenem Herbst, während er erprobte, wie weit reine Farbe Stimmung und Atmosphäre tragen konnte. Das Pflaster, die Markise und der tiefe Himmel sind alle mit einem fast übernatürlichen Glühen aufgeladen.\n\nDas Bild war ein entscheidender Schritt zu den wirbelnden Himmeln der «Sternennacht» des folgenden Jahres, und manche Betrachter haben den erleuchteten Tisch mit einer zentralen Gestalt und dem kreuzförmigen Fenster dahinter als stilles Echo eines Abendmahls gelesen. Es hängt im Kröller-Müller-Museum in den Niederlanden.",
-  },
-
   'col-2-mujer-con-sombrilla': {
     description:
       "Eine Frau mit einem grünen Sonnenschirm steht auf einer windgepeitschten grasigen Anhöhe, von unten gegen einen hellen, wolkenzerstreuten Himmel gesehen, ihr Schleier und Kleid seitwärts geweht, während ein Kind dahinter zusieht.",
@@ -10928,20 +10930,6 @@ export const ABOUT_TEXT_DE: Record<string, AboutText> = {
       "Unter einer tiefblauen Nacht lodern die Gaslampen von Arles am fernen Ufer der Rhône entlang und ziehen lange Spiegelungen über das Wasser, der Große Wagen glitzert darüber, ein Paar schlendert im Vordergrund.",
     history:
       "Van Gogh malte diese Nachtszene am Flussufer in Arles im September 1888, etwa neun Monate vor der berühmteren, wogenderen «Sternennacht», die er in der Anstalt in Saint-Rémy schuf. Hier ist der Himmel ruhig und juwelenbesetzt statt wirbelnd und aus direkter Beobachtung am Ufer der Rhône gemalt.\n\nEr war begeistert von der Herausforderung der Nacht, arbeitete im Freien unter Gaslicht und, wie er scherzte, bisweilen mit an seinem Hut befestigten Kerzen. Er gab sorgfältig den Großen Wagen über Kopf und die langen Spiegelungen der Gaslampen der Stadt wieder, die über das Wasser zogen, und fügte am unteren Rand zwei Arm in Arm schlendernde Liebende hinzu.\n\nAn seinen Bruder Theo schreibend, gestand er, er habe «ein schreckliches Bedürfnis nach — soll ich das Wort sagen — Religion», und gehe hinaus, um die Sterne zu malen. Beim Salon des Indépendants 1889 gezeigt, hängt es heute im Musée d'Orsay in Paris.",
-  },
-
-  'col-2-el-puente-japones': {
-    description:
-      "Eine grüne hölzerne Fußgängerbrücke wölbt sich über den Seerosenteich in Giverny, halb verschluckt von herabhängenden Weiden und dichtem Laub, das die Leinwand in einem Wandteppich aus Grüntönen füllt.",
-    history:
-      "Monet baute in den 1890er Jahren eine gewölbte Fußgängerbrücke im japanischen Stil über den Seerosenteich in seinem Garten in Giverny, inspiriert von den japanischen Drucken, die er sammelte und überall in seinem Haus aufhängte. Er malte sie viele Male und behandelte die Brücke, die Weiden und die schwimmenden Seerosen als einen einzigen grünen Wandteppich.\n\nDie frühen Fassungen sind heiter und klar gezeichnet; die späteren, nach 1918 entstanden, als grauer Star seine Sehkraft trübte und vergilbte, werden heftig gefärbt und nahezu abstrakt, die Brücke fast von wütenden Rottönen und verworrenen Strichen verschluckt. Diese späten Leinwände verblüfften abstrakte Maler der Jahrhundertmitte, die einen Vorläufer in ihnen sahen.\n\nMonet verbrachte Jahrzehnte und ein kleines Vermögen damit, den Garten eigens als zu malendes Sujet zu entwerfen und zu pflegen, und verwischte die Grenze zwischen Gärtner und Künstler. Die Brückenreihe ist heute über Museen weltweit verstreut, darunter das Musée d'Orsay und die National Gallery of Art in Washington.",
-  },
-
-  'col-2-jardin-del-artista-en-giverny': {
-    description:
-      "Reihen violetter und rosa Schwertlilien lodern im Garten des Künstlers und weichen in kühnen diagonalen Bändern unter Bäumen zurück, die ganze Fläche lebendig von raschen, gesättigten Strichen.",
-    history:
-      "Monet behandelte den Garten, den er in Giverny anlegte, als lebendiges Kunstwerk und sein Hauptsujet durch seine späteren Jahrzehnte und entwarf seine Beete und Wege mit dem Auge eines Malers für Farbharmonien, ehe er je eine Staffelei aufstellte. Diese Ansicht von etwa 1900 blickt einen von violetten und rosa Schwertlilien lodernden Weg hinab.\n\nEr ordnet die Blumenbeete in kühne diagonale Bänder, die zu den Bäumen zurückschwingen, und löst einzelne Blüten in Bänder und Sprenkel reiner, gesättigter Farbe auf. Die Grenze zwischen Gartenbau und Malerei ist so gut wie ausgelöscht — der Garten ist das wahre Atelier des Bildes.\n\nMonet beschäftigte ein Team von Gärtnern und importierte seltene Pflanzen eigens ihrer bildnerischen Wirkung wegen, und Bilder wie dieses feiern jene Verschmelzung von Natur und Kunst. Es hängt im Musée d'Orsay in Paris.",
   },
 
   'col-2-acantilados-en-etretat': {
@@ -11542,32 +11530,12 @@ export const ABOUT_TEXT_DE: Record<string, AboutText> = {
       "John Constable malte «Das Kornfeld» 1826 und zeigte eine schattige Gasse, von der es heißt, sie sei eine, die er als Junge auf seinem Schulweg nahe seinem heimatlichen East Bergholt ging. Ein Hirtenjunge streckt sich, um aus einem Bach zu trinken, während seine Herde zu sonnigen Feldern reifen Getreides und einer fernen Kirche zieht.\n\nDas Bild ist voll liebevoll beobachteten englischen Details — Wildblumen, ein zerbrochenes Tor, ein verirrtes Schaf, ein Hund — und durchdrungen von der warmen Nostalgie, die Constable für die arbeitende Landschaft seiner Jugend empfand. Er befürchtete, es sei zu voller Vorfall, und fügte den Kirchturm am Horizont teils hinzu, um dem konventionellen Geschmack zu gefallen.\n\nEine Gruppe seiner Bewunderer kaufte es nach seinem Tod per Subskription und schenkte es der Nation, und es wurde zu einem seiner beliebtesten Werke. Es hängt in der National Gallery in London.",
   },
 
-  'col-4-recuerdo-de-mortefontaine': {
-    description:
-      "In einem weichen, silbrigen Dunst am Rand eines Sees rahmen federartige Bäume eine Frau und zwei Kinder, die Blüten pflücken, die ganze Szene traumhaft und sanft verschwommen.",
-    history:
-      "Camille Corot malte «Souvenir de Mortefontaine» 1864, auf dem Höhepunkt seines späten Ruhms, und nahm den Namen eines echten Parks nördlich von Paris, behandelte ihn aber nur als Ausgangspunkt. Seine «souvenirs» waren keine topografischen Aufzeichnungen, sondern poetische Erinnerungen, halb erinnert und halb erfunden.\n\nEr löste die Szene in einen weichen, silbrigen Dunst federartiger Bäume, stillen Wassers und einer Frau, die in die Äste greift, auf und dämpfte alles scharfe Detail zu einer zarten, traumhaften Schwärmerei. Diese neblige, atmosphärische Manier war bei Sammlern ungemein beliebt und machte den alternden Corot sowohl reich als auch geliebt.\n\nIndem er die Zeichnung zu Stimmung und Licht lockerte und indem er jüngere Maler wie Pissarro und Berthe Morisot betreute, half er still, den Weg von der klassischen Landschaft zum Impressionismus zu weisen. Es hängt im Louvre.",
-  },
 
   'col-4-el-puente-en-argenteuil': {
     description:
       "Segelboote mit hohen Masten ruhen auf der ruhigen blauen Seine neben einer Straßenbrücke bei Argenteuil, das Wasser und der Himmel in hellen, gebrochenen Strichen eines klaren Sommertages wiedergegeben.",
     history:
       "Monet lebte einen Großteil der 1870er Jahre in Argenteuil, einem Flussstädtchen gleich stromabwärts von Paris, und es wurde das sonnendurchflutete Herzland des frühen Impressionismus. Die Seine war dort ein modischer Ort zum Segeln und für die Wochenendmuße, und Monet stattete sogar ein schwimmendes Atelierboot aus, um den Fluss vom Wasser aus zu malen.\n\nDiese Straßenbrücke, nach der Kriegszerstörung wieder aufgebaut, erscheint in mehreren seiner Leinwände; ihn zog die klare Geometrie ihrer Pfeiler an, gegen das lockere Schimmern vertäuter Segelboote und sich kräuselnder Spiegelungen gesetzt. Die helle Palette und die gebrochenen, selbstsicheren Striche zeigen den neuen Stil in seiner optimistischsten Form.\n\nFreunde wie Renoir, Sisley, Manet und Caillebotte besuchten ihn und malten dort an seiner Seite und machten Argenteuil zu einer Art Freiluftlabor der Bewegung. Fassungen der Brücke hängen im Musée d'Orsay und in der National Gallery of Art in Washington.",
-  },
-
-  'col-4-los-acantilados-de-etretat': {
-    description:
-      "Die großen Kreidefelsen und der Steinbogen von Étretat an der normannischen Küste ragen über einem wogenden grünen Meer auf, in raschen, kraftvollen Strichen gemalt, die den Wind und die Gischt einfangen.",
-    history:
-      "Die Kreideküste von Étretat, mit ihren drei natürlichen Bögen und einer aus dem Meer aufragenden Felsnadel, war lange ein Magnet für Maler und Schriftsteller gewesen — Courbet, Delacroix und der Romancier Maupassant unter ihnen —, ehe Monet sie in den 1880er Jahren zu seiner eigenen machte. Er kehrte in verschiedenen Jahreszeiten zurück, logierte im Dorf und schleppte seine Staffelei hinab zum Kiesstrand.\n\nIhn faszinierte weniger der Fels selbst als die Art, wie er sich veränderte: derselbe Felsen unter Sturm und Stille, in Morgen- und Abenddämmerung, im Gegenlicht oder lodernd, in raschen, kraftvollen Strichen gemalt, die den Wind, die Gischt und die wechselnde Farbe des Wassers ergreifen. An der Gezeitenkante arbeitend, verlor er einmal fast seine Ausrüstung — und sich selbst — an eine Woge.\n\nDiese Besessenheit, ein Motiv über viele Leinwände hinweg einzufangen, floss unmittelbar in die großen Reihen — Heuhaufen, Pappeln, Kathedralen —, die seine spätere Laufbahn beschäftigen sollten. Leinwände von Étretat werden in Museen auf der ganzen Welt verwahrt.",
-  },
-
-  'col-4-la-casa-amarilla': {
-    description:
-      "Ein leuchtend gelbes Haus an einer Straßenecke glüht unter einem tiefblauen Himmel, ein Zug überquert eine Brücke dahinter, die ganze Szene in Van Goghs lebhafter, kontrastierender Farbe gemalt.",
-    history:
-      "Van Gogh malte «Das gelbe Haus» im September 1888 und stellte das bescheidene Eckgebäude in Arles dar, dessen rechten Flügel er als Heim und Atelier gemietet hatte. Er war davon begeistert und füllte Briefe an seinen Bruder Theo mit Plänen, es zum Herz eines gemeinsamen «Ateliers des Südens» zu machen, wo gleichgesinnte Künstler zusammen leben und arbeiten könnten.\n\nEr setzte das sonnengebackene gelbe Haus und seine grünen Fensterläden gegen einen intensiven kobaltblauen Himmel, ein Zug dampft über die Brücke dahinter — ein Bild, strahlend von Hoffnung auf die Gemeinschaft, die er zu begründen träumte. Um seinen ersten Gast zu empfangen, schmückte er die Räume mit seinen Sonnenblumenbildern.\n\nJener Gast, Paul Gauguin, kam tatsächlich, um zu bleiben, doch ihre intensiven, zänkischen zwei Monate zusammen endeten im Dezember mit Van Goghs Zusammenbruch und dem Abtrennen eines Teils seines eigenen Ohrs. Der Traum brach zusammen; das Gemälde überlebt im Van-Gogh-Museum in Amsterdam.",
   },
 
   'col-4-el-rio-hudson': {
@@ -11786,11 +11754,11 @@ export const ABOUT_TEXT_DE: Record<string, AboutText> = {
       "Joaquín Sorolla malte «Spaziergang am Meeresufer» 1909 und stellte seine Frau Clotilde und ihre Tochter María dar, wie sie am Wasserrand in wallenden weißen Sommerkleidern und gazigen Schleiern gehen. Die beiden Frauen, elegant und selbstbeherrscht, sind mitten im Schritt in einem Windstoß der Meeresbrise erfasst.\n\nSorolla, der spanische Meister des Sonnenlichts, machte das Licht selbst zum eigentlichen Sujet: das blendende Gleißen des Mittelmeers, das Spiel der Sonne durch durchscheinenden Stoff, das Schimmern von Haut und Gaze, alles in brillantem, raschem, selbstsicherem Pinselstrich ergriffen. Seine virtuose Handhabung der blendenden Küstensonne brachte seinem Stil den Namen «Luminismus» ein.\n\nZu seiner Zeit international berühmt, füllte Sorolla seine Leinwände mit der Freude und Vitalität der spanischen Küste. Es hängt im Museo Sorolla in Madrid, dem eigenen Haus des Künstlers.",
   },
 
-  'col-4-ninos-en-la-playa': {
+  'col-4-cosiendo-la-vela': {
     description:
-      "Drei nackte Jungen liegen im nassen Sand am Rand der Brandung, ihre Körper und das seichte Wasser schimmern von reflektiertem Sonnenlicht in Strichen aus Violett, Rosa und Gold.",
+      "Fischer und ihre Familien sitzen in einem von Weinlaub beschatteten Hof und nähen ein riesiges weißes Segel im gesprenkelten Licht.",
     history:
-      "Sorolla malte «Kinder am Strand» 1910, am Strand seines heimatlichen Valencia, wo Jungen aus Fischerfamilien in der Brandung badeten und lagen. Er zeigt drei von ihnen nackt im nassen Sand am Wasserrand ausgestreckt, von oben gesehen, während der seichte Schaum über ihre Körper wäscht.\n\nEs ist eine höchste Schaustellung seiner Gabe, Sonnenlicht auf Haut und Wasser zu malen: Das Fleisch glüht violett, rosa und golden, und der reflektierende Wasserfilm löst die Jungen und den Schaum in ein einziges Schimmern leuchtender Farbe auf. Es gibt fast keine Anekdote, nur Licht, Körper und das Meer — reine Empfindung.\n\nWerke wie dieses, strahlend und frei, machten Sorolla in den Jahren vor dem Ersten Weltkrieg zu einem der bewundertsten Maler in Europa und Amerika. Es hängt im Prado in Madrid.",
+      "Sorolla malte «Das Nähen des Segels» 1896 in Valencia im Freien auf einer über drei Meter breiten Leinwand, damit die Szene den Maßstab und die Unmittelbarkeit des Lebens behielt.\n\nDas Thema ist alltägliche Arbeit, das eigentliche Thema aber ist das Licht: Die Sonne bricht durch die Weinlaube in wandernde Flecken auf Segeltuch, Gesichtern und Boden. Das Bild erhielt in München eine Medaille und wurde für Venedig erworben — ein Grundstein für Sorollas Ruf als Maler des mediterranen Lichts.",
   },
 
   'col-4-el-angelus': {
@@ -11994,13 +11962,6 @@ export const ABOUT_TEXT_DE: Record<string, AboutText> = {
       "Henri Rousseau malte «Der Traum» 1910, das letzte Jahr seines Lebens, und es ist das größte und ehrgeizigste seiner Dschungelbilder. Eine nackte Frau lehnt auf einem roten Samtsofa, unwahrscheinlicherweise mitten in einen mondbeschienenen Dschungel gesetzt, der von Löwen, einem Elefanten, Vögeln, einer Schlange und einem schattenhaften flötenspielenden Beschwörer wimmelt.\n\nRousseau fügte ein kurzes Gedicht bei, das das Paradox erklärte: Die schlafende Frau, die auf ihrem Sofa träumt, hört die Musik des Beschwörers und wird in ihrem Traum in den verzauberten Wald um sie versetzt. Der autodidaktische Maler baute diese üppigen, imaginären Dschungel gänzlich aus Pariser Gewächshäusern, Zootieren und Bilderbüchern, ohne je einen echten gesehen zu haben, was ihnen ihre flache, minuziöse, halluzinatorische Fremdheit gibt.\n\nLange verlacht, lebte Rousseau gerade lange genug, um zu sehen, wie die junge Avantgarde ihn umarmte, und seine traumhafte Vision machte ihn zum Helden der Surrealisten. «Der Traum» hängt im Museum of Modern Art in New York.",
   },
 
-  'col-5-judith-y-la-cabeza-de-holofernes': {
-    description:
-      "Eine juwelenbehängte, halb entkleidete Frau blickt mit schweren Lidern, ekstatischen Augen hinaus, der abgetrennte Kopf des Holofernes gerade am unteren Rand eines goldenen, gemusterten Hintergrunds sichtbar.",
-    history:
-      "Klimt malte «Judith I» 1901, nahm die alttestamentliche Heldin, die ihr Volk rettete, indem sie den feindlichen Feldherrn Holofernes enthauptete, und formte sie zu einer durch und durch modernen Wiener Femme fatale um. Juwelenbehängt und halb entkleidet, blickt sie mit schweren Lidern, ekstatischen Augen hinaus, der abgetrennte Kopf am unteren Rand kaum sichtbar vor einem vergoldeten Hintergrund.\n\nKlimt verwischt bewusst die Grenze zwischen Triumph und erotischer Schwärmerei, so dass Judith weniger wie eine rächende Patriotin aussieht als wie eine in gefährliche, fast orgasmische Lust versunkene Frau. Das Bild gehört zur Wiener Fin-de-siècle-Faszination für die verführerische, bedrohliche Frau, und der Goldhintergrund weist auf seine Goldene Phase voraus.\n\nSo anders als die traditionelle fromme Judith, dass es bisweilen mit Salome verwechselt wird, verursachte es zu seiner Zeit einen Skandal. Es hängt im Belvedere in Wien.",
-  },
-
   'col-5-danae': {
     description:
       "Eine schlafende Frau kringelt sich in einem goldenen Regen — der Gott Zeus, der sie als fallendes Gold besucht —, ihr geröteter Körper in wirbelnden Stoff und Muster gehüllt in einem Bild träumender Sinnlichkeit.",
@@ -12053,11 +12014,11 @@ export const ABOUT_TEXT_DE: Record<string, AboutText> = {
       "Munch malte die erste von sechs Fassungen von «Das kranke Kind» 1885–86 und griff zurück auf die brennendste Wunde seiner Kindheit: den Tod seiner geliebten älteren Schwester Sophie an Tuberkulose, als er ein Junge war, einer Krankheit, die auch ihre Mutter getötet hatte. Ein blasses, rothaariges Mädchen blickt zum Licht, während eine trauernde Frau am Bettrand den Kopf senkt.\n\nMunch schabte, kratzte und überarbeitete die Oberfläche, bis sie verschwommen und unfertig aussah, als sähe man sie durch Tränen, und weigerte sich bewusst, Krankheit und Trauer hübsch zu machen. Kritiker der Zeit griffen es als verpfuschte Skizze an, doch er verteidigte die Rohheit als dem Gefühl treuer, als es jede polierte Vollendung sein könne.\n\nEr nannte es einen Durchbruch, und es leitete die zutiefst persönliche, emotional entblößte Kunst ein, die seine Laufbahn bestimmen sollte. Fassungen hängen im Nationalmuseum in Oslo und anderswo.",
   },
 
-  'col-5-pubertad': {
+  'col-5-tres-chicas-con-sombreros-de-paja': {
     description:
-      "Ein nacktes heranwachsendes Mädchen sitzt steif auf dem Rand eines Bettes, die Arme schützend über dem Schoß gekreuzt, ein großer dunkler Schatten ragt bedrohlich an der Wand hinter ihr auf.",
+      "Drei junge Frauen mit breiten gelben Strohhüten stehen vor flächigen, leuchtenden Farbfeldern, die Gesichter nur angedeutet.",
     history:
-      "Munch malte «Pubertät» um 1894–95 und zeigte ein nacktes heranwachsendes Mädchen, das steif auf dem Rand eines Bettes sitzt, die Arme schützend über dem Schoß gekreuzt, ihre weiten Augen auf den Betrachter geheftet. Hinter ihr ragt ein großer, dunkler Schatten die Wand hinauf, in keinem Verhältnis zu ihrem kleinen Körper.\n\nDas Bild fängt den verletzlichen, ängstlichen Augenblick eines Kindes an der Schwelle zum Erwachsensein ein, und jener bedrohliche Schatten — von ihrer tatsächlichen Gestalt gelöst — liest sich als Projektion undefinierter Furcht, erwachender Sexualität und der unbekannten Zukunft, die auf sie eindrängt. Munch verwandelt einen privaten, unbeholfenen Augenblick in eine Studie der Furcht selbst.\n\nSeine Bereitschaft, solch unbehagliche psychologische Zustände zu ergründen, hob ihn von der höflichen Kunst seiner Zeit ab und machte ihn zu einem Vater des Expressionismus. «Pubertät» hängt im Nationalmuseum in Oslo.",
+      "Macke malte dieses Bild 1913 in Bonn, im Jahr seiner vollen Reife als Kolorist. Als Mitglied des Blauen Reiters neben Franz Marc und Paul Klee hatte er Robert Delaunays prismatische Farbe aufgenommen, ohne die sichtbare Welt aufzugeben.\n\nSein Thema ist stets die gewöhnliche moderne Muße: Spaziergänger in Parks, Frauen vor Schaufenstern, Hüte und Sonnenlicht. Ein Jahr später fiel Macke mit 27 Jahren in der Champagne in den ersten Wochen des Ersten Weltkriegs — eines der leuchtendsten Talente seiner Generation.",
   },
 
   'col-5-ansiedad': {
@@ -12067,18 +12028,11 @@ export const ABOUT_TEXT_DE: Record<string, AboutText> = {
       "Munch malte «Angst» 1894 und verwendete den lodernden blutroten Himmel und die steile fjordseitige Brücke wieder, die er im Jahr zuvor für «Der Schrei» erfunden hatte. Doch statt einer einsamen Gestalt, die sich den Kopf hält, drängt sich eine ganze Menge hohläugiger, maskenhafter Gesichter zum Betrachter vor und starrt leer hinaus.\n\nIndem er die Furcht über eine Prozession grimmiger, identischer Gesichter vervielfältigt, erweitert Munch seine Vision existenzieller Angst vom einzelnen gequälten Menschen auf die moderne städtische Menge — eine Masse isolierter Individuen, die dieselbe namenlose Furcht teilen. Das Bild schöpft sowohl aus seinem eigenen inneren Aufruhr als auch aus der Fin-de-siècle-Stimmung kollektiven Unbehagens.\n\nTeil seines «Lebensfrieses», zeigt es, wie Munch eine Handvoll aufgeladener Motive zu einer ineinandergreifenden Betrachtung über Liebe, Furcht und Tod umarbeitete. «Angst» hängt im Munch-Museum in Oslo.",
   },
 
-  'col-5-atardecer-en-karl-johan': {
+  'col-5-dama-con-abanico': {
     description:
-      "Eine Flut bleicher, weitäugiger Gesichter treibt in der Dämmerung einen Boulevard von Kristiania hinab auf den Betrachter zu, die Menge leer und gespenstisch vor den gelb erleuchteten Gebäuden.",
+      "Eine Frau mit entblößter Schulter hält einen Fächer vor einem flachen goldgelben Grund voller chinesischer Phönixe und Lotosblüten.",
     history:
-      "Munch malte «Abend auf der Karl-Johan-Straße» 1892 und verwandelte einen Spaziergang den Hauptboulevard von Kristiania (heute Oslo) hinab in einen wachen Albtraum. Die Szene soll aus seinen eigenen gequälten Spaziergängen dort schöpfen, als er hoffte und fürchtete, einer früheren Liebe zu begegnen.\n\nEine Flut bleicher, weitäugiger, maskenhafter Gesichter treibt die dämmerungserleuchtete Straße hinab auf den Betrachter zu, leer und gespenstisch vor den gelb erleuchteten Gebäuden, während eine einzelne dunkle Gestalt von der Menge fortgeht — oft als der Künstler selbst gelesen, völlig allein inmitten des Gedränges. Der bürgerliche Abendspaziergang wird zu einem Bild von Furcht und Entfremdung.\n\nDiese Auflösung des gewöhnlichen Lebens in psychologischen Schrecken weist auf den Expressionismus und auf seinen eigenen «Schrei» voraus. «Abend auf der Karl-Johan-Straße» hängt in den KODE-Museen in Bergen, Norwegen.",
-  },
-
-  'col-5-retrato-de-emilie-floge': {
-    description:
-      "Eine hochgewachsene Frau steht, in ein schmales, reich gemustertes blau-goldenes Gewand von Klimts eigenem Entwurf gehüllt, ihr bleiches Gesicht und ihre Hände tauchen aus einer schimmernden Säule von Ornament auf.",
-    history:
-      "Klimt malte dieses Bildnis der Emilie Flöge 1902. Flöge war eine erfolgreiche Modedesignerin, die einen modischen Wiener Salon führte, und sie war Klimts engste lebenslange Gefährtin — seine Muse, Geschäftspartnerin und, manchen Berichten zufolge, die große Liebe seines Lebens, obwohl die genaue Natur ihres Bandes privat blieb.\n\nSie steht, in ein schmales, reich gemustertes blau-goldenes Gewand gehüllt, sehr wahrscheinlich eines der fließenden, unstrukturierten «Reformkleider», die sie und Klimt als Befreiung von den starren Korsetten der Zeit förderten. Das Bildnis verschmilzt ihre reale, selbstbeherrschte Gegenwart mit dem schimmernden dekorativen Muster, das zu Klimts Kennzeichen wurde.\n\nKlimt mochte das fertige Werk angeblich nicht, doch es steht als zartes Denkmal ihrer Partnerschaft; auf seinem Sterbebett soll er nach Emilie gerufen haben. Es hängt im Wien Museum in Wien.",
+      "Es war das letzte Bild, an dem Klimt arbeitete. Als er im Februar 1918 mit 55 Jahren an einem Schlaganfall starb, stand es noch auf der Staffelei seines Wiener Ateliers — nahezu vollendet, aber unsigniert.\n\nDer flache Goldgrund sowie Phönixe und Lotosblüten stammen aus der chinesischen und japanischen Kunst, die Klimt sammelte; die Dargestellte ist unbekannt, wohl eher eine Tänzerin als eine Auftraggeberin der Gesellschaft. 2023 wurde das Bild in London für 85,3 Mio. Pfund versteigert — der höchste je in Europa für ein Kunstwerk gezahlte Preis.",
   },
 
   'col-5-las-tres-edades-de-la-mujer': {
@@ -12470,6 +12424,60 @@ export const ABOUT_TEXT_DE: Record<string, AboutText> = {
       "Ein brillant gefärbter Hahn und eine Henne stolzieren zwischen blauen Hortensien, jede Feder und Blüte mit blendender, fast halluzinatorischer Präzision wiedergegeben.",
     history:
       "Itō Jakuchū, ein exzentrischer Kyotoer Maler des 18. Jahrhunderts, machte sich vor allem mit brillant gefärbten Studien von Vögeln einen Namen, und hier stolzieren ein Hahn und eine Henne zwischen blauen Hortensien, jede Feder und Blüte mit blendender, fast halluzinatorischer Präzision wiedergegeben. Er hielt lebendes Geflügel in seinem Garten, um es endlos nach der Natur zu studieren.\n\nDer Sohn eines wohlhabenden Kyotoer Gemüsehändlers, gab Jakuchū das Familiengeschäft auf, um sich ganz der Malerei zu widmen, und arbeitete mit einer geduldigen, besessenen Genauigkeit und der Liebe eines Juweliers zu intensiver Farbe und intensivem Muster. Sein Meisterwerk war eine gewaltige Reihe von etwa dreißig Seidenrollen mit Vögeln, Blumen und Tieren, von denen lebhafte Hahnenbilder wie dieses zu den bewundertsten zählen.\n\nLange eine gewisse Kultfigur, hat Jakuchū eine enorme Wiederbelebung erfahren und wird heute zu den beliebtesten aller japanischen Maler gezählt. Seine Vogelbilder werden in japanischen Sammlungen gehütet, darunter die kaiserliche Sammlung.",
+  },
+  'col-2-un-bar-del-folies-bergere': {
+    description:
+      "Eine Kellnerin steht hinter einer Marmortheke voller Flaschen und blickt uns abwesend an, während ein Spiegel den vollen Saal zurückwirft.",
+    history:
+      "Manet malte es 1882 in seinem Atelier, ein Jahr vor seinem Tod, nach einer echten Kellnerin namens Suzon. Es war sein letztes großes Werk und sein Abschied von dem Paris der Cafés und des Spektakels, das er sein Leben lang gemalt hatte.\n\nBerühmt ist das Bild für seinen unmöglichen Spiegel: Die Spiegelung zeigt die Frau aus einem Winkel, den kein Betrachter einnehmen könnte, und der Mann, dem sie gegenübersteht, fehlt in unserer Sicht. Kritiker griffen den «Fehler» sofort an; seither gilt das Bild als bewusste Meditation über das Schauen und die Einsamkeit inmitten der Menge.",
+  },
+  'col-2-el-pifano': {
+    description:
+      "Ein Junge in roter Hose und schwarzer Jacke spielt Querpfeife vor einem schlichten grauen Grund, ohne Boden und Horizont.",
+    history:
+      "1866 nach Manets Spanienreise gemalt, verdankt «Der Pfeifer» alles Velázquez, dessen Figuren er gerade in Madrid frei vor neutralem Grund gesehen hatte. Der Junge war ein echter Musiker der Kaiserlichen Garde.\n\nDie Salonjury lehnte das Bild ab, und Émile Zola veröffentlichte eine wütende Verteidigung, die seine Laufbahn als Kunstkritiker begründete. Was wie Unvermögen wirkte — kein Schatten, kein Raum, Farbe in flachen Flächen — gilt heute als erster Schritt zur modernen Malerei: das Bild als Fläche statt als Fenster.",
+  },
+  'col-2-banistas-en-asnieres': {
+    description:
+      "Arbeiter ruhen in der Sonne am Flussufer, einer sitzt mit Strohhut am Wasser, am anderen Ufer rauchen Fabrikschlote.",
+    history:
+      "Seurat war vierundzwanzig, als er diese riesige Leinwand malte, seine erste, nach Monaten von Ölstudien vor Ort in Asnières, einem Industrievorort nordwestlich von Paris.\n\nEr gab gewöhnlichen Arbeitern den Maßstab und die Stille antiker Skulptur und überarbeitete später Teile der Oberfläche mit den Punkten reiner Farbe, die ihn bald berühmt machten. Vom Salon abgelehnt, wurde es im ersten Salon des Indépendants gezeigt — der Beginn des Neoimpressionismus.",
+  },
+  'col-4-entre-las-sierras-nevadas': {
+    description:
+      "Ein stiller See spiegelt zerklüftete Gipfel in goldenem Dunst, Hirsche am Ufer, Vögel queren die Lichtbahnen.",
+    history:
+      "Bierstadt zog 1863 mit einer Vermessungsexpedition nach Westen und füllte Skizzenbücher in den Rocky Mountains und Kalifornien. Diese Leinwand, 1868 in Rom gemalt, zeigt keinen bestimmten Ort, sondern eine zusammengesetzte Vision — ein amerikanisches Eden aus vielen Ansichten.\n\nSolche riesigen Bilder wurden als Schaustücke mit Eintritt gezeigt und zogen Menschenmengen an, die den Westen nie gesehen hatten. Sie prägten, wie eine Nation ihre Grenze imaginierte, und stützten das Argument für die Nationalparks.",
+  },
+  'col-4-recuerdo-de-mortefontaine': {
+    description:
+      "Ein silbriger See im Morgengrauen, ein großer Baum über dem Wasser und kleine Gestalten, die am Ufer Blüten pflücken, in weiches Graugrün getaucht.",
+    history:
+      "Corot malte es 1864 in seinem Pariser Atelier, in Erinnerung an den Park von Mortefontaine nördlich der Stadt. Solche Bilder nannte er «Souvenirs»: keine Aufzeichnungen eines Ortes, sondern destillierte Erinnerungen, das Detail fortgebrannt, nur die Stimmung geblieben.\n\nVon Napoleon III. gekauft, wurde es zum Modell des späten, silbrig-federnden Corot, der ihn ungeheuer populär — und ungeheuer gefälscht — machte. Die jungen Impressionisten verehrten ihn: Monet, Pissarro und Berthe Morisot lernten davon, wie er das Licht die Konturen auflösen ließ.",
+  },
+  'col-5-retrato-de-jeanne-hebuterne': {
+    description:
+      "Eine junge Frau mit langem Hals und geneigtem, maskenhaftem Gesicht sitzt ruhig, die Mandelaugen fast leer.",
+    history:
+      "Jeanne Hébuterne war eine Kunststudentin, die Modigliani 1917 in Paris kennenlernte und seine Gefährtin und ständiges Modell wurde. Er malte sie über zwanzigmal, stets mit dem verlängerten Hals und den ausgehöhlten Augen, die er von afrikanischen Masken und seiner aufgegebenen Bildhauerlaufbahn übernommen hatte.\n\nModigliani starb im Januar 1920 mit 35 Jahren an tuberkulöser Meningitis. Jeanne, mit dem zweiten Kind schwanger, nahm sich am Tag darauf das Leben. Die Tragödie färbt seither jede Lesart dieser Bildnisse — obwohl sie in Wahrheit Zärtlichkeit zeigen, kein Verhängnis.",
+  },
+  'col-5-escena-callejera-de-berlin': {
+    description:
+      "Kantige Gestalten in Stadtkleidung streifen einander auf einem vollen Gehsteig, in säurigen Rosa- und Grüntönen, nervös hingestrichelt.",
+    history:
+      "Kirchner zog 1911 nach Berlin und fand sein Thema in dessen Straßen: die Menge, das elektrische Licht, die verschlüsselten Blicke der modernen Stadt. Zwischen 1913 und 1915 malte er elf Straßenszenen, den Gipfel des deutschen Expressionismus.\n\nEr streckte die Figuren, kippte die Gehsteige und setzte Farbe gegen die Natur, damit der Betrachter die nervöse Energie spürt statt sie zu beobachten. Der Krieg zerbrach ihn — nach einem Zusammenbruch entlassen, zog er sich in die Schweizer Alpen zurück — und die Nationalsozialisten erklärten seine Kunst später für «entartet».",
+  },
+  'col-4-la-corriente-del-golfo': {
+    description:
+      "Ein schwarzer Seemann liegt auf dem Deck eines entmasteten Boots in schwerer See, Haie kreisen, am Horizont eine Wasserhose.",
+    history:
+      "Homer malte «Der Golfstrom» 1899 nach Wintern auf den Bahamas und in Florida und griff dabei ein Motiv auf, das er Jahre zuvor in Aquarell skizziert hatte. Händlern war es zu düster, ein Jahrzehnt blieb es unverkauft.\n\nAls Sammler besorgt fragten, was aus dem Mann werde, erwiderte Homer gereizt, der Seemann werde von dem Schiff am Horizont gerettet. Heute als Meditation über Isolation, Gefahr und die atlantische Geschichte der Sklaverei gelesen, zählt es zu den meistdiskutierten Bildern der amerikanischen Kunst.",
+  },
+  'final-la-musa': {
+    description:
+      "Eine junge Frau sitzt, den Bleistift über einem leeren Skizzenbuch, den Blick gehoben, als warte sie auf den Einfall.",
+    history:
+      "Samuel F. B. Morse malte seine Tochter Susan um 1836-37 und nannte das Bild «Die Muse». Er war einer der besten amerikanischen Maler seiner Generation und hatte Jahre in Europa damit verbracht, die Meister zu kopieren; seine «Galerie des Louvre» drängt achtunddreißig Gemälde auf eine Leinwand.\n\nUnd dann hörte er auf. Bei einem großen Staatsauftrag übergangen, verbittert und mittellos, gab Morse die Kunst ganz auf. Er wandte sich einer Maschine zu, die Nachrichten über einen Draht schickte, und einem Code aus Punkten und Strichen, der seinen Namen um die Welt trug. Das leere Skizzenbuch im Schoß seiner Tochter ist die letzte Seite seines Malerlebens.\n\nJeder Code, den du gescannt hast, um hierher zu gelangen, stammt gewissermaßen von dem ab, was er danach tat.",
   },
 };
 

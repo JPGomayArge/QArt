@@ -17,4 +17,7 @@ import type { ImageSourcePropType } from 'react-native';
 
 export const IMAGE_OVERRIDES: Record<string, ImageSourcePropType> = {
   'col-6-el-cactus': require('../../assets/overrides/col-6-el-cactus.jpg'),
+  // Manuelita Rosas: every Commons scan of it includes the gilt frame, so this
+  // is a hand-cropped copy of the Google Art Project scan.
+  'col-6-retrato-de-manuelita-rosas': require('../../assets/overrides/col-6-retrato-de-manuelita-rosas.jpg'),
 };

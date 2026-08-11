@@ -67,7 +67,12 @@ export default function CountryScreen() {
               {works.map((a) => {
                 const done = isPaintingComplete(a, ownedMap);
                 return (
-                  <Pressable key={a.id} style={styles.tile} onPress={() => router.push(`/artwork/${a.id}`)}>
+                  <Pressable
+                    key={a.id}
+                    style={styles.tile}
+                    disabled={!done}
+                    onPress={done ? () => router.push(`/artwork/${a.id}`) : undefined}
+                  >
                     <View style={[styles.tileFrame, { borderColor: RARITY[a.rarity].color + '66' }]}>
                       <ArtImage artwork={a} hidden={!done} radius={RADIUS.sm} showQrMark={false} />
                     </View>

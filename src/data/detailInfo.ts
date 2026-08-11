@@ -55,7 +55,6 @@ export const DETAIL_INFO: Record<string, DetailInfo> = {
     museum: 'National Gallery de Londres',
     about: `Vista nocturna del bulevar parisino por Camille Pissarro (1897), parte de una serie pintada desde la ventana de su hotel. Capta el brillo de las farolas y el bullicio urbano con pincelada impresionista y una atmósfera húmeda y luminosa.`,
   },
-  'col-2-el-puente-japones': { technique: 'óleo sobre lienzo' },
   'col-2-acantilados-en-etretat': { technique: 'óleo sobre lienzo' },
   'col-2-almuerzo-de-los-remeros': {
     about: `Escena luminosa de Renoir (1881) con un grupo de amigos almorzando en una terraza a orillas del Sena. Celebra el ocio moderno con color vibrante y retratos llenos de vida; se conserva en la Colección Phillips de Washington.`,

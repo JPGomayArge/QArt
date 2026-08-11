@@ -7,16 +7,18 @@ import { SafeAreaProvider } from 'react-native-safe-area-context';
 
 import { SafetyScreen } from '@/components/SafetyScreen';
 import { I18nProvider } from '@/i18n';
-import { warmImageCache } from '@/game/prefetch';
+import { warmImageCache, warmRoom } from '@/game/prefetch';
 import { GameProvider, useGame } from '@/store/GameStore';
 import { COLORS } from '@/theme/theme';
 
 function RootGate() {
-  const { ready, safetyAck, acknowledgeSafety, owned } = useGame();
+  const { ready, safetyAck, acknowledgeSafety, owned, room } = useGame();
 
   // Cache the catalog on-device once the save is loaded (runs in background).
   useEffect(() => {
-    if (ready) warmImageCache(Object.keys(owned));
+    if (!ready) return;
+    // My Room first: those ten pieces are the ones a tap away from being needed.
+    warmRoom(room).then(() => warmImageCache(Object.keys(owned)));
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [ready]);
 

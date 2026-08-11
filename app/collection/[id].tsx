@@ -76,9 +76,24 @@ export default function ExhibitionScreen() {
           if (m !== 0) return m;
           return a.title.localeCompare(b.title);
         });
+      // The Great Wave is this collection's centrepiece, the way every other
+      // collection opens on its single most famous jewel.
+      center = all.find((a) => a.id === 'col-6-la-gran-ola-de-kanagawa');
       const byCountry: Record<string, Artwork[]> = {};
-      for (const a of all) (byCountry[a.country || 'Other'] ??= []).push(a);
-      for (const country of Object.keys(byCountry).sort()) {
+      for (const a of all) {
+        if (center && a.id === center.id) continue; // shown as the centrepiece
+        (byCountry[a.country || 'Other'] ??= []).push(a);
+      }
+      // Japan leads (it holds the centrepiece); the rest stay alphabetical.
+      const lead = center?.country;
+      const countries = Object.keys(byCountry).sort((a, b) => {
+        if (lead) {
+          if (a === lead) return -1;
+          if (b === lead) return 1;
+        }
+        return a.localeCompare(b);
+      });
+      for (const country of countries) {
         out.push({ type: 'label', text: country });
         out.push(...packRows(toPaintingCells(sortCountry(byCountry[country]))));
       }

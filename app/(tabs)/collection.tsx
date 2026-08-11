@@ -1,7 +1,8 @@
 import { useRouter } from 'expo-router';
-import { CaretRight, Heart } from 'phosphor-react-native';
-import React, { useMemo, useState } from 'react';
+import { CaretRight, Heart, Sparkle } from 'phosphor-react-native';
+import React, { useMemo, useState, useEffect} from 'react';
 import {
+  Modal,
   FlatList,
   Pressable,
   ScrollView,
@@ -17,6 +18,7 @@ import { ArtworkCard } from '@/components/ArtworkCard';
 import { PartComposite, PartPaintingCard } from '@/components/PartPaintingCard';
 import { ARTWORKS, ARTWORK_BY_ID, type Artwork } from '@/data/artworks';
 import { COLLECTIONS, collectionName, type CollectionMeta } from '@/data/collections';
+import { titleFor } from '@/data/titles';
 import { useLocale } from '@/i18n';
 import { t } from '@/data/ui';
 import { ARTWORK_DETAILS } from '@/data/details';
@@ -29,6 +31,7 @@ import {
   packRows,
   rowKey,
   PAINTINGS,
+  FINALE_ID,
   type GridRow,
   type PaintingCell,
 } from '@/game/parts';
@@ -61,7 +64,7 @@ export default function CollectionScreen() {
   const insets = useSafeAreaInsets();
   const { width } = useWindowDimensions();
   const router = useRouter();
-  const { owned, isOwned, countOf, shards, isFavorite } = useGame();
+  const { owned, isOwned, countOf, shards, isFavorite, finaleSeen, markFinaleSeen } = useGame();
   const { locale } = useLocale();
 
   const [view, setView] = useState<ViewMode>('galleries');
@@ -71,6 +74,16 @@ export default function CollectionScreen() {
   const [sort, setSort] = useState<SortKey>('rarity');
 
   const stats = useMemo(() => collectionStats(owned), [owned]);
+
+  // The finale reveal: fires once, the first time the 300 are all complete.
+  const [showFinale, setShowFinale] = useState(false);
+  useEffect(() => {
+    if (stats.perfect && !finaleSeen) setShowFinale(true);
+  }, [stats.perfect, finaleSeen]);
+  const closeFinale = () => {
+    setShowFinale(false);
+    markFinaleSeen();
+  };
 
   // Most-recently discovered pieces (by first-seen), for a quick "look what you
   // just found" strip on the galleries view.
@@ -158,6 +171,35 @@ export default function CollectionScreen() {
           <Stat label={t(locale, 'col.duplicates')} value={String(stats.duplicates)} />
           <Stat label={t(locale, 'col.shards')} value={String(shards)} />
         </View>
+
+        {/* The 301st piece: a slot that only exists once the 300 are complete —
+            empty and waiting while it's still out there, then the piece itself. */}
+        {stats.perfect && (
+          <Pressable
+            style={[styles.finaleSlot, stats.hasFinale && styles.finaleSlotFound]}
+            disabled={!stats.hasFinale}
+            onPress={() => router.push(`/artwork/${FINALE_ID}`)}
+          >
+            <View style={styles.finaleThumb}>
+              {stats.hasFinale && ARTWORK_BY_ID[FINALE_ID] ? (
+                <ArtImage artwork={ARTWORK_BY_ID[FINALE_ID]} radius={RADIUS.sm} showQrMark={false} instant />
+              ) : (
+                <Sparkle size={20} color={COLORS.gold} weight="fill" />
+              )}
+            </View>
+            <View style={{ flex: 1 }}>
+              <Text style={styles.finaleSlotTitle}>
+                {stats.hasFinale && ARTWORK_BY_ID[FINALE_ID]
+                  ? titleFor(FINALE_ID, locale, ARTWORK_BY_ID[FINALE_ID].title)
+                  : t(locale, 'finale.slotTitle')}
+              </Text>
+              <Text style={styles.finaleSlotSub}>
+                {stats.hasFinale ? t(locale, 'finale.slotFound') : t(locale, 'finale.slotHint')}
+              </Text>
+            </View>
+            {stats.hasFinale && <CaretRight size={16} color={COLORS.gold} />}
+          </Pressable>
+        )}
       </View>
 
       {/* View toggle */}
@@ -363,6 +405,21 @@ export default function CollectionScreen() {
         windowSize={5}
         removeClippedSubviews
       />
+
+      {/* Shown once, the moment the 300 are complete: the catalogue was never 300. */}
+      <Modal visible={showFinale} transparent animationType="fade" onRequestClose={closeFinale}>
+        <View style={styles.finaleBackdrop}>
+          <View style={styles.finaleCard}>
+            <Sparkle size={34} color={COLORS.gold} weight="fill" />
+            <Text style={styles.finaleTitle}>{t(locale, 'finale.title')}</Text>
+            <Text style={styles.finaleBody}>{t(locale, 'finale.body')}</Text>
+            <Text style={styles.finaleCounter}>{t(locale, 'finale.counter')}</Text>
+            <Pressable style={styles.finaleBtn} onPress={closeFinale}>
+              <Text style={styles.finaleBtnText}>{t(locale, 'finale.cta')}</Text>
+            </Pressable>
+          </View>
+        </View>
+      </Modal>
     </View>
   );
 }
@@ -526,4 +583,37 @@ const styles = StyleSheet.create({
   },
   mineDot: { position: 'absolute', top: 5, right: 5, width: 9, height: 9, borderRadius: 5 },
   mineHeart: { position: 'absolute', bottom: 5, left: 5 },
+  finaleBackdrop: {
+    flex: 1, backgroundColor: 'rgba(6,6,10,0.88)',
+    alignItems: 'center', justifyContent: 'center', padding: SPACING.lg,
+  },
+  finaleCard: {
+    width: '100%', maxWidth: 420, alignItems: 'center', gap: SPACING.md,
+    backgroundColor: COLORS.card, borderColor: COLORS.gold, borderWidth: 1,
+    borderRadius: RADIUS.lg, padding: SPACING.xl,
+  },
+  finaleTitle: {
+    color: COLORS.gold, fontSize: 22, fontWeight: '800',
+    fontFamily: FONT.serif, textAlign: 'center',
+  },
+  finaleBody: { color: COLORS.text, fontSize: 14, lineHeight: 21, textAlign: 'center' },
+  finaleCounter: { color: COLORS.textDim, fontSize: 13, fontWeight: '700', textAlign: 'center' },
+  finaleBtn: {
+    marginTop: SPACING.xs, backgroundColor: COLORS.gold, borderRadius: RADIUS.pill,
+    paddingHorizontal: SPACING.xl, paddingVertical: SPACING.md,
+  },
+  finaleBtnText: { color: '#0B0B0F', fontWeight: '800', fontSize: 15 },
+  finaleSlot: {
+    marginTop: SPACING.sm, flexDirection: 'row', alignItems: 'center', gap: SPACING.md,
+    borderRadius: RADIUS.md, padding: SPACING.sm,
+    borderWidth: 1, borderStyle: 'dashed', borderColor: 'rgba(201,162,75,0.55)',
+    backgroundColor: 'rgba(201,162,75,0.07)',
+  },
+  finaleSlotFound: { borderStyle: 'solid', borderColor: COLORS.gold, backgroundColor: 'rgba(201,162,75,0.14)' },
+  finaleThumb: {
+    width: 42, height: 52, borderRadius: RADIUS.sm, overflow: 'hidden',
+    alignItems: 'center', justifyContent: 'center', backgroundColor: 'rgba(0,0,0,0.25)',
+  },
+  finaleSlotTitle: { color: COLORS.gold, fontSize: 14, fontWeight: '800', fontFamily: FONT.serif },
+  finaleSlotSub: { color: COLORS.textDim, fontSize: 12, marginTop: 2 },
 });

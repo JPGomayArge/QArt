@@ -101,20 +101,26 @@ export default function ArtistScreen() {
               {L.inApp(works.filter((a) => isPaintingComplete(a, ownedMap)).length, works.length)}
             </Text>
             <View style={styles.grid}>
-              {works.map((a) => (
-                <Pressable
-                  key={a.id}
-                  style={styles.tile}
-                  onPress={() => router.push(`/artwork/${a.id}`)}
-                >
-                  <View style={[styles.tileFrame, { borderColor: RARITY[a.rarity].color + '66' }]}>
-                    <ArtImage artwork={a} hidden={!isPaintingComplete(a, ownedMap)} radius={RADIUS.sm} showQrMark={false} />
-                  </View>
-                  <Text style={styles.tileLabel} numberOfLines={1}>
-                    {isPaintingComplete(a, ownedMap) ? a.title : '—'}
-                  </Text>
-                </Pressable>
-              ))}
+              {works.map((a) => {
+                // Undiscovered pieces stay locked: tapping one must not reveal
+                // its detail page (that's the whole point of the mosaic teaser).
+                const done = isPaintingComplete(a, ownedMap);
+                return (
+                  <Pressable
+                    key={a.id}
+                    style={styles.tile}
+                    disabled={!done}
+                    onPress={done ? () => router.push(`/artwork/${a.id}`) : undefined}
+                  >
+                    <View style={[styles.tileFrame, { borderColor: RARITY[a.rarity].color + '66' }]}>
+                      <ArtImage artwork={a} hidden={!done} radius={RADIUS.sm} showQrMark={false} />
+                    </View>
+                    <Text style={styles.tileLabel} numberOfLines={1}>
+                      {done ? a.title : '—'}
+                    </Text>
+                  </Pressable>
+                );
+              })}
             </View>
           </>
         )}

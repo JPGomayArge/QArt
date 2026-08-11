@@ -26,7 +26,17 @@ export function partsOf(group: string): Artwork[] {
  * fragment. Progress and totals are reported in paintings (300), while the
  * grids still show every collectible fragment (325).
  */
-export const PAINTINGS: Artwork[] = ARTWORKS.filter((a) => !a.partGroup || a.partIndex === 1);
+/**
+ * The hidden 301st piece. It lives outside every collection and every lottery:
+ * it is not part of the 300, never appears in a grid, and can only be unlocked
+ * by its own code once the 300 are complete. See FINALE_PATTERNS in special.ts.
+ */
+export const FINALE_ID = 'final-la-musa';
+export const FINALE_COLLECTION = 'col-final';
+
+export const PAINTINGS: Artwork[] = ARTWORKS.filter(
+  (a) => a.collectionId !== FINALE_COLLECTION && (!a.partGroup || a.partIndex === 1)
+);
 
 export function paintingsOf(collectionId: string): Artwork[] {
   return PAINTINGS.filter((a) => a.collectionId === collectionId);

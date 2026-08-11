@@ -14,8 +14,9 @@ import React, {
 
 import { ARTWORK_BY_ID, ARTWORKS, type Artwork } from '@/data/artworks';
 import { qrToArtwork, boosterDrop, collectionDrop, sha256, normalizePayload, specialArtworkId } from '@/game/hash';
+import { matchesFinale } from '@/game/special';
 import { RARITY, type Rarity } from '@/game/rarity';
-import { PAINTINGS, isPaintingComplete } from '@/game/parts';
+import { PAINTINGS, isPaintingComplete, FINALE_ID, FINALE_COLLECTION } from '@/game/parts';
 import {
   BOOSTERS,
   SKINS,
@@ -91,6 +92,9 @@ type SaveData = {
   // One-time migration marker: paid frames used to be free (all owned). We reset
   // ownership once so the priced frames become purchasable again.
   framesReset?: boolean;
+  // Shown once, the moment the 300 are complete: congratulates the player and
+  // points them at the hidden 301st piece.
+  finaleSeen?: boolean;
 };
 
 export type DiscoverResult = {
@@ -133,6 +137,8 @@ type GameContextValue = {
   activeSkin: string;
   ownedFrames: Record<string, true>;
   activeFrame: string;
+  /** Whether the "you completed the 300" message has already been shown. */
+  finaleSeen: boolean;
   // queries
   isOwned: (id: string) => boolean;
   countOf: (id: string) => number;
@@ -152,6 +158,7 @@ type GameContextValue = {
   setRoomHero: (id: string) => void; // pick the room's main exhibit (toggles off if same)
   buySkin: (id: string) => boolean;
   setActiveSkin: (id: string) => void;
+  markFinaleSeen: () => void;
   buyFrame: (id: string) => boolean;
   setActiveFrame: (id: string) => void;
   /** Buy a specific artwork with shards (Painting of the Day). */
@@ -210,6 +217,7 @@ function emptySave(): SaveData {
     ownedFrames: Object.fromEntries(FRAMES.filter((f) => f.cost === 0).map((f) => [f.id, true])),
     activeFrame: DEFAULT_FRAME,
     framesReset: true, // fresh saves already start with only the free frames owned
+    finaleSeen: false,
     unit: 'cm',
     scaleReal: false,
   };
@@ -376,6 +384,17 @@ export function GameProvider({ children }: { children: React.ReactNode }) {
         const windowMs = cooldownDaysFor(count) * DAY_MS;
         if (last && Date.now() - last < windowMs) {
           return { ok: false, reason: 'cooldown', retryAt: last + windowMs };
+        }
+      }
+
+      // The 301st piece: its code is only meaningful to a player who already
+      // holds all 300. For anyone else it stays an ordinary code and falls
+      // through to the lottery below, so the ending can't be stumbled upon.
+      if (matchesFinale(raw) && ARTWORK_BY_ID[FINALE_ID]) {
+        const done = PAINTINGS.every((p) => isPaintingComplete(p, s.owned));
+        if (done) {
+          const result = recordDrop(ARTWORK_BY_ID[FINALE_ID], { incScan: true, cooldownKey: qrHash });
+          return { ok: true, result, special: true };
         }
       }
 
@@ -561,6 +580,10 @@ export function GameProvider({ children }: { children: React.ReactNode }) {
     setSave((prev) => (prev.ownedSkins[id] ? { ...prev, activeSkin: id } : prev));
   }, []);
 
+  const markFinaleSeen = useCallback(() => {
+    setSave((prev) => (prev.finaleSeen ? prev : { ...prev, finaleSeen: true }));
+  }, []);
+
   const buyFrame = useCallback((id: string): boolean => {
     const def = FRAMES.find((f) => f.id === id);
     if (!def) return false;
@@ -707,6 +730,8 @@ export function GameProvider({ children }: { children: React.ReactNode }) {
       setRoomHero,
       buySkin,
       setActiveSkin,
+      finaleSeen: save.finaleSeen ?? false,
+      markFinaleSeen,
       buyFrame,
       setActiveFrame,
       buyArtwork,
@@ -784,10 +809,16 @@ export function collectionStats(owned: Record<string, OwnedEntry>) {
   const discoveredIds = new Set(Object.keys(owned));
   // Counted in *paintings*: a multi-part work is one piece, complete only when
   // every fragment has been found.
-  const total = PAINTINGS.length;
-  const discovered = PAINTINGS.filter((p) => isPaintingComplete(p, owned)).length;
+  const base = PAINTINGS.length; // the 300
+  const found = PAINTINGS.filter((p) => isPaintingComplete(p, owned)).length;
+  // The 301st only EXISTS once the 300 are complete: until then the counter
+  // reads x/300, then flips to 300/301 and finally 301/301.
+  const perfect = found >= base;
+  const hasFinale = !!owned[FINALE_ID];
+  const total = base + (perfect ? 1 : 0);
+  const discovered = found + (perfect && hasFinale ? 1 : 0);
   const artists = new Set(ARTWORKS.filter((a) => discoveredIds.has(a.id)).map((a) => a.artist));
-  const totalArtists = new Set(ARTWORKS.map((a) => a.artist));
+  const totalArtists = new Set(ARTWORKS.filter((a) => a.collectionId !== FINALE_COLLECTION).map((a) => a.artist));
   let duplicates = 0;
   for (const id of discoveredIds) duplicates += Math.max(0, (owned[id]?.count ?? 1) - 1);
   return {
@@ -797,5 +828,9 @@ export function collectionStats(owned: Record<string, OwnedEntry>) {
     artistsDiscovered: artists.size,
     totalArtists: totalArtists.size,
     duplicates,
+    /** True the moment the base 300 are all complete. */
+    perfect,
+    /** True once the hidden finale has been unlocked too. */
+    hasFinale,
   };
 }
